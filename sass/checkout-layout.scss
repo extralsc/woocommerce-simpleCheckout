@@ -57,11 +57,14 @@ body {
 		border: 1px solid $grey;
 	}
 
-	.cart-subtotal th {
+	.cart-subtotal th, tr.woocommerce-shipping-totals {
 		font-weight: normal !important;
+		.shipping {
+			font-weight: normal !important;
+		}
 	}
 
-	.order-total, .cart-subtotal, .cart_item {
+	.order-total, .cart-subtotal, .cart_item, .shipping {
 		color: $text-color;
 	}
 

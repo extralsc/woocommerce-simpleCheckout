@@ -2114,7 +2114,7 @@ form.woocommerce-checkout .fc-wrapper #order_review table.woocommerce-checkout-r
   display: block;
   width: 100%;
   line-height: 1.2;
-  color: #e1e1e1;
+  color: #6a6a6a;
   white-space: normal;
 }
 
@@ -2453,10 +2453,13 @@ body input[type=text], body input[type=number], body input[type=email], body inp
   box-shadow: none;
   border: 1px solid #e1e1e1;
 }
-body .cart-subtotal th {
+body .cart-subtotal th, body tr.woocommerce-shipping-totals {
   font-weight: normal !important;
 }
-body .order-total, body .cart-subtotal, body .cart_item {
+body .cart-subtotal th .shipping, body tr.woocommerce-shipping-totals .shipping {
+  font-weight: normal !important;
+}
+body .order-total, body .cart-subtotal, body .cart_item, body .shipping {
   color: #181818;
 }
 body .woocommerce-Price-amount {
