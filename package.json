@@ -12,10 +12,10 @@
     "type": "git",
     "url": "https://github.com/extralsc/woocommerce-simpleCheckout.git"
   },
-  "author": "Fluidweb.co",
+  "author": "ceeglo.se",
   "license": "GPL-3.0",
-  "copyright": "Copyright (c) 2021, Fluidweb OÜ",
-  "homepage": "https://SimpleCheckout.com",
+  "copyright": "Copyright (c) 2021, SimpleCheckout Ceeglo OÜ",
+  "homepage": "https://ceeglo.se",
   "devDependencies": {
     "browser-sync": "^2.26.14",
     "del": "^5.1.0",

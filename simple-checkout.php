@@ -13,7 +13,7 @@ WC tested up to: 5.8
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 License: GPLv3
 
-Copyright (C) 2021 Fluidweb OÜ
+Copyright (C) 2021 SimpleCheckout Ceeglo OÜ
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
