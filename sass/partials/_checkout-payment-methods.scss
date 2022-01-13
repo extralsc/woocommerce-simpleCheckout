@@ -214,3 +214,11 @@
 .fc-wrapper #payment .payment_methods > .woocommerce-notice {
 	margin-bottom: 0;
 }
+
+
+.fc-checkout-order-payment-method {
+	font-size: 14px;
+	font-weight: 500;
+	padding: 10px 0;
+	color: $text-color;
+}

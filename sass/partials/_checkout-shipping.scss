@@ -21,7 +21,7 @@
 
 
 div.woocommerce form .fc-step__substep[data-substep-id="shipping_address"] {
-	background-color: $lighter-grey;
+	background-color: $white;
 
 	// Make fields background white
 	textarea,
@@ -37,5 +37,6 @@ div.woocommerce form .fc-step__substep[data-substep-id="shipping_address"] {
 	.select2-selection {
 		background-color: $white;
 		color: inherit;
+		border: 1px solid $grey;
 	}
 }

@@ -120,6 +120,7 @@ body:not( .has-checkout-must-login-notice ) .fc-checkout-header ~ .woocommerce-m
 body:not( .has-checkout-must-login-notice ) .fc-checkout-header ~ .woocommerce-info,
 body:not( .has-checkout-must-login-notice ) .fc-checkout-header ~ .woocommerce-error {
 	width: calc( #{ $checkout-steps-width--large-screen } - #{ $checkout-column-gap--large-screen } );
+	margin-bottom: 5px;
 }
 
 

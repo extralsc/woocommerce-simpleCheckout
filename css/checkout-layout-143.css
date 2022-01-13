@@ -1657,6 +1657,13 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
   margin-bottom: 0;
 }
 
+.fc-checkout-order-payment-method {
+  font-size: 14px;
+  font-weight: 500;
+  padding: 10px 0;
+  color: #181818;
+}
+
 .fc-wrapper .fc-expansible-form-section__content--coupon_code .collapsible-content__inner {
   position: relative;
 }

@@ -9,9 +9,9 @@
 
 // Named colors
 $raisin-black:                  #1E212B !default;
-$dark-liver-grey:               #535156 !default;
-$rocket-mettallic-grey:         #888181 !default;
-$light-grey:                    #D6D8D8 !default;
+$dark-liver-grey:               #6a6a6a !default;
+$rocket-mettallic-grey:         #e1e1e1 !default;
+$light-grey:                    #6A6A6A !default;
 $cultured-grey:                 #F0F4F4 !default;
 $green-pigment:                 #00A854 !default;
 $viridian-green:                #30989C !default;
@@ -21,6 +21,8 @@ $crayola-yellow:                #FED766 !default;
 
 // ----------
 
+$text-color:					#181818 !default;
+
 // Greys
 $black:                         #000 !default;
 $darker-grey:                   $raisin-black !default;
@@ -29,6 +31,7 @@ $grey:                          $rocket-mettallic-grey !default;
 $light-grey:                    $light-grey !default;
 $lighter-grey:                  $cultured-grey !default;
 $white:                         #fff !default;
+$grey-white:					#faf9f8 !default;
 
 // Utility colors
 $success-color:                 $green-pigment !default;
@@ -36,7 +39,7 @@ $error-color:                   $venetian-red !default;
 $alert-color:                   $crayola-yellow !default;
 $info-color:                    $maximum-blue-green !default;
 
-$border-color:                  $light-grey !default;
+$border-color:                  #e1e1e1 !default;
 $border-light-color:            $lighter-grey !default;
 
 // Shadows
@@ -72,10 +75,10 @@ $global-spacing-extra-large:        remsize( 13rem ) !default;
 
 $global-radius-extra-small:         remsize( .3rem ) !default;
 $global-radius-small:               remsize( .5rem ) !default;
-$global-radius:                     remsize( .8rem ) !default;
-$global-radius-medium:              remsize( 1.3rem ) !default;
-$global-radius-large:               remsize( 2.1rem ) !default;
-$global-radius-extra-large:         remsize( 3.4rem ) !default;
+$global-radius:                     remsize( .3rem ) !default;
+$global-radius-medium:              remsize( 0.5rem ) !default;
+$global-radius-large:               remsize( 1rem ) !default;
+$global-radius-extra-large:         remsize( 2rem ) !default;
 
 // END - SPACING & BOX SYSTEM
 // ----------------------------------------
@@ -265,7 +268,7 @@ $option-box-checked-color:                  $darker-grey !default;
 // ----------------------------------------
 // CHECKOUT HEADER
 
-$checkout-header-background-color:          $white !default;
+$checkout-header-background-color:          $grey-white !default;
 $checkout-header-box-shadow:                0 remsize( .2rem ) remsize( 1rem ) rgba( 0, 0, 0, .1 ) !default;
 
 $checkout-header-height:                    remsize( 6rem ) !default;
@@ -350,7 +353,7 @@ $checkout-substep-title-padding--large-screen:   0 $global-spacing-tiny 0 0 !def
 $checkout-substep-complete-title-padding:                 0 $global-spacing-large 0 #{ $global-spacing-extra-small + $checkout-substep-title-check-icon-spacing + $checkout-substep-title-check-icon-size } !default;
 $checkout-substep-complete-title-padding--large-screen:   0 $global-spacing-tiny 0 #{ $global-spacing-extra-small + $checkout-substep-title-check-icon-spacing + $checkout-substep-title-check-icon-size } !default;
 
-$checkout-substep-title-color:                   $dark-grey !default;
+$checkout-substep-title-color:                   $text-color !default;
 $checkout-substep-title-font-size:               $font-size-small !default;
 $checkout-substep-title-font-size--large-screen: $font-size-small--large-screen !default;
 $checkout-substep-title-font-weight:             bold !default;
@@ -466,9 +469,9 @@ $shipping-method-font-weight:               normal !default;
 $shipping-method-price-font-weight:         bold !default;
 $shipping-method-price-width:               $global-spacing-large !default;
 
-$shipping-method-border-color:              $option-box-border-color !default;
-$shipping-method-border:                    $option-box-border !default;
-$shipping-method-border-radius:             $option-box-border-radius !default;
+$shipping-method-border-color:              $grey !default; //$option-box-border-color
+$shipping-method-border:                    $option-box-border !default; //
+$shipping-method-border-radius:             0 !default; // $option-box-border-radius
 
 $shipping-method-radio-size:                $option-box-radio-size !default;
 $shipping-method-radio-border:              $option-box-radio-border !default;
@@ -537,8 +540,8 @@ $coupon-code-remove-background-color:       transparent !default;
 // ----------------------------------------
 // CHECKOUT FIELDS
 
-$checkout-field-description-padding:                  $global-spacing-tiny $global-spacing-extra-small !default;
-$checkout-field-description-color:                    $grey !default;
+$checkout-field-description-padding:                  5px 0 !default;
+$checkout-field-description-color:                    $dark-grey !default;
 $checkout-field-description-background-color:         transparent !default;
 $checkout-field-description-font-size:                $font-size-extra-small !default;
 $checkout-field-description-font-size--large-screen:  $font-size-extra-small !default;

@@ -39,6 +39,8 @@ body.theme-kentha .fc-step__substep-fields-inner input[type=search],
 body.theme-kentha .fc-step__substep-fields-inner textarea, 
 body.theme-kentha .fc-step__substep-fields-inner .input-text {
 	padding: remsize( 1rem );
+	background-color: $white;
+	border: 1px solid $light-grey;
 }
 
 body.theme-kentha .fc-step__substep-fields-inner .select2-selection.select2-selection, 

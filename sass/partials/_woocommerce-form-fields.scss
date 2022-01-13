@@ -92,12 +92,17 @@ div.woocommerce form .form-row label,
 div.woocommerce form #billing_address_2_field > label,
 div.woocommerce form #shipping_address_2_field > label {
 	z-index: z( 'default' ) + 1;
-	margin-bottom: $global-spacing-tiny;
 	width: auto;
 	opacity: unset;
 	overflow: unset;
 	white-space: normal;
-	line-height: 1.2;
+    padding-bottom: 0px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: $light-grey;
 }
 
 
@@ -134,8 +139,11 @@ div.woocommerce form #shipping_address_2_field > label {
 	input[type="text"],
 	input[type="tel"],
 	input[type="url"],
-	input[type="password"] {
-		background-color: $white;
+	input[type="password"],
+	#billing_email {
+		background-color: $white !important;
+		border: 1px solid $grey;
+		box-shadow: none !important;
 	}
 }
 
@@ -166,8 +174,10 @@ div.woocommerce form .form-row {
 		position: relative;
 
 		&:focus {
-			outline: $focus-outline-field;
-			outline-offset: $focus-outline-offset-field;
+			border: 1px solid $text-color;
+			outline: none;
+			// outline: $focus-outline-field;
+			// outline-offset: $focus-outline-offset-field;
 		}
 	}
 }
