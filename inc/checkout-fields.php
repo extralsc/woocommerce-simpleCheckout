@@ -76,8 +76,8 @@ class FluidCheckout_CheckoutFields extends FluidCheckout
 
 		// Only apply class changes on checkout and account pages
 		if (function_exists('is_checkout') && (is_checkout() || is_account_page() || (defined('DOING_AJAX') && DOING_AJAX))) {
-			$fields_args['shipping_city']['class'] = array('form-row-last');
 			$fields_args['shipping_postcode']['class'] = array('form-row-first');
+			$fields_args['shipping_city']['class'] = array('form-row-last');
 			$fields_args['shipping_state']['class'] = array('form-row');
 		}
 
@@ -100,9 +100,9 @@ class FluidCheckout_CheckoutFields extends FluidCheckout
 
 		// Only apply class changes on checkout and account pages
 		if (function_exists('is_checkout') && (is_checkout() || is_account_page() || (defined('DOING_AJAX') && DOING_AJAX))) {
-			$new_field_args['city']['class'] = array('form-row-first');
-			$new_field_args['state']['class'] = array('form-row-last');
 			$new_field_args['postcode']['class'] = array('form-row-first');
+			$new_field_args['city']['class'] = array('form-row-last');
+			$new_field_args['state']['class'] = array('form-row');
 		}
 
 		$new_field_args = apply_filters('fc_default_locale_field_args', $new_field_args);
