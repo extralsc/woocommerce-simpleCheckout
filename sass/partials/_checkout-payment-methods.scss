@@ -153,6 +153,7 @@
 .fc-wrapper #payment ul.payment_methods > li.wc_payment_method > label .payment-method__label-text {
 	display: inline-block;
 	margin-right: $global-spacing-extra-small;
+	font-size: 14px;
 }
 
 .fc-wrapper #payment ul.payment_methods > li.wc_payment_method > label img {
@@ -171,6 +172,7 @@
 	padding: $global-spacing-small;
 	border-bottom: $payment-method-border;
 	background-color: $lighter-grey;
+	font-size: 14px;
 
 	@media (#{$bp-larger-than-tablet}) { padding: $global-spacing-small #{ $payment-method-radio-size + $payment-method-padding-horizontal }; }
 
@@ -217,8 +219,9 @@
 
 
 .fc-checkout-order-payment-method {
-	font-size: 14px;
+	font-size: 15px;
 	font-weight: 500;
 	padding: 10px 0;
 	color: $text-color;
 }
+

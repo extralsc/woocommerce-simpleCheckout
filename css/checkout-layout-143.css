@@ -1603,6 +1603,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
 .fc-wrapper #payment ul.payment_methods > li.wc_payment_method > label .payment-method__label-text {
   display: inline-block;
   margin-right: 10px;
+  font-size: 14px;
 }
 
 .fc-wrapper #payment ul.payment_methods > li.wc_payment_method > label img {
@@ -1617,6 +1618,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
   padding: 20px;
   border-bottom: solid 1px #e1e1e1;
   background-color: #F0F4F4;
+  font-size: 14px;
 }
 @media (min-width: 750px) {
   .fc-wrapper #payment ul.payment_methods > li.wc_payment_method .payment_box {
@@ -1658,7 +1660,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
 }
 
 .fc-checkout-order-payment-method {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   padding: 10px 0;
   color: #181818;
