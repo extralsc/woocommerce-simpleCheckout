@@ -11,7 +11,7 @@
 }
 
 .fc-sidebar div.place-order {
-	display: none;
+	// display: none;
 
 	@media (#{$bp-larger-than-desktop}) {
 		display: block;

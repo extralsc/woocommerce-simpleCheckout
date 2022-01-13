@@ -57,6 +57,7 @@ $attributes_inner_str = implode(' ', array_map(array(FluidCheckout::instance(), 
 				<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="fc-checkout-order-review__edit-cart"><?php echo esc_html(__('Edit Cart', 'fluid-checkout')); ?></a>
 				<button type="button" class="fc-checkout-order-review__close-order-summary <?php echo esc_attr(apply_filters('fc_order_summary_continue_button_classes', 'button')); ?>" data-flyout-close aria-label="<?php echo esc_html(__('Close and continue with checkout', 'fluid-checkout')); ?>"><?php echo esc_html(__('Continue', 'fluid-checkout')); ?></button>
 			</div>
+
 		<?php endif; ?>
 
 		<?php if (get_option('fc_enable_checkout_place_order_sidebar', 'no') !== 'no') : ?>

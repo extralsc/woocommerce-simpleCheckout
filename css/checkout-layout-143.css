@@ -1743,9 +1743,6 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
   }
 }
 
-.fc-sidebar div.place-order {
-  display: none;
-}
 @media (min-width: 1000px) {
   .fc-sidebar div.place-order {
     display: block;
@@ -2507,4 +2504,7 @@ body .c-cart__form--additional-fields {
 body .includes_tax {
   text-transform: uppercase;
   color: #6a6a6a;
+}
+body .white-bg {
+  background-color: #FFF;
 }

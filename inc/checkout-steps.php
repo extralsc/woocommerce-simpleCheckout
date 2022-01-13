@@ -117,6 +117,11 @@ class FluidCheckout_Steps extends FluidCheckout
 		add_action('fc_checkout_payment', 'woocommerce_checkout_payment', 20);
 
 		if (get_option('fc_enable_checkout_place_order_sidebar', 'no') !== 'no') {
+			if ($is_sidebar_widget) { // asd
+				add_action('fc_output_step_payment', array($this, 'output_substep_payment'), 80);
+				add_action('fc_output_step_payment', array($this, 'output_order_review'), 90);
+				add_action('fc_output_step_payment', array($this, 'output_checkout_place_order'), 100, 2);
+			}
 		} else {
 			add_action('fc_output_step_payment', array($this, 'output_substep_payment'), 80);
 			add_action('fc_output_step_payment', array($this, 'output_order_review'), 90);
@@ -2821,7 +2826,7 @@ class FluidCheckout_Steps extends FluidCheckout
 				if ($is_sidebar_widget) {
 					$attributes = array_merge($attributes, array(
 						'id' => 'fc-checkout-order-review',
-						'data-flyout' => true,
+						'data-flyout' => false,
 						'data-flyout-order-review' => true,
 						'data-flyout-open-animation-class' => 'fade-in-down',
 						'data-flyout-close-animation-class' => 'fade-out-up',
@@ -2830,8 +2835,10 @@ class FluidCheckout_Steps extends FluidCheckout
 
 				// Maybe add class for additional content inside the order summary section
 				if (get_option('fc_enable_checkout_place_order_sidebar', 'no') === 'yes' || is_active_sidebar('fc_order_summary_after')) {
-					$attributes['class'] = $attributes['class'] . ' has-additional-content';
+					$attributes['class'] = $attributes['class'] . ' has-additional-content white-bg';
 				}
+				add_action('fc_output_step_payment', array($this, 'output_checkout_place_order'), 100, 2);
+
 
 				return $attributes;
 			}
