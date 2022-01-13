@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Fluid Checkout for WooCommerce\n"
+"Project-Id-Version: simple checkout for WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-01-12 17:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
@@ -29,7 +29,7 @@ msgstr ""
 msgid "(Required)"
 msgstr ""
 
-#: fluid-checkout.php:369
+#: simple-checkout.php:369
 #, php-format
 msgid ""
 "<strong>%1$s</strong> requires <strong>%2$s</strong> to be installed and "
@@ -163,7 +163,7 @@ msgstr ""
 msgid "Checkout Layout"
 msgstr ""
 
-#: inc/admin/admin-settings-fluid-checkout.php:65
+#: inc/admin/admin-settings-simple-checkout.php:65
 msgid "Checkout Options"
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr ""
 
 #: inc/admin/admin-settings-advanced.php:116
 msgid ""
-"Controls whether to use the Fluid Checkout page header and footer or keep "
+"Controls whether to use the simple checkout page header and footer or keep "
 "the currently active theme's."
 msgstr ""
 
@@ -410,12 +410,12 @@ msgid "From"
 msgstr ""
 
 #. Author of the plugin
-#: inc/admin/admin-settings-fluid-checkout.php:25
-msgid "Fluid Checkout"
+#: inc/admin/admin-settings-simple-checkout.php:25
+msgid "simple checkout"
 msgstr ""
 
 #. Name of the plugin
-msgid "Fluid Checkout for WooCommerce"
+msgid "simple checkout for WooCommerce"
 msgstr ""
 
 #: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:88
@@ -477,14 +477,14 @@ msgstr ""
 
 #. URI of the plugin
 #. Author URI of the plugin
-msgid "https://fluidcheckout.com/"
+msgid "https://SimpleCheckout.com/"
 msgstr ""
 
 #: inc/admin/admin-notice-review-request.php:45
 msgid "I Need Help!"
 msgstr ""
 
-#: inc/admin/admin-settings-fluid-checkout.php:238
+#: inc/admin/admin-settings-simple-checkout.php:238
 msgctxt "Image uploader."
 msgid "No image selected."
 msgstr ""
@@ -746,9 +746,9 @@ msgstr ""
 msgid "Same as shipping address"
 msgstr ""
 
-#: inc/admin/admin-settings-fluid-checkout.php:250
-#: inc/admin/admin-settings-fluid-checkout.php:251
-#: inc/admin/admin-settings-fluid-checkout.php:254
+#: inc/admin/admin-settings-simple-checkout.php:250
+#: inc/admin/admin-settings-simple-checkout.php:251
+#: inc/admin/admin-settings-simple-checkout.php:254
 msgid "Select an image"
 msgstr ""
 
@@ -831,16 +831,16 @@ msgid "Step %1$s of %2$s"
 msgstr ""
 
 #: inc/admin/admin-notice-review-request.php:41
-msgid "Thanks for choosing Fluid Checkout, you rock!"
+msgid "Thanks for choosing simple checkout, you rock!"
 msgstr ""
 
 #: inc/admin/admin-settings-wc-shipping.php:50
 msgid ""
 "The shipping destination is always set to \"Default to customer shipping "
-"address\" when Fluid Checkout is activated. Customers can still provide "
+"address\" when simple checkout is activated. Customers can still provide "
 "different shipping and billing addresses during checkout, an option for "
 "setting the default billing address to be the same as the shipping address "
-"is available at WooCommerce > Settings > Fluid Checkout > Address Fields."
+"is available at WooCommerce > Settings > simple checkout > Address Fields."
 msgstr ""
 
 #: inc/compat/themes/compat-theme-Impreza.php:117
@@ -874,12 +874,12 @@ msgid "Troubleshooting"
 msgstr ""
 
 #: inc/admin/admin-settings-advanced.php:120
-msgid "Use Fluid Checkout header and footer"
+msgid "Use simple checkout header and footer"
 msgstr ""
 
 #: inc/admin/admin-settings-advanced.php:115
 msgid ""
-"We recommend using the Fluid Checkout header and footer to avoid "
+"We recommend using the simple checkout header and footer to avoid "
 "distractions at the checkout page. <a href=\"https://baymard.com/blog/cart-"
 "abandonment\" target=\"_blank\">Read the research about cart abandonment</a>."
 msgstr ""
@@ -894,7 +894,7 @@ msgstr ""
 
 #: inc/admin/admin-notice-review-request.php:42
 msgid ""
-"You have been using Fluid Checkout for a while. How do you like it so far? "
+"You have been using simple checkout for a while. How do you like it so far? "
 "<br>Please give us a quick rating, it works as a boost for us to keep "
 "working on the plugin :)"
 msgstr ""

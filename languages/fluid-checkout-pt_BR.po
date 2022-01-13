@@ -1,6 +1,6 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: Fluid Checkout for WooCommerce\n"
+"Project-Id-Version: simple checkout for WooCommerce\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-08 14:39+0000\n"
 "PO-Revision-Date: 2022-01-12 17:54+0000\n"
@@ -35,7 +35,7 @@ msgstr ""
 msgid "(Required)"
 msgstr "(Obrigatório)"
 
-#: fluid-checkout.php:369
+#: simple-checkout.php:369
 #, php-format
 msgid ""
 "<strong>%1$s</strong> requires <strong>%2$s</strong> to be installed and "
@@ -175,7 +175,7 @@ msgstr "Cabeçalho do checkout - Celular"
 msgid "Checkout Layout"
 msgstr "Opções de Layout"
 
-#: inc/admin/admin-settings-fluid-checkout.php:65
+#: inc/admin/admin-settings-simple-checkout.php:65
 msgid "Checkout Options"
 msgstr "Opções de checkout"
 
@@ -270,13 +270,13 @@ msgstr "Continuar"
 
 #: inc/admin/admin-settings-advanced.php:116
 #| msgid ""
-#| "Controls whether to use the Fluid Checkout page header and footer of keep "
+#| "Controls whether to use the simple checkout page header and footer of keep "
 #| "the currently active theme's."
 msgid ""
-"Controls whether to use the Fluid Checkout page header and footer or keep "
+"Controls whether to use the simple checkout page header and footer or keep "
 "the currently active theme's."
 msgstr ""
-"Controla se o cabeçalho e rodapé do Fluid Checkout deve ser usado na página "
+"Controla se o cabeçalho e rodapé do simple checkout deve ser usado na página "
 "de checkout ou se manter o do tema ativo no momento."
 
 #: inc/checkout-coupon-codes.php:71 inc/checkout-coupon-codes.php:89
@@ -468,13 +468,13 @@ msgid "From"
 msgstr "Remetente"
 
 #. Author of the plugin
-#: inc/admin/admin-settings-fluid-checkout.php:25
-msgid "Fluid Checkout"
-msgstr "Fluid Checkout"
+#: inc/admin/admin-settings-simple-checkout.php:25
+msgid "simple checkout"
+msgstr "simple checkout"
 
 #. Name of the plugin
-msgid "Fluid Checkout for WooCommerce"
-msgstr "Fluid Checkout para WooCommerce"
+msgid "simple checkout for WooCommerce"
+msgstr "simple checkout para WooCommerce"
 
 #: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:88
 msgid "Germanized for WooCommerce"
@@ -535,14 +535,14 @@ msgstr "Valor de cor para HTML. Ex: #f3f3f3"
 
 #. URI of the plugin
 #. Author URI of the plugin
-msgid "https://fluidcheckout.com/"
-msgstr "https://fluidcheckout.com/"
+msgid "https://SimpleCheckout.com/"
+msgstr "https://SimpleCheckout.com/"
 
 #: inc/admin/admin-notice-review-request.php:45
 msgid "I Need Help!"
 msgstr "Eu preciso de ajuda!"
 
-#: inc/admin/admin-settings-fluid-checkout.php:238
+#: inc/admin/admin-settings-simple-checkout.php:238
 msgctxt "Image uploader."
 msgid "No image selected."
 msgstr "Nenhuma imagem selecionada."
@@ -848,9 +848,9 @@ msgstr "Remover"
 msgid "Same as shipping address"
 msgstr "Igual ao endereço de entrega"
 
-#: inc/admin/admin-settings-fluid-checkout.php:250
-#: inc/admin/admin-settings-fluid-checkout.php:251
-#: inc/admin/admin-settings-fluid-checkout.php:254
+#: inc/admin/admin-settings-simple-checkout.php:250
+#: inc/admin/admin-settings-simple-checkout.php:251
+#: inc/admin/admin-settings-simple-checkout.php:254
 msgid "Select an image"
 msgstr "Selecionar imagem"
 
@@ -933,26 +933,26 @@ msgid "Step %1$s of %2$s"
 msgstr "Passo %1$s de %2$s"
 
 #: inc/admin/admin-notice-review-request.php:41
-msgid "Thanks for choosing Fluid Checkout, you rock!"
-msgstr "Obrigado por escolher o Fluid Checkout, você é demais!"
+msgid "Thanks for choosing simple checkout, you rock!"
+msgstr "Obrigado por escolher o simple checkout, você é demais!"
 
 #: inc/admin/admin-settings-wc-shipping.php:50
 #| msgid ""
 #| "The shipping destination is always set to \"Default to customer shipping "
-#| "address\" when Fluid Checkout is activated. Customers can still provide "
+#| "address\" when simple checkout is activated. Customers can still provide "
 #| "different shipping and billing addresses during checkout, an option for "
 #| "setting the default billing address to be the same as the shipping "
 #| "address is available at WooCommerce > Settings > Checkout > Address "
 #| "Fields."
 msgid ""
 "The shipping destination is always set to \"Default to customer shipping "
-"address\" when Fluid Checkout is activated. Customers can still provide "
+"address\" when simple checkout is activated. Customers can still provide "
 "different shipping and billing addresses during checkout, an option for "
 "setting the default billing address to be the same as the shipping address "
-"is available at WooCommerce > Settings > Fluid Checkout > Address Fields."
+"is available at WooCommerce > Settings > simple checkout > Address Fields."
 msgstr ""
 "O destino de envio é sempre definido como \"Padrão para o endereço de "
-"entrega do cliente\" quando o Fluid Checkout está ativado. Os clientes ainda "
+"entrega do cliente\" quando o simple checkout está ativado. Os clientes ainda "
 "podem fornecer endereços de entrega e cobrança diferentes durante o checkout,"
 " uma opção para definir o endereço de cobrança padrão para ser o mesmo que o "
 "endereço de entrega está disponível em WooCommerce > Configurações > Fluid "
@@ -993,16 +993,16 @@ msgid "Troubleshooting"
 msgstr "Solução de problemas"
 
 #: inc/admin/admin-settings-advanced.php:120
-msgid "Use Fluid Checkout header and footer"
-msgstr "Usar cabeçalho e rodapé do Fluid Checkout"
+msgid "Use simple checkout header and footer"
+msgstr "Usar cabeçalho e rodapé do simple checkout"
 
 #: inc/admin/admin-settings-advanced.php:115
 msgid ""
-"We recommend using the Fluid Checkout header and footer to avoid "
+"We recommend using the simple checkout header and footer to avoid "
 "distractions at the checkout page. <a href=\"https://baymard.com/blog/cart-"
 "abandonment\" target=\"_blank\">Read the research about cart abandonment</a>."
 msgstr ""
-"Recomendamos usar o cabeçalho e rodapé do Fluid Checkout para evitar "
+"Recomendamos usar o cabeçalho e rodapé do simple checkout para evitar "
 "distrações na página de checkout. <a href=\"https://baymard.com/blog/cart-"
 "abandonment\" target=\"_blank\">Leia a pesquisa sobre abandono de carrinhos "
 "de compra (em inglês)</a> ."
@@ -1017,11 +1017,11 @@ msgstr "Escreva uma mensagem de presente ..."
 
 #: inc/admin/admin-notice-review-request.php:42
 msgid ""
-"You have been using Fluid Checkout for a while. How do you like it so far? "
+"You have been using simple checkout for a while. How do you like it so far? "
 "<br>Please give us a quick rating, it works as a boost for us to keep "
 "working on the plugin :)"
 msgstr ""
-"Você está usando o Fluid Checkout há algum tempo. Como está gostando até "
+"Você está usando o simple checkout há algum tempo. Como está gostando até "
 "agora? <br> Por favor, dê-nos uma classificação rápida, isso funciona como "
 "um incentivo para continuarmos trabalhando no plugin :)"
 

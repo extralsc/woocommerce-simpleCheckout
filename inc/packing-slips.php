@@ -1,15 +1,17 @@
 <?php
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Feature for adding packing slips options.
  */
-class FluidCheckout_PackingSlips extends FluidCheckout {
+class SimpleCheckout_PackingSlips extends SimpleCheckout
+{
 
 	/**
 	 * __construct function.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->hooks();
 	}
 
@@ -18,47 +20,49 @@ class FluidCheckout_PackingSlips extends FluidCheckout {
 	/**
 	 * Initialize hooks.
 	 */
-	public function hooks() {
+	public function hooks()
+	{
 		// Admin Settings
-		add_filter( 'fc_checkout_general_settings', array( $this, 'add_packing_list_info_message_setting' ), 10 );
+		add_filter('sc_checkout_general_settings', array($this, 'add_packing_list_info_message_setting'), 10);
 	}
 
 
 
 	/**
-	 * Add a packing slip information message option to the Fluid Checkout general settings page.
+	 * Add a packing slip information message option to the simple checkout general settings page.
 	 *
 	 * @param   array  $settings  Admin settings array.
 	 */
-	public function add_packing_list_info_message_setting( $settings ) {
+	public function add_packing_list_info_message_setting($settings)
+	{
 		// Define positions for new settings
-		$index = count( $settings ) - 1;
+		$index = count($settings) - 1;
 
 		// Define setting to insert
 		$insert_settings = array(
 			array(
-				'title'             => __( 'Packing Slips', 'fluid-checkout' ),
-				'desc'              => __( 'Information message printed on the packing slips. May be replaced with the gift message for order with a gift message added.', 'fluid-checkout' ),
-				'id'                => 'fc_packing_slips_message_box_body_text',
+				'title'             => __('Packing Slips', 'simple-checkout'),
+				'desc'              => __('Information message printed on the packing slips. May be replaced with the gift message for order with a gift message added.', 'simple-checkout'),
+				'id'                => 'sc_packing_slips_message_box_body_text',
 				'type'              => 'textarea',
 				'autoload'          => false,
 			),
 		);
 
 		// Get token position
-		$position_index = count( $settings ) - 1;
-		for ( $index = 0; $index < count( $settings ) - 1; $index++ ) {
-			$args = $settings[ $index ];
+		$position_index = count($settings) - 1;
+		for ($index = 0; $index < count($settings) - 1; $index++) {
+			$args = $settings[$index];
 
-			if ( array_key_exists( 'id', $args ) && $args[ 'id' ] == 'fc_display_gift_message_in_order_details' ) {
+			if (array_key_exists('id', $args) && $args['id'] == 'sc_display_gift_message_in_order_details') {
 				$position_index = $index + 1;
 			}
 		}
 
 		// Insert at token position
-		$new_settings  = array_slice( $settings, 0, $position_index );
-		$new_settings = array_merge( $new_settings, $insert_settings );
-		$new_settings = array_merge( $new_settings, array_slice( $settings, $position_index, count( $settings ) ) );
+		$new_settings  = array_slice($settings, 0, $position_index);
+		$new_settings = array_merge($new_settings, $insert_settings);
+		$new_settings = array_merge($new_settings, array_slice($settings, $position_index, count($settings)));
 
 		return $new_settings;
 	}
@@ -70,42 +74,45 @@ class FluidCheckout_PackingSlips extends FluidCheckout {
 	 *
 	 * @param   int  $order_id   ID of the order.
 	 */
-	public function get_message_box_html( $order_id ) {
+	public function get_message_box_html($order_id)
+	{
 		// Get message values
-		$args = apply_filters( 'fc_packing_slips_message_box_args', array(
-			'message_body' => get_option( 'fc_packing_slips_message_box_body_text', '' ),
+		$args = apply_filters('sc_packing_slips_message_box_args', array(
+			'message_body' => get_option('sc_packing_slips_message_box_body_text', ''),
 			'message_footer' => '',
 			'info_text' => '',
 			'message_icon_url' => self::$directory_url . 'images/icon-info.png',
 			'message_body_extra_classes' => '',
-		), $order_id );
+		), $order_id);
 
 		// Replace `[siteurl]` with the actual website url
-		$args['message_body'] = str_replace( '[siteurl]', esc_url( get_option( 'siteurl' ) ), $args['message_body'] );
-		$args['info_text'] = str_replace( '[siteurl]', esc_url( get_option( 'siteurl' ) ), $args['info_text'] );
+		$args['message_body'] = str_replace('[siteurl]', esc_url(get_option('siteurl')), $args['message_body']);
+		$args['info_text'] = str_replace('[siteurl]', esc_url(get_option('siteurl')), $args['info_text']);
 
 		// Bail if there is no message body
-		if ( empty( $args['message_body'] ) ) { return ''; };
+		if (empty($args['message_body'])) {
+			return '';
+		};
 
 		// Start buffer
 		ob_start();
-		?>
+?>
 		<div class="packing-list__message-wrapper">
 			<div class="packing-list__message-box">
-				<div class="packing-list__message-icon"><img src="<?php echo esc_url( $args['message_icon_url'] ); ?>"/></div>
+				<div class="packing-list__message-icon"><img src="<?php echo esc_url($args['message_icon_url']); ?>" /></div>
 
-				<div class="packing-list__message-body <?php echo esc_attr( $args['message_body_extra_classes'] ); ?>"><?php echo wp_kses_post( $args['message_body'] ); ?></div>
+				<div class="packing-list__message-body <?php echo esc_attr($args['message_body_extra_classes']); ?>"><?php echo wp_kses_post($args['message_body']); ?></div>
 
-				<?php if ( ! empty( $args['message_footer'] ) ) : ?>
-					<div class="packing-list__message-footer"><?php echo esc_html( $args['message_footer'] ); ?></div>
+				<?php if (!empty($args['message_footer'])) : ?>
+					<div class="packing-list__message-footer"><?php echo esc_html($args['message_footer']); ?></div>
 				<?php endif; ?>
 			</div>
 
-			<?php if ( ! empty( $args['info_text'] ) ) : ?>
-				<div class="packing-list__info-text"><?php echo esc_html( $args['info_text'] ); ?></div>
+			<?php if (!empty($args['info_text'])) : ?>
+				<div class="packing-list__info-text"><?php echo esc_html($args['info_text']); ?></div>
 			<?php endif; ?>
 		</div>
-		<?php
+<?php
 
 		// Return html
 		return ob_get_clean();
@@ -116,7 +123,8 @@ class FluidCheckout_PackingSlips extends FluidCheckout {
 	/**
 	 * Get message box styles for packing list.
 	 */
-	public function get_message_box_styles() {
+	public function get_message_box_styles()
+	{
 		$css = '
 			.packing-list__message-wrapper {
 				margin: 20px 0 35px;
@@ -182,7 +190,6 @@ class FluidCheckout_PackingSlips extends FluidCheckout {
 
 		return $css;
 	}
-
 }
 
-FluidCheckout_PackingSlips::instance();
+SimpleCheckout_PackingSlips::instance();

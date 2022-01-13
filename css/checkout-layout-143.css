@@ -436,7 +436,7 @@ body:not(.has-checkout-must-login-notice) .fc-checkout-header ~ .woocommerce-err
 
 .fc-checkout-header .fc-checkout__cart-link:before {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -447,7 +447,7 @@ body:not(.has-checkout-must-login-notice) .fc-checkout-header ~ .woocommerce-err
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -466,7 +466,7 @@ body:not(.has-checkout-must-login-notice) .fc-checkout-header ~ .woocommerce-err
 
 .fc-checkout-header .fc-checkout__cart-link:after {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -477,7 +477,7 @@ body:not(.has-checkout-must-login-notice) .fc-checkout-header ~ .woocommerce-err
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -501,7 +501,7 @@ body:not(.has-checkout-must-login-notice) .fc-checkout-header ~ .woocommerce-err
 
 .has-flyout--open-fc-checkout-order-review .fc-checkout-header .fc-checkout__cart-link:after {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -827,7 +827,7 @@ body.woocommerce-checkout form.woocommerce-checkout .fc-wrapper .fc-step__subste
 }
 .has-checkout-layout--multi-step.woocommerce-checkout form.woocommerce-checkout .fc-wrapper [data-step-complete] .fc-step__substep .fc-step__substep-title:before {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -1136,7 +1136,7 @@ body.woocommerce-checkout form.woocommerce-checkout .fc-wrapper .fc-step__subste
 
 .fc-login-form .button--flyout-close:before {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -1147,7 +1147,7 @@ body.woocommerce-checkout form.woocommerce-checkout .fc-wrapper .fc-step__subste
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -1386,7 +1386,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
 
 .woocommerce ul#shipping_method .shipping-method__option input[type=radio] + .shipping-method__option-label:after {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -1397,7 +1397,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -1565,7 +1565,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
 
 .fc-wrapper #payment ul.payment_methods > .wc_payment_method > input[type=radio]:first-child + label:after {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -1576,7 +1576,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
   -moz-osx-font-smoothing: grayscale;
   vertical-align: middle;
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -2397,7 +2397,7 @@ div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus {
 }
 div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus:before {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;

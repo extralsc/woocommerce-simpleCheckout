@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Checkout shipping information form
  *
@@ -17,40 +18,41 @@
  * @global WC_Checkout $checkout
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 ?>
 
 
 <div class="woocommerce-shipping-fields">
 
-	<?php do_action( 'fc_checkout_before_step_shipping_fields' ); ?>
+	<?php do_action('sc_checkout_before_step_shipping_fields'); ?>
 
-	<?php if ( true === WC()->cart->needs_shipping_address() ) : ?>
+	<?php if (true === WC()->cart->needs_shipping_address()) : ?>
 
-		<?php // CHANGE: Output "ship to different address" option via hook ?>
-		<?php do_action( 'fc_before_checkout_shipping_address_wrapper', $checkout ); ?>
+		<?php // CHANGE: Output "ship to different address" option via hook 
+		?>
+		<?php do_action('sc_before_checkout_shipping_address_wrapper', $checkout); ?>
 
 		<div class="shipping_address">
 
-			<?php do_action( 'woocommerce_before_checkout_shipping_form', $checkout ); ?>
+			<?php do_action('woocommerce_before_checkout_shipping_form', $checkout); ?>
 
 			<div class="woocommerce-shipping-fields__field-wrapper">
 				<?php
-				$fields = $checkout->get_checkout_fields( 'shipping' );
+				$fields = $checkout->get_checkout_fields('shipping');
 
-				foreach ( $fields as $key => $field ) {
+				foreach ($fields as $key => $field) {
 					/**
 					 * The variable `$display_fields` is passed as a paramenter to this template file
-					 * @see Hook `fc_checkout_contact_step_field_ids`
+					 * @see Hook `sc_checkout_contact_step_field_ids`
 					 */
-					if ( in_array( $key, $display_fields ) ) {
-						woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+					if (in_array($key, $display_fields)) {
+						woocommerce_form_field($key, $field, $checkout->get_value($key));
 					}
 				}
 				?>
 			</div>
 
-			<?php do_action( 'woocommerce_after_checkout_shipping_form', $checkout ); ?>
+			<?php do_action('woocommerce_after_checkout_shipping_form', $checkout); ?>
 
 		</div>
 
@@ -58,10 +60,9 @@ defined( 'ABSPATH' ) || exit;
 
 	<?php
 	// CHANGE: Added for compatibility with plugins that use this action hook
-	do_action( 'woocommerce_checkout_shipping', $checkout );
+	do_action('woocommerce_checkout_shipping', $checkout);
 	?>
-	
-	<?php do_action( 'fc_checkout_after_step_shipping_fields' ); ?>
+
+	<?php do_action('sc_checkout_after_step_shipping_fields'); ?>
 
 </div>
-

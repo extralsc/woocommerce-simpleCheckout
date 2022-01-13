@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Checkout payment form
  *
@@ -11,15 +12,15 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package fluid-checkout
+ * @package simple-checkout
  * @version 1.2.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 ?>
 
-<?php do_action( 'fc_checkout_before_step_payment_fields' ); ?>
+<?php do_action('sc_checkout_before_step_payment_fields'); ?>
 
-<?php do_action( 'fc_checkout_payment' ); ?>
+<?php do_action('sc_checkout_payment'); ?>
 
-<?php do_action( 'fc_checkout_after_step_payment_fields' ); ?>
+<?php do_action('sc_checkout_after_step_payment_fields'); ?>

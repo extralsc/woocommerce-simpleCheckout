@@ -1,4 +1,4 @@
-=== Fluid Checkout for WooCommerce ===
+=== simple checkout for WooCommerce ===
 Contributors: fluidwebco, diegoversiani, luiggiab
 Tags: woocommerce, checkout, conversion, multi-step, one-page
 Requires PHP: 7.4
@@ -13,7 +13,7 @@ Provides a distraction free checkout experience for any WooCommerce store. Ask f
 
 == Description ==
 
-Fluid Checkout simplifies and improves the checkout experience on WooCommerce websites for your new and repeating customers with a truly linear, Shopify-like checkout.
+simple checkout simplifies and improves the checkout experience on WooCommerce websites for your new and repeating customers with a truly linear, Shopify-like checkout.
 
 Eliminate unnecessary friction at the checkout page and benefit from better conversion rates, customer satisfaction, and earned customer loyalty.
 
@@ -23,24 +23,24 @@ Similar to the Shopify checkout, and even better!
 
 Better accessibility at the checkout page with support for keyboard-only navigation and screen readers.
 
-[View detailed list of features on our website](https://fluidcheckout.com/features/)
+[View detailed list of features on our website](https://SimpleCheckout.com/features/)
 
 == Demos ==
 
-* [Multi step layout](https://demos.fluidcheckout.com/multi-step/cart/?add-to-cart=14&quantity=2)
+* [Multi step layout](https://demos.SimpleCheckout.com/multi-step/cart/?add-to-cart=14&quantity=2)
 Make sure to test the checkout flow by adding to the cart and completing the purchase at least two times to see how the plugin streamlines the process for repeat customers.
 
-* [Single step layout](https://demos.fluidcheckout.com/single-step/cart/?add-to-cart=22&quantity=2)
+* [Single step layout](https://demos.SimpleCheckout.com/single-step/cart/?add-to-cart=22&quantity=2)
 Single step checkout is recommended when only a few fields are required, usually when selling digital products or allowing local store pickup where shipping address information is not needed.
 
-* [Highly stylized theme](https://demos.fluidcheckout.com/theme-deli/cart/?add-to-cart=14&quantity=2)
-With themes that are highly stylized such as Storefront Deli -- when comparing to a plain theme such as the default Storefront theme, Fluid Checkout adapts itself with part of the theme's styles, keeping the same look and feel while improving the experience.
+* [Highly stylized theme](https://demos.SimpleCheckout.com/theme-deli/cart/?add-to-cart=14&quantity=2)
+With themes that are highly stylized such as Storefront Deli -- when comparing to a plain theme such as the default Storefront theme, simple checkout adapts itself with part of the theme's styles, keeping the same look and feel while improving the experience.
 
 == Lite Version (Free) ==
 
-* **Multi-step or Single-step**: Choose between multi-step and one-step checkout layouts. While Fluid Checkout changes the layout of the checkout page, it will still look and feel like your website.
+* **Multi-step or Single-step**: Choose between multi-step and one-step checkout layouts. While simple checkout changes the layout of the checkout page, it will still look and feel like your website.
 
-* **Optimized for mobile**: Fluid Checkout is optimized for mobile devices and will surface the most appropriate keyboard type on fields such as phone and email. In fact, Fluid Checkout was created with mobile devices in mind, and enhanced with more functionality and style for bigger screens.
+* **Optimized for mobile**: simple checkout is optimized for mobile devices and will surface the most appropriate keyboard type on fields such as phone and email. In fact, simple checkout was created with mobile devices in mind, and enhanced with more functionality and style for bigger screens.
 
 * **Easily add trust symbols to the checkout page**: Add any widget such as accepted payment methods, security badges, reviews, testimonials, or anything that can boost the perceived trust customers have on the website. The checkout page contains widget areas displayed at strategic positions:
 
@@ -63,7 +63,7 @@ With themes that are highly stylized such as Storefront Deli -- when comparing t
 
 * **Automatically saved customer data**: customers won't lose any information they already have entered on the checkout page, and will get back exactly where they left when re-visiting it. Only payment information won't be saved for security reasons.
 
-* **Skip completed steps**: Repeat customers will love how easy it is to complete their next purchase. Fluid Checkout skips the steps where all required information is provided and validated while providing an easy way to review and change any of the information.
+* **Skip completed steps**: Repeat customers will love how easy it is to complete their next purchase. simple checkout skips the steps where all required information is provided and validated while providing an easy way to review and change any of the information.
 
 * **Log-in without leaving the checkout**: Repeat customers with an account registered can log in from the checkout page directly without having to visit another page and make their way back to checkout.
 
@@ -76,22 +76,22 @@ We are working to bring to you the following PRO features:
 * Cart page optimization
 * Edit cart at checkout
 * Thank you / Order confirmation page
-* [Google Address Autocomplete for WooCommerce](https://fluidcheckout.com/product/fc-google-address-autocomplete/)
+* [Google Address Autocomplete for WooCommerce](https://SimpleCheckout.com/product/fc-google-address-autocomplete/)
 * Customize checkout steps and fields
 * Account matching, let registered customers complete the purchase without logging in and attach the order to their account
 * Account pages optimization
 
-**[Google Address Autocomplete for WooCommerce](https://fluidcheckout.com/product/fc-google-address-autocomplete/) is now available as a stand-alone plugin**.
+**[Google Address Autocomplete for WooCommerce](https://SimpleCheckout.com/product/fc-google-address-autocomplete/) is now available as a stand-alone plugin**.
 
 
 == Need more features? ==
 
-**[Request a feature](https://support.fluidcheckout.com/).**
+**[Request a feature](https://support.SimpleCheckout.com/).**
 
 
 == Tested WooCommerce Themes ==
 
-By default, Fluid Checkout works with every WooCommerce theme. Some themes may need adjustments due to not using WooCommerce standards hooks or styles. We've tested certain third-party WooCommerce themes to ensure better compatibility with Fluid Checkout:
+By default, simple checkout works with every WooCommerce theme. Some themes may need adjustments due to not using WooCommerce standards hooks or styles. We've tested certain third-party WooCommerce themes to ensure better compatibility with simple checkout:
 
 = Free Themes =
 
@@ -134,7 +134,7 @@ Only the themes that we have added explicit compatibility with, or that we have 
 
 If your theme is not on the list it **does not mean it won't work**. Only that we have not tested it yet.
 
-Try Fluid Checkout now and if you experience any issues please let us know through the [support forum](https://wordpress.org/support/plugin/fluid-checkout/) and we'll fix it asap.
+Try simple checkout now and if you experience any issues please let us know through the [support forum](https://wordpress.org/support/plugin/simple-checkout/) and we'll fix it asap.
 
 
 == Compatible with popular plugins ==
@@ -176,14 +176,14 @@ Only the plugins that we have added explicit compatibility with, or that we have
 
 If your theme is not on the list it **does not mean it won't work**. Only that we have not tested it yet.
 
-Try Fluid Checkout now and if you experience any issues please let us know through the [support forum](https://wordpress.org/support/plugin/fluid-checkout/) and we'll fix it asap.
+Try simple checkout now and if you experience any issues please let us know through the [support forum](https://wordpress.org/support/plugin/simple-checkout/) and we'll fix it asap.
 
 
 == Fully Customizable ==
 
 In addition to a number of default settings (including a custom header/logo), multi-step or single step layout types and easily enabling/disabling features from settings page, the plugin contains HTML/PHP based templates and provides many filters and action hooks that allow for customization.
 
-To customize template files, copy the templates to your theme folder, add a hook to the filter `fc_override_template_with_theme_file` to allow the plugin's version of the template to be overriden by the your customized template file. For more information and examples, see our guide [How to customize template files](https://support.fluidcheckout.com/portal/en/kb/articles/how-to-customize-template-files).
+To customize template files, copy the templates to your theme folder, add a hook to the filter `sc_override_template_with_theme_file` to allow the plugin's version of the template to be overriden by the your customized template file. For more information and examples, see our guide [How to customize template files](https://support.SimpleCheckout.com/portal/en/kb/articles/how-to-customize-template-files).
 
 To customize styles when making small adjustments, just add your custom CSS through your theme, the Customizer Custom CSS field or using a plugin.
 
@@ -210,7 +210,7 @@ Currently the plugin is translated into the languages below, and more are commin
 * Spanish - Argentina (soon)
 
 ** Note: **
-Fluid Checkout is fully localized/translatable. This is very important for all users worldwide.
+simple checkout is fully localized/translatable. This is very important for all users worldwide.
 Please contribute your language to the plugin to make it even more useful.
 For translating we recommend the plugin ["Loco Translate - By Tim Whitlock"](https://wordpress.org/plugins/loco-translate/).
 
@@ -220,47 +220,47 @@ For translating we recommend the plugin ["Loco Translate - By Tim Whitlock"](htt
 = Automatic installation =
 
 * Log in to your WordPress dashboard, navigate to the Plugins menu and click Add New.
-* Search for "Fluid Checkout for WooCommerce", and press "Install now".
+* Search for "simple checkout for WooCommerce", and press "Install now".
 * Or, press "Upload Plugin" and select the zip file, then press "Install Now".
 
 = Settings =
 
-Once installed and activated, the Fluid Checkout will take over the WooCommerce checkout page and change its layout to the **multi-step** option. The default settings were chosen to minimize checkout abandonment and to work for most shops. Some features need to be enabled on the settings page before you see them at the checkout page.
+Once installed and activated, the simple checkout will take over the WooCommerce checkout page and change its layout to the **multi-step** option. The default settings were chosen to minimize checkout abandonment and to work for most shops. Some features need to be enabled on the settings page before you see them at the checkout page.
 
-If you want to tweak the settings, head over to WP Admin > WooCommerce > Settings > Fluid Checkout.
+If you want to tweak the settings, head over to WP Admin > WooCommerce > Settings > simple checkout.
 
 
 == Frequently Asked Questions ==
 
-= Will Fluid Checkout work with my theme? =
+= Will simple checkout work with my theme? =
 
-Yes! Fluid Checkout should work with most theme out-of-the-box. However some themes may need adjustments due to not using WooCommerce standard hooks or styles.
+Yes! simple checkout should work with most theme out-of-the-box. However some themes may need adjustments due to not using WooCommerce standard hooks or styles.
 
-**If you have any issues using Fluid Checkout with your theme please let us know through the [support forum](https://wordpress.org/support/plugin/fluid-checkout/) and we'll fix it asap.**
+**If you have any issues using simple checkout with your theme please let us know through the [support forum](https://wordpress.org/support/plugin/simple-checkout/) and we'll fix it asap.**
 
-= Does Fluid Checkout work with the plugins I use on my webshop? =
+= Does simple checkout work with the plugins I use on my webshop? =
 
-Although Fluid Checkout was built in a way that it should be compatible with most plugins, the checkout page is a really complex part of WooCommerce and there are myriads of plugins that extends it. Because of that, it is likely that some plugins won't work optimaly with Fluid Checkout out-of-the-box.
+Although simple checkout was built in a way that it should be compatible with most plugins, the checkout page is a really complex part of WooCommerce and there are myriads of plugins that extends it. Because of that, it is likely that some plugins won't work optimaly with simple checkout out-of-the-box.
 
-**If you have any issues using Fluid Checkout with other plugins please let us know through the [support forum](https://wordpress.org/support/plugin/fluid-checkout/) and we'll fix it asap.**
+**If you have any issues using simple checkout with other plugins please let us know through the [support forum](https://wordpress.org/support/plugin/simple-checkout/) and we'll fix it asap.**
 
-= Is Fluid Checkout fully compatible with ADA/WCAG 2.1 Level AA requirements? Will it make my webshop compliant? =
+= Is simple checkout fully compatible with ADA/WCAG 2.1 Level AA requirements? Will it make my webshop compliant? =
 
-No. While Fluid Checkout does improve the accessibility of the checkout page by implementing support for keyboard-only navigation and screen readers, **we can't say if your webshop will be 100% compliant or not** with ADA, WCAG or any other accessibility requirements. 
+No. While simple checkout does improve the accessibility of the checkout page by implementing support for keyboard-only navigation and screen readers, **we can't say if your webshop will be 100% compliant or not** with ADA, WCAG or any other accessibility requirements. 
 
 Did you know that only about 30% of accessibility issues can be detected with automated tools? The majority of the issues can only be detected with manual testing on each page of the website. Read the article: [Automated Accessibility Testing Tools: How Much Do Scans Catch?](https://www.essentialaccessibility.com/blog/automated-accessibility-testing-tools-how-much-do-scans-catch).
 
 We have plans to add an "accessible layout" feature that will ensure most accessibility issues will be fixed.
 
-**[Contact us](https://fluidcheckout.com/support/) if you need help with making your webshop accessible to people with disabilities.**
+**[Contact us](https://SimpleCheckout.com/support/) if you need help with making your webshop accessible to people with disabilities.**
 
 = How do I add trust symbols to the checkout page? =
 
 The plugin provides widget areas in strategic positions on the checkout page for adding the trust symbols. Head over to WP Admin > Appearance > Widget Areas, and add any type of widget to boost the perceived trust customers have on the website.
 
-= How do I get Fluid Checkout for WooCommerce PRO? =
+= How do I get simple checkout for WooCommerce PRO? =
 
-We are working on building the PRO version of Fluid Checkout. Visit [our website](https://fluidcheckout.com) and sign up to be the first to know when it's ready.
+We are working on building the PRO version of simple checkout. Visit [our website](https://SimpleCheckout.com) and sign up to be the first to know when it's ready.
 
 
 == Screenshots ==
@@ -278,7 +278,7 @@ We are working on building the PRO version of Fluid Checkout. Visit [our website
 
 = 1.4.3 - 2022-01-12 =
 
-* Added: New actions `fc_checkout_header_widgets_inside_before` and `fc_checkout_header_widgets_inside_after` to add content inside the checkout header widget area via PHP code.
+* Added: New actions `sc_checkout_header_widgets_inside_before` and `sc_checkout_header_widgets_inside_after` to add content inside the checkout header widget area via PHP code.
 * Improved: Moved checkout header widgets to before the cart icon link in the template file `fc/checkout/checkout-header.php`.
 * Improved: Compatibility with plugin WooCommerce Stripe Payment Gateway - by WooCommerce.
 * Fixed: Use of deprecated function `is_ajax` on payment.php template file since WooCommerce 6.1.0.
@@ -297,10 +297,10 @@ We are working on building the PRO version of Fluid Checkout. Visit [our website
 * Added: Compatibility with theme Diza.
 * Added: New widget area to display trust symbols below the place order button.
 * Added: Option to set a background color for the checkout page. Refactor checkout header background color to output custom styles in a `<style>` tag.
-* Added: New filter `fc_display_checkout_page_title` to make the checkout page title visible. When hidden, checkout page title is output as `screen-reader-only`. Defaults to hidden.
-* Added: New filter `fc_checkout_express_checkout_section_title` to allow changing the express checkout section title.
-* Added: New filter `fc_output_checkout_contact_login_cta` to control whether to display the call to action "Already have an account? Log in." in the contact step.
-* Added: New action `fc_checkout_below_contact_login_cta` to allow adding content to the contact login substep.
+* Added: New filter `sc_display_checkout_page_title` to make the checkout page title visible. When hidden, checkout page title is output as `screen-reader-only`. Defaults to hidden.
+* Added: New filter `sc_checkout_express_checkout_section_title` to allow changing the express checkout section title.
+* Added: New filter `sc_output_checkout_contact_login_cta` to control whether to display the call to action "Already have an account? Log in." in the contact step.
+* Added: New action `sc_checkout_below_contact_login_cta` to allow adding content to the contact login substep.
 * Added: New option `checkoutEnablePreventUnload` to the `fcSettings` to allow disabling the "data loss protection" script when closing the browser tab with unsaved changes to checkout fields.
 * Updated: `collapsible-block` library to version 1.1.7.
 * Improved: Block the place order button with attribute and class `disabled` when processing the order to prevent user from submitting duplicate orders.
@@ -317,7 +317,7 @@ We are working on building the PRO version of Fluid Checkout. Visit [our website
 * Fixed: Removed background color from `fieldset` elements on payment method fields section.
 * Fixed: Billing address form not displaying when the shipping country was not yet selected on single-step layout mode.
 * Fixed: Certain SVG logo images not being displayed on the checkout header.
-* Fixed: Fatal error when activating Fluid Checkout on older versions of PHP.
+* Fixed: Fatal error when activating simple checkout on older versions of PHP.
 
 = 1.4.1 - 2021-12-03 =
 * Added: Translation to German. Thanks to @reilix.
@@ -325,9 +325,9 @@ We are working on building the PRO version of Fluid Checkout. Visit [our website
 * Added: Compatibility with theme MrTailor.
 * Added: Compatibility with theme Riode.
 * Added: Compatibility with WooCommerce Delivery & Pickup Date Time Pro by CodeRockz.
-* Added: Conditionally add the shipping package name to the shipping method section. Added the hook `fc_shipping_method_display_package_name` to control whether to display the package name.
+* Added: Conditionally add the shipping package name to the shipping method section. Added the hook `sc_shipping_method_display_package_name` to control whether to display the package name.
 * Added: Filter to change button classes for "Proceed to next step" buttons.
-* Added: New filter `fc_substep_title_<substep_id>` to allow changing the titles of each substep.
+* Added: New filter `sc_substep_title_<substep_id>` to allow changing the titles of each substep.
 * Improved: Compatibility with theme Woodmart.
 * Improved: Added function to allow unregistering checkout steps.
 * Improved: Allow collapsible sections to be created without a toggle link when toggle label is `null`.
@@ -351,7 +351,7 @@ We are working on building the PRO version of Fluid Checkout. Visit [our website
 * Improved: Automatically determine the label for the "Proceed to <next step>" button based on the registered steps. Custom translations will need to be updated.
 * Improved: Refactor of the front-end checkout validation script to allow developers to add validation type extensions.
 * Improved: Compatibility with theme Neve.
-* Fixed: Checkout fields values should be replaced with data from registered customer profile when user logs from the checkout page or otherwise. Renamed hook `fc_customer_persisted_data_clear_fields` to `fc_customer_persisted_data_clear_fields_order_processed`.
+* Fixed: Checkout fields values should be replaced with data from registered customer profile when user logs from the checkout page or otherwise. Renamed hook `sc_customer_persisted_data_clear_fields` to `sc_customer_persisted_data_clear_fields_order_processed`.
 * Fixed: When adding new steps, functions to get current and next steps and outputing the progress bar now works as expected.
 * Fixed: Translation of shipping package names to match what is used by WooCommerce.
 * Fixed: Coupon code "Add" link label now respects the option to make field labels `lowercase`, instead of always making it `lowercase`.
@@ -379,7 +379,7 @@ Fixed: Fix build process to save theme compat files in the right place.
 * Added: New option to hide the additional order notes field. Saves to the WooCommerce option `woocommerce_enable_order_comments`.
 * Improved: Moved local pickup functions and customizations to a new class, potentially breaking sites with customizations that rely on these functions.
 * Improved: Changed the hook used to initialize the plugin features from `plugins_loaded` to `after_setup_theme` to allow themes to customize early plugin settings and features.
-* Improved: Show "Pickup point" as the substep title. Text can be changed by using the filter `fc_shipping_address_local_pickup_point_title`.
+* Improved: Show "Pickup point" as the substep title. Text can be changed by using the filter `sc_shipping_address_local_pickup_point_title`.
 * Improved: Add option "Make 'Add' link buttons lowercase" to prevent plugin from changing the optional fields link buttons to `lowercase` when keeping the letter case is necessary.
 * Improved: Changed the markup for the checkbox "Same as shipping address" for better compatibility with WooCommerce form field styles.
 * Improved: Compatibility styles for checkbox and validation check icon for Blocksy theme.
@@ -392,14 +392,14 @@ Fixed: Fix build process to save theme compat files in the right place.
 * Removed: Unused `cart-totals.php` template file.
 
 = 1.2.10 - 2021-09-10 =
-* Added: New filter hook `fc_coupon_code_field_initially_expanded` to allow displaying the coupon code field always expanded.
+* Added: New filter hook `sc_coupon_code_field_initially_expanded` to allow displaying the coupon code field always expanded.
 * Improved: Fix plugin and theme compatibility styles enqueue function to use filter hook instead of options to allow disabling loading compatibility files.
 * Fixed: Fix substep "Additional notes" being displayed even when all fields are removed.
 * Fixed: Typos and info in the readme.txt.
 
 = 1.2.9 - 2021-08-18 =
 * Bump tested up to WooCommerce 5.6
-* Added: New action hooks `fc_before_substep_<substep_id>` and `fc_after_substep_<substep_id>`.
+* Added: New action hooks `sc_before_substep_<substep_id>` and `sc_after_substep_<substep_id>`.
 * Improved: Add compatibility with plugin "Sg Checkout Location Picker for WooCommerce" by Sevengits.
 * Improved: Add compatibility with plugin "SG Map to Address" by Sevengits.
 * Improved: Add compatibility with plugin options for delivery or pickup date and time for "Delivery & Pickup Date Time for WooCommerce (Free)" by CodeRockz.
@@ -424,10 +424,10 @@ Fixed: Fix build process to save theme compat files in the right place.
 
 = 1.2.5 - 2021-08-02 =
 * Bump tested up to WordPress 5.8 and WooCommerce 5.5
-* Added: New filter hook `fc_place_order_button_classes` to allow developers to change the place order button classes.
+* Added: New filter hook `sc_place_order_button_classes` to allow developers to change the place order button classes.
 * Added: Handy "Settings" link on the plugins list.
 * Added: New feature to automatically hide shipping address fields when "Local Pickup" is selected.
-* Improved: Moved action hooks `fc_checkout_before_step_shipping_fields` and `fc_checkout_after_step_shipping_fields` do inside the shipping address fields wrapper element.
+* Improved: Moved action hooks `sc_checkout_before_step_shipping_fields` and `sc_checkout_after_step_shipping_fields` do inside the shipping address fields wrapper element.
 * Improved: Update translation to pt-BR.
 * Fixed: Added the place order section as a fragment in the checkout page as it is expected from the original WooCommerce behavior.
 * Fixed: Login link on error message for existing email does not open the login modal.
@@ -466,4 +466,4 @@ Fixed: Fix build process to save theme compat files in the right place.
 Moved local pickup functions and customizations to a new class, potentially breaking sites with customizations that rely on these functions.
 
 = 1.4 =
-Changes to "Proceed to <next_step>" button labels, custom translations will need to be updated. Changes the way customer session data is cleared. Renamed hook `fc_customer_persisted_data_clear_fields` to `fc_customer_persisted_data_clear_fields_order_processed` can break customizations use this hook.
+Changes to "Proceed to <next_step>" button labels, custom translations will need to be updated. Changes the way customer session data is cleared. Renamed hook `sc_customer_persisted_data_clear_fields` to `sc_customer_persisted_data_clear_fields_order_processed` can break customizations use this hook.

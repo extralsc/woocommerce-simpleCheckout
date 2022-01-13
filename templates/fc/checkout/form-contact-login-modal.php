@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Checkout contact login substep
  *
@@ -11,21 +12,21 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package fluid-checkout
+ * @package simple-checkout
  * @version 1.2.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 ?>
 
 <div class="fc-login-form" data-flyout data-flyout-modal data-flyout-checkout-login>
 	<div class="fc-login-form__inner" data-flyout-content>
 
 		<div class="fc-login-form__close-wrapper">
-			<a href="#close" class="button--flyout-close" title="<?php esc_attr_e( 'Close login form', 'fluidtheme' ) ?>" data-flyout-close aria-label="<?php echo esc_html( _x( 'Close', 'Close button aria-label', 'fluid-checkout' ) ); ?>"></a>
+			<a href="#close" class="button--flyout-close" title="<?php esc_attr_e('Close login form', 'fluidtheme') ?>" data-flyout-close aria-label="<?php echo esc_html(_x('Close', 'Close button aria-label', 'simple-checkout')); ?>"></a>
 		</div>
 
-		<div class="fc-login-form__title"><?php echo esc_html( __( 'Sign in to your account', 'fluid-checkout' ) ); ?></div>
+		<div class="fc-login-form__title"><?php echo esc_html(__('Sign in to your account', 'simple-checkout')); ?></div>
 
 		<?php woocommerce_login_form(); ?>
 

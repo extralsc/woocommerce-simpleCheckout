@@ -1,15 +1,17 @@
 <?php
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Compatibility with theme: Shoptimizer (by CommerceGurus).
  */
-class FluidCheckout_ThemeCompat_Shoptimizer extends FluidCheckout {
+class SimpleCheckout_ThemeCompat_Shoptimizer extends SimpleCheckout
+{
 
 	/**
 	 * __construct function.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->hooks();
 	}
 
@@ -18,9 +20,10 @@ class FluidCheckout_ThemeCompat_Shoptimizer extends FluidCheckout {
 	/**
 	 * Initialize hooks.
 	 */
-	public function hooks() {
+	public function hooks()
+	{
 		// Late hooks
-		add_action( 'init', array( $this, 'late_hooks' ), 100 );
+		add_action('init', array($this, 'late_hooks'), 100);
 	}
 
 
@@ -28,12 +31,13 @@ class FluidCheckout_ThemeCompat_Shoptimizer extends FluidCheckout {
 	/**
 	 * Add or remove late hooks.
 	 */
-	public function late_hooks() {
+	public function late_hooks()
+	{
 		// Removes Coupon code from woocommerce after checkout form
-		remove_action( 'woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
-		remove_action( 'woocommerce_before_cart', 'shoptimizer_cart_progress', 10 );
-		remove_action( 'woocommerce_before_checkout_form', 'shoptimizer_cart_progress', 5 );
+		remove_action('woocommerce_after_checkout_form', 'woocommerce_checkout_coupon_form', 10);
+		remove_action('woocommerce_before_cart', 'shoptimizer_cart_progress', 10);
+		remove_action('woocommerce_before_checkout_form', 'shoptimizer_cart_progress', 5);
 	}
 }
 
-FluidCheckout_ThemeCompat_Shoptimizer::instance();
+SimpleCheckout_ThemeCompat_Shoptimizer::instance();

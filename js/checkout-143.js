@@ -827,9 +827,9 @@ jQuery( function( $ ) {
 		remove_coupon: function( e ) {
 			e.preventDefault();
 
-			// CHANGE: Change container element to be the coupon code item if Fluid Checkout coupons feature is enabled
-			var isFluidCheckoutCouponsEnabled = $( this ).parents( '.fc-coupon-codes__coupon' ).length > 0;
-			var container = isFluidCheckoutCouponsEnabled ? $( this ).parents( '.fc-coupon-codes__coupon' ) : $( this ).parents( '.woocommerce-checkout-review-order' ),
+			// CHANGE: Change container element to be the coupon code item if simple checkout coupons feature is enabled
+			var isSimpleCheckoutCouponsEnabled = $( this ).parents( '.fc-coupon-codes__coupon' ).length > 0;
+			var container = isSimpleCheckoutCouponsEnabled ? $( this ).parents( '.fc-coupon-codes__coupon' ) : $( this ).parents( '.woocommerce-checkout-review-order' ),
 				coupon    = $( this ).data( 'coupon' );
 
 			container.addClass( 'processing' ).block({
@@ -846,7 +846,7 @@ jQuery( function( $ ) {
 			};
 
 			// CHANGE: Remove existing messages previously to sending request
-			if ( isFluidCheckoutCouponsEnabled ) {
+			if ( isSimpleCheckoutCouponsEnabled ) {
 				$( '.woocommerce-error, .woocommerce-message' ).remove();
 			}
 
@@ -856,7 +856,7 @@ jQuery( function( $ ) {
 				data:    data,
 				success: function( code ) {
 					// CHANGE: Unblock container and remove messages if using native WooCommerce coupons feature
-					if ( ! isFluidCheckoutCouponsEnabled ) {
+					if ( ! isSimpleCheckoutCouponsEnabled ) {
 						$( '.woocommerce-error, .woocommerce-message' ).remove();
 						container.removeClass( 'processing' ).unblock();
 					}
@@ -867,10 +867,10 @@ jQuery( function( $ ) {
 						var $substep = $( '.fc-step__substep[data-substep-id="coupon_codes"]' );
 
 						// CHANGE: Maybe display coupon code messages in the coupon code step instead of the top of the page
-						if ( isFluidCheckoutCouponsEnabled && $substep_title.length ) {
+						if ( isSimpleCheckoutCouponsEnabled && $substep_title.length ) {
 							$( code ).insertAfter( $substep_title );
 						}
-						else if ( isFluidCheckoutCouponsEnabled && $substep.length > 0 ) {
+						else if ( isSimpleCheckoutCouponsEnabled && $substep.length > 0 ) {
 							$substep.prepend( code );
 						}
 						else {

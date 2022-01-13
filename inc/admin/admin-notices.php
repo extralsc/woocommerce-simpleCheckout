@@ -1,15 +1,17 @@
 <?php
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Admin notices.
  */
-class FluidCheckout_AdminNotices extends FluidCheckout {
+class SimpleCheckout_AdminNotices extends SimpleCheckout
+{
 
 	/**
 	 * __construct function.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->hooks();
 	}
 
@@ -18,9 +20,10 @@ class FluidCheckout_AdminNotices extends FluidCheckout {
 	/**
 	 * Initialize hooks.
 	 */
-	public function hooks() {
-		add_action( 'admin_notices', array( $this, 'display_notices' ), 10 );
-		add_action( 'admin_init', array( $this, 'dismiss_notice' ), 10 );
+	public function hooks()
+	{
+		add_action('admin_notices', array($this, 'display_notices'), 10);
+		add_action('admin_init', array($this, 'dismiss_notice'), 10);
 	}
 
 
@@ -28,10 +31,11 @@ class FluidCheckout_AdminNotices extends FluidCheckout {
 	/**
 	 * Display notices if they exist.
 	 */
-	public static function display_notices() {
-		$notices = apply_filters( 'fc_admin_notices', array() );
+	public static function display_notices()
+	{
+		$notices = apply_filters('sc_admin_notices', array());
 
-		if ( empty( $notices ) ) {
+		if (empty($notices)) {
 			return;
 		}
 
@@ -44,30 +48,30 @@ class FluidCheckout_AdminNotices extends FluidCheckout {
 			'dismissable' => true,
 		);
 
-		foreach ( $notices as $notice ) {
-			$notice = wp_parse_args( $notice, $default_options );
+		foreach ($notices as $notice) {
+			$notice = wp_parse_args($notice, $default_options);
 
-			if ( is_null( $notice['name'] ) || self::is_dismissed( $notice['name'] ) ) {
+			if (is_null($notice['name']) || self::is_dismissed($notice['name'])) {
 				continue;
 			}
 
-			if ( $notice['dismissable'] ) {
-				$notice['actions'][] = '<a href="' . esc_url( add_query_arg( array( 'fc_action' => 'dismiss_notice', 'fc_notice' => $notice['name'] ) ) ) . '">' . __( 'Dismiss Notice', 'fluid-checkout' ) . '</a>';
+			if ($notice['dismissable']) {
+				$notice['actions'][] = '<a href="' . esc_url(add_query_arg(array('sc_action' => 'dismiss_notice', 'sc_notice' => $notice['name']))) . '">' . __('Dismiss Notice', 'simple-checkout') . '</a>';
 			}
-			
-			?>
+
+?>
 			<div class="notice fc-admin-notice <?php echo $notice['error'] === true ? 'notice-error' : ''; ?>" <?php echo $notice['error'] === true ? '' : 'style="border-left-color: #0047e1;"'; ?>>
-				<?php if ( ! empty( $notice['title'] ) ) : ?>
-					<p><strong><?php echo wp_kses_post( $notice['title'] ); ?></strong></p>
+				<?php if (!empty($notice['title'])) : ?>
+					<p><strong><?php echo wp_kses_post($notice['title']); ?></strong></p>
 				<?php endif; ?>
 
-				<p><?php echo wp_kses_post( $notice['description'] ); ?></p>
+				<p><?php echo wp_kses_post($notice['description']); ?></p>
 
-				<?php if ( is_array( $notice['actions'] ) && count( $notice['actions'] ) > 0 ) { ?>
-					<p><?php echo wp_kses_post( implode( ' ',  $notice['actions'] ) ); ?></p>
+				<?php if (is_array($notice['actions']) && count($notice['actions']) > 0) { ?>
+					<p><?php echo wp_kses_post(implode(' ',  $notice['actions'])); ?></p>
 				<?php } ?>
 			</div>
-			<?php
+<?php
 		}
 	}
 
@@ -80,8 +84,9 @@ class FluidCheckout_AdminNotices extends FluidCheckout {
 	 *
 	 * @return bool
 	 */
-	public static function is_dismissed( $name ) {
-		return (bool) get_option( 'fc_dismissed_notice_' . $name, false );
+	public static function is_dismissed($name)
+	{
+		return (bool) get_option('sc_dismissed_notice_' . $name, false);
 	}
 
 
@@ -89,30 +94,30 @@ class FluidCheckout_AdminNotices extends FluidCheckout {
 	/**
 	 * Dismiss notices.
 	 */
-	public static function dismiss_notice() {
+	public static function dismiss_notice()
+	{
 		// Permissions check.
-		if ( ! current_user_can( 'install_plugins' ) ) {
+		if (!current_user_can('install_plugins')) {
 			return;
 		}
 
-		$action = filter_input( INPUT_GET, 'fc_action', FILTER_SANITIZE_STRING );
+		$action = filter_input(INPUT_GET, 'sc_action', FILTER_SANITIZE_STRING);
 
 		// Bail if not our notices.
-		if ( 'dismiss_notice' !== $action ) {
+		if ('dismiss_notice' !== $action) {
 			return;
 		}
 
 		// Get notice.
-		$name = filter_input( INPUT_GET, 'fc_notice', FILTER_SANITIZE_STRING );
+		$name = filter_input(INPUT_GET, 'sc_notice', FILTER_SANITIZE_STRING);
 
-		if ( ! $name ) {
+		if (!$name) {
 			return;
 		}
 
 		// Update notice dismiss option
-		update_option( 'fc_dismissed_notice_' . $name, 1 );
+		update_option('sc_dismissed_notice_' . $name, 1);
 	}
-	
 }
 
-FluidCheckout_AdminNotices::instance();
+SimpleCheckout_AdminNotices::instance();

@@ -1,15 +1,17 @@
 <?php
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Compatibility with plugin: Rede WooCommerce (by Rede).
  */
-class FluidCheckout_RedeWooCommerce extends FluidCheckout {
+class SimpleCheckout_RedeWooCommerce extends SimpleCheckout
+{
 
 	/**
 	 * __construct function.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->hooks();
 	}
 
@@ -18,9 +20,10 @@ class FluidCheckout_RedeWooCommerce extends FluidCheckout {
 	/**
 	 * Initialize hooks.
 	 */
-	public function hooks() {
+	public function hooks()
+	{
 		// Add Rede payment gateway checkout fields to the persisted data skip list
-		add_filter( 'fc_customer_persisted_data_skip_fields', array( $this, 'add_rede_persisted_data_skip_fields' ), 10, 2 );
+		add_filter('sc_customer_persisted_data_skip_fields', array($this, 'add_rede_persisted_data_skip_fields'), 10, 2);
 	}
 
 
@@ -31,7 +34,8 @@ class FluidCheckout_RedeWooCommerce extends FluidCheckout {
 	 * @param  array  $skip_field_keys     Checkout field keys to skip from saving to the session.
 	 * @param  array  $parsed_posted_data  All parsed post data.
 	 */
-	public function add_rede_persisted_data_skip_fields( $skip_field_keys, $parsed_posted_data ) {
+	public function add_rede_persisted_data_skip_fields($skip_field_keys, $parsed_posted_data)
+	{
 		$rede_fields_keys = array(
 			'rede_credit_number',
 			'rede_credit_installments',
@@ -40,9 +44,8 @@ class FluidCheckout_RedeWooCommerce extends FluidCheckout {
 			'rede_credit_cvc',
 		);
 
-		return array_merge( $skip_field_keys, $rede_fields_keys );
+		return array_merge($skip_field_keys, $rede_fields_keys);
 	}
-
 }
 
-FluidCheckout_RedeWooCommerce::instance();
+SimpleCheckout_RedeWooCommerce::instance();

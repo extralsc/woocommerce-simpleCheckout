@@ -221,7 +221,7 @@ div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus {
 }
 div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus:before {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;

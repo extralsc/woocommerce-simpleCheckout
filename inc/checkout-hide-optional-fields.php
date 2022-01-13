@@ -1,15 +1,17 @@
 <?php
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Customizations to the checkout optional fields.
  */
-class FluidCheckout_CheckoutHideOptionalFields extends FluidCheckout {
+class SimpleCheckout_CheckoutHideOptionalFields extends SimpleCheckout
+{
 
 	/**
 	 * __construct function.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->hooks();
 	}
 
@@ -18,9 +20,10 @@ class FluidCheckout_CheckoutHideOptionalFields extends FluidCheckout {
 	/**
 	 * Initialize hooks.
 	 */
-	public function hooks() {
+	public function hooks()
+	{
 		// WooCommerce fields output
-		add_filter( 'woocommerce_form_field', array( $this, 'add_optional_form_field_link_button' ), 100, 4 );
+		add_filter('woocommerce_form_field', array($this, 'add_optional_form_field_link_button'), 100, 4);
 	}
 
 
@@ -28,8 +31,9 @@ class FluidCheckout_CheckoutHideOptionalFields extends FluidCheckout {
 	/**
 	 * Return Checkout Steps class instance.
 	 */
-	public function checkout_steps() {
-		return FluidCheckout_Steps::instance();
+	public function checkout_steps()
+	{
+		return SimpleCheckout_Steps::instance();
 	}
 
 
@@ -38,18 +42,19 @@ class FluidCheckout_CheckoutHideOptionalFields extends FluidCheckout {
 	 *
 	 * @return  Array  List of field ids to skip hidding.
 	 */
-	public function get_hide_optional_fields_skip_list() {
+	public function get_hide_optional_fields_skip_list()
+	{
 		// Always skip these fields
-		$skip_list = array( 'state', 'billing_state', 'shipping_state' );
+		$skip_list = array('state', 'billing_state', 'shipping_state');
 
 		// Maybe skip "address line 2" fields
-		if ( get_option( 'fc_hide_optional_fields_skip_address_2', 'no' ) === 'yes' ) {
+		if (get_option('sc_hide_optional_fields_skip_address_2', 'no') === 'yes') {
 			$skip_list[] = 'address_2';
 			$skip_list[] = 'shipping_address_2';
 			$skip_list[] = 'billing_address_2';
 		}
 
-		return apply_filters( 'fc_hide_optional_fields_skip_list', $skip_list );
+		return apply_filters('sc_hide_optional_fields_skip_list', $skip_list);
 	}
 
 
@@ -62,28 +67,39 @@ class FluidCheckout_CheckoutHideOptionalFields extends FluidCheckout {
 	 * @param   arrray  $args   Field args.
 	 * @param   mixed   $value  Value of the field. Defaults to `null`.
 	 */
-	public function add_optional_form_field_link_button( $field, $key, $args, $value ) {
+	public function add_optional_form_field_link_button($field, $key, $args, $value)
+	{
 		// Bail if field is required
-		if ( array_key_exists( 'required', $args ) && $args['required'] == true ) { return $field; }
+		if (array_key_exists('required', $args) && $args['required'] == true) {
+			return $field;
+		}
 
 		// Bail if field is not empty
-		if ( ! empty( $value ) ) { return $field; }
+		if (!empty($value)) {
+			return $field;
+		}
 
 		// Bail if field has already been hidden
 		// Needed for compatibility with plugins that call `woocommerce_form_field` multiple times for the same field
-		if ( false !== strpos( $field, 'id="fc-expansible-form-section__toggle--' . $key ) ) { return $field; }
+		if (false !== strpos($field, 'id="fc-expansible-form-section__toggle--' . $key)) {
+			return $field;
+		}
 
 		// Bail if optional field by its type
-		if ( in_array( $args['type'], apply_filters( 'fc_hide_optional_fields_skip_types', array( 'checkbox', 'radio', 'hidden' ) ) ) ) { return $field; }
+		if (in_array($args['type'], apply_filters('sc_hide_optional_fields_skip_types', array('checkbox', 'radio', 'hidden')))) {
+			return $field;
+		}
 
 		// Check if should skip current field
-		if ( in_array( $key, $this->get_hide_optional_fields_skip_list() ) ) { return $field; }
+		if (in_array($key, $this->get_hide_optional_fields_skip_list())) {
+			return $field;
+		}
 
 		// Set attribute `data-autofocus` to focus on the optional field when expanding the section
-		$field = str_replace( 'name="'. esc_attr( $key ) .'"', 'name="'. esc_attr( $key ) .'" data-autofocus', $field );
+		$field = str_replace('name="' . esc_attr($key) . '"', 'name="' . esc_attr($key) . '" data-autofocus', $field);
 
 		// Move container classes to expansible block
-		$container_class_esc = esc_attr( implode( ' ', $args['class'] ) );
+		$container_class_esc = esc_attr(implode(' ', $args['class']));
 		$expansible_section_args = array(
 			'section_attributes' => array(
 				'class' => 'form-row ' . $container_class_esc,
@@ -91,16 +107,16 @@ class FluidCheckout_CheckoutHideOptionalFields extends FluidCheckout {
 		);
 
 		// Remove the container class from the field element
-		$field = str_replace( 'form-row '. $container_class_esc, 'form-row ', $field );
+		$field = str_replace('form-row ' . $container_class_esc, 'form-row ', $field);
 
 		// Start buffer
 		ob_start();
 
 		// Add expansible block markup for the field
-		$form_field_label = get_option( 'fc_optional_fields_link_label_lowercase', 'yes' ) === 'yes' ? strtolower( $args['label'] ) : $args['label'];
+		$form_field_label = get_option('sc_optional_fields_link_label_lowercase', 'yes') === 'yes' ? strtolower($args['label']) : $args['label'];
 		/* translators: %s: Form field label */
-		$toggle_label = apply_filters( 'fc_expansible_section_toggle_label_'.$key, sprintf( __( 'Add %s', 'fluid-checkout' ), $form_field_label ) );
-		$this->checkout_steps()->output_expansible_form_section_start_tag( $key, $toggle_label, $expansible_section_args );
+		$toggle_label = apply_filters('sc_expansible_section_toggle_label_' . $key, sprintf(__('Add %s', 'simple-checkout'), $form_field_label));
+		$this->checkout_steps()->output_expansible_form_section_start_tag($key, $toggle_label, $expansible_section_args);
 		echo $field; // WPCS: XSS ok.
 		$this->checkout_steps()->output_expansible_form_section_end_tag();
 
@@ -109,7 +125,6 @@ class FluidCheckout_CheckoutHideOptionalFields extends FluidCheckout {
 
 		return $field;
 	}
-
 }
 
-FluidCheckout_CheckoutHideOptionalFields::instance();
+SimpleCheckout_CheckoutHideOptionalFields::instance();

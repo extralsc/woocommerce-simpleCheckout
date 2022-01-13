@@ -27,7 +27,7 @@ div.woocommerce .form-row .woocommerce-error {
 
 div.woocommerce .form-row .woocommerce-error:before {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;
@@ -83,7 +83,7 @@ div.woocommerce form .form-row.woocommerce-validated:not([class*=woocommerce-inv
 div.woocommerce form .form-row.woocommerce-validated:not([class*=woocommerce-invalid]) .select2-selection:after,
 div.woocommerce form .form-row.woocommerce-validated:not([class*=woocommerce-invalid]) .woocommerce-input-wrapper:after {
   display: inline-block;
-  font-family: "fluid-checkout-icons" !important;
+  font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
   font-weight: normal !important;
   font-variant: normal !important;

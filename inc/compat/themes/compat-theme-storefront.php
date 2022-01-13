@@ -1,15 +1,17 @@
 <?php
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Compatibility with theme: Storefront (by WooCommerce).
  */
-class FluidCheckout_ThemeCompat_Storefront extends FluidCheckout {
+class SimpleCheckout_ThemeCompat_Storefront extends SimpleCheckout
+{
 
 	/**
 	 * __construct function.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->hooks();
 	}
 
@@ -18,12 +20,13 @@ class FluidCheckout_ThemeCompat_Storefront extends FluidCheckout {
 	/**
 	 * Initialize hooks.
 	 */
-	public function hooks() {
+	public function hooks()
+	{
 		// Page container class
-		remove_filter( 'fc_content_section_class', array( FluidCheckout_Steps::instance(), 'fc_content_section_class' ), 10 );
+		remove_filter('sc_content_section_class', array(SimpleCheckout_Steps::instance(), 'sc_content_section_class'), 10);
 
 		// Coupon code button style
-		add_filter('fc_coupon_code_apply_button_classes', array( $this, 'change_coupon_code_apply_button_class' ), 10 );
+		add_filter('sc_coupon_code_apply_button_classes', array($this, 'change_coupon_code_apply_button_class'), 10);
 	}
 
 
@@ -33,11 +36,10 @@ class FluidCheckout_ThemeCompat_Storefront extends FluidCheckout {
 	 *
 	 * @param   string  $class  Coupon code apply button class.
 	 */
-	public function change_coupon_code_apply_button_class( $class ) {
+	public function change_coupon_code_apply_button_class($class)
+	{
 		return $class . ' button alt';
 	}
-
-
 }
 
-FluidCheckout_ThemeCompat_Storefront::instance();
+SimpleCheckout_ThemeCompat_Storefront::instance();

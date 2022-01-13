@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Checkout contact form
  *
@@ -11,41 +12,42 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package fluid-checkout
+ * @package simple-checkout
  * @version 1.3.1
  * @wc-version 3.6.0
  * @wc-original checkout/form-billing.php
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 ?>
 
-<?php do_action( 'fc_checkout_before_contact_fields' ); ?>
+<?php do_action('sc_checkout_before_contact_fields'); ?>
 
 <div class="fc-contact-fields fc-clearfix">
 
 	<div class="fc-contact-fields__wrapper">
-		<?php do_action( 'fc_checkout_contact_before_fields' ); ?>
+		<?php do_action('sc_checkout_contact_before_fields'); ?>
 
-		<?php // CHANGE: Display only fields in the contact step display list ?>
+		<?php // CHANGE: Display only fields in the contact step display list 
+		?>
 		<?php
 		$field_groups = $checkout->get_checkout_fields();
-		foreach ( $field_groups as $group_key => $fields ) {
-			foreach ( $fields as $key => $field ) {
+		foreach ($field_groups as $group_key => $fields) {
+			foreach ($fields as $key => $field) {
 				/**
 				 * The variable `$display_fields` is passed as a paramenter to this template file
-				 * @see Hook `fc_checkout_contact_step_field_ids`
+				 * @see Hook `sc_checkout_contact_step_field_ids`
 				 */
-				if ( in_array( $key, $display_fields ) ) {
-					woocommerce_form_field( $key, $field, $checkout->get_value( $key ) );
+				if (in_array($key, $display_fields)) {
+					woocommerce_form_field($key, $field, $checkout->get_value($key));
 				}
 			}
 		}
 		?>
 
-		<?php do_action( 'fc_checkout_contact_after_fields' ); ?>
+		<?php do_action('sc_checkout_contact_after_fields'); ?>
 	</div>
 
 </div>
 
-<?php do_action( 'fc_checkout_after_contact_fields' ); ?>
+<?php do_action('sc_checkout_after_contact_fields'); ?>

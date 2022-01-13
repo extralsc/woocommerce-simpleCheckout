@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Checkout Form
  *
@@ -16,44 +17,44 @@
  * @fc-version 1.2.0
  */
 
-if ( ! defined( 'ABSPATH' ) ) {
+if (!defined('ABSPATH')) {
 	exit;
 }
 
-do_action( 'woocommerce_before_checkout_form', $checkout );
+do_action('woocommerce_before_checkout_form', $checkout);
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
-if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_required() && ! is_user_logged_in() ) {
+if (!$checkout->is_registration_enabled() && $checkout->is_registration_required() && !is_user_logged_in()) {
 	echo '<div class="fc-must-login-notice">';
-	echo esc_html( apply_filters( 'woocommerce_checkout_must_be_logged_in_message', __( 'You must be logged in to checkout.', 'woocommerce' ) ) );
+	echo esc_html(apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'woocommerce')));
 	echo '</div>';
 	return;
 }
 
 ?>
 
-<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url( wc_get_checkout_url() ); ?>" enctype="multipart/form-data">
+<form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
 
-	<div id="fc-wrapper" class="fc-wrapper <?php echo esc_attr( apply_filters( 'fc_wrapper_classes', '' ) ); ?>">
+	<div id="fc-wrapper" class="fc-wrapper <?php echo esc_attr(apply_filters('sc_wrapper_classes', '')); ?>">
 
-		<?php do_action( 'fc_checkout_before', $checkout ); ?>
+		<?php do_action('sc_checkout_before', $checkout); ?>
 
 		<div class="fc-inside">
 
-			<?php do_action( 'fc_checkout_before_steps', $checkout ); ?>
+			<?php do_action('sc_checkout_before_steps', $checkout); ?>
 
 			<div class="fc-checkout-steps">
-				<?php do_action( 'fc_checkout_steps', $checkout ); ?>
+				<?php do_action('sc_checkout_steps', $checkout); ?>
 			</div>
 
-			<?php do_action( 'fc_checkout_after_steps', $checkout ); ?>
+			<?php do_action('sc_checkout_after_steps', $checkout); ?>
 
 		</div>
 
-		<?php do_action( 'fc_checkout_after', $checkout ); ?>
+		<?php do_action('sc_checkout_after', $checkout); ?>
 
 	</div>
 
 </form>
 
-<?php do_action( 'woocommerce_after_checkout_form', $checkout ); ?>
+<?php do_action('woocommerce_after_checkout_form', $checkout); ?>

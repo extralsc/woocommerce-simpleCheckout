@@ -1,4 +1,5 @@
 <?php
+
 /**
  * The checkout template file.
  *
@@ -11,28 +12,28 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package fluid-checkout
+ * @package simple-checkout
  * @version 1.2.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 // Replace site header with our implementation
-if ( FluidCheckout_Steps::instance()->get_hide_site_header_footer_at_checkout() ) {
-	wc_get_template( 'fc/header-checkout.php' );
+if (SimpleCheckout_Steps::instance()->get_hide_site_header_footer_at_checkout()) {
+	wc_get_template('fc/header-checkout.php');
 }
 // Display the site's default header
 else {
-	get_header( 'checkout' );
+	get_header('checkout');
 }
 ?>
-<div class="fc-content <?php echo esc_attr( apply_filters( 'fc_content_section_class', '' ) ); ?>">
+<div class="fc-content <?php echo esc_attr(apply_filters('sc_content_section_class', '')); ?>">
 
-	<h1 class="fc-checkout__title <?php echo false === apply_filters( 'fc_display_checkout_page_title', false ) ? 'screen-reader-text' : ''; ?>"><?php the_title(); ?></h1>
+	<h1 class="fc-checkout__title <?php echo false === apply_filters('sc_display_checkout_page_title', false) ? 'screen-reader-text' : ''; ?>"><?php the_title(); ?></h1>
 
 	<?php
 	// Load the checkout page content
-	while ( have_posts() ) :
+	while (have_posts()) :
 		the_post();
 		the_content();
 	endwhile;
@@ -42,10 +43,10 @@ else {
 
 <?php
 // Replace site header with our implementation
-if ( FluidCheckout_Steps::instance()->get_hide_site_header_footer_at_checkout() ) {
-	wc_get_template( 'fc/footer-checkout.php' );
+if (SimpleCheckout_Steps::instance()->get_hide_site_header_footer_at_checkout()) {
+	wc_get_template('fc/footer-checkout.php');
 }
 // Display the site's default header
 else {
-	get_footer( 'checkout' );
+	get_footer('checkout');
 }

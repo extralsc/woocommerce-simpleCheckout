@@ -1,15 +1,17 @@
 <?php
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
 /**
  * Compatibility with plugin: WooCommerce PDF Invoices & Packing Slips (by Ewout Fernhout).
  */
-class FluidCheckout_WooCommercePDFInvoicesPackingSlips extends FluidCheckout {
+class SimpleCheckout_WooCommercePDFInvoicesPackingSlips extends SimpleCheckout
+{
 
 	/**
 	 * __construct function.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->hooks();
 	}
 
@@ -18,19 +20,21 @@ class FluidCheckout_WooCommercePDFInvoicesPackingSlips extends FluidCheckout {
 	/**
 	 * Initialize hooks.
 	 */
-	public function hooks() {
+	public function hooks()
+	{
 		// Late hooks
-		add_action( 'init', array( $this, 'late_hooks' ), 100 );
+		add_action('init', array($this, 'late_hooks'), 100);
 	}
 
 	/**
 	 * Add or remove late hooks.
 	 */
-	public function late_hooks() {
+	public function late_hooks()
+	{
 		// Packing Slips customizations
-		if ( class_exists( 'FluidCheckout_PackingSlips' ) && class_exists( 'FluidCheckout_GiftOptions' ) && ! FluidCheckout_GiftOptions::instance()->is_gift_message_in_order_details() ) {
-			add_action( 'wpo_wcpdf_before_order_details', array( $this, 'output_message_box_for_packing_slips' ), 10, 2 );
-			add_action( 'wpo_wcpdf_template_styles', array( $this, 'add_message_box_styles_for_packing_slips' ), 10, 2 );
+		if (class_exists('SimpleCheckout_PackingSlips') && class_exists('SimpleCheckout_GiftOptions') && !SimpleCheckout_GiftOptions::instance()->is_gift_message_in_order_details()) {
+			add_action('wpo_wcpdf_before_order_details', array($this, 'output_message_box_for_packing_slips'), 10, 2);
+			add_action('wpo_wcpdf_template_styles', array($this, 'add_message_box_styles_for_packing_slips'), 10, 2);
 		}
 	}
 
@@ -42,11 +46,14 @@ class FluidCheckout_WooCommercePDFInvoicesPackingSlips extends FluidCheckout {
 	 * @param   string    $template_type  Type of document being generated. Possible values: `packing-slip`, `invoice`.
 	 * @param   WC_Order  $order          Order object.
 	 */
-	public function output_message_box_for_packing_slips( $template_type, $order ) {
+	public function output_message_box_for_packing_slips($template_type, $order)
+	{
 		// Bail if not packing slip
-		if ( 'packing-slip' !== $template_type ) { return; }
+		if ('packing-slip' !== $template_type) {
+			return;
+		}
 
-		echo FluidCheckout_PackingSlips::instance()->get_message_box_html( $order->get_id() );
+		echo SimpleCheckout_PackingSlips::instance()->get_message_box_html($order->get_id());
 	}
 
 
@@ -56,11 +63,11 @@ class FluidCheckout_WooCommercePDFInvoicesPackingSlips extends FluidCheckout {
 	 * @param   string          $css       CSS code for the printable document styles.
 	 * @param   Order_Document  $document  Invoice or Packing Slip document object.
 	 */
-	public function add_message_box_styles_for_packing_slips( $css, $order ) {
-		$css = $css . PHP_EOL . FluidCheckout_PackingSlips::instance()->get_message_box_styles();
+	public function add_message_box_styles_for_packing_slips($css, $order)
+	{
+		$css = $css . PHP_EOL . SimpleCheckout_PackingSlips::instance()->get_message_box_styles();
 		return $css;
 	}
-
 }
 
-FluidCheckout_WooCommercePDFInvoicesPackingSlips::instance();
+SimpleCheckout_WooCommercePDFInvoicesPackingSlips::instance();

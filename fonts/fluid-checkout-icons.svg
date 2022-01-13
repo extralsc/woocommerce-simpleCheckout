@@ -3,8 +3,8 @@
 <svg xmlns="http://www.w3.org/2000/svg">
 <metadata>Copyright (C) 2021 by original authors @ fontello.com</metadata>
 <defs>
-<font id="fluid-checkout-icons" horiz-adv-x="1000" >
-<font-face font-family="fluid-checkout-icons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<font id="simple-checkout-icons" horiz-adv-x="1000" >
+<font-face font-family="simple-checkout-icons" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
 <missing-glyph horiz-adv-x="1000" />
 <glyph glyph-name="alert-octagon" unicode="&#xe800;" d="M671-108h-342c-12 0-21 4-29 12l-246 246c-8 4-12 17-12 29v342c0 12 4 21 12 29l246 246c4 8 17 12 29 12h346c13 0 21-4 29-12l246-246c4-4 8-17 8-29v-346c0-12-4-21-12-29l-246-246c-4-4-17-8-29-8z m-325 83h312l221 221v308l-225 221h-308l-221-221v-312l221-217z m196 375v167c0 25-17 41-42 41s-42-16-42-41v-167c0-25 17-42 42-42s42 17 42 42z m-13-196c4 4 9 9 9 13 0 4 4 12 4 16 0 5 0 13-4 17-5 4-5 8-9 13 0 0-4 4-8 4s-4 4-8 4c-17 8-34 4-46-8-4-5-9-9-9-13 0-4-4-8-4-17 0-12 4-20 13-29 8-8 16-12 29-12 17 0 25 4 33 12z" horiz-adv-x="1000" />
 

@@ -4,7 +4,7 @@ defined('ABSPATH') || exit;
 /**
  * Customizations to the checkout fields.
  */
-class FluidCheckout_CheckoutFields extends FluidCheckout
+class SimpleCheckout_CheckoutFields extends SimpleCheckout
 {
 
 	/**
@@ -46,7 +46,7 @@ class FluidCheckout_CheckoutFields extends FluidCheckout
 	public function get_checkout_field_args()
 	{
 		$needs_shipping = is_checkout() ? WC()->cart->needs_shipping() : true;
-		$billing_email_description = $needs_shipping ? __('Order and tracking number will be sent to this email address.', 'fluid-checkout') : __('Order number and receipt will be sent to this email address.', 'fluid-checkout');
+		$billing_email_description = $needs_shipping ? __('Order and tracking number will be sent to this email address.', 'simple-checkout') : __('Order number and receipt will be sent to this email address.', 'simple-checkout');
 		$billing_company_class = get_option('woocommerce_checkout_phone_field', 'required') === 'required' ? 'form-row-last' : 'form-row-wide';
 
 		$fields_args = array(
@@ -81,7 +81,7 @@ class FluidCheckout_CheckoutFields extends FluidCheckout
 			$fields_args['shipping_state']['class'] = array('form-row');
 		}
 
-		return apply_filters('fc_checkout_field_args', $fields_args);
+		return apply_filters('sc_checkout_field_args', $fields_args);
 	}
 
 
@@ -94,8 +94,8 @@ class FluidCheckout_CheckoutFields extends FluidCheckout
 	public function change_default_locale_field_args($fields)
 	{
 		$new_field_args = array(
-			'address_1'           => array('class' => array('form-row-wide'), 'description' => __('House number and street name.', 'fluid-checkout')),
-			'address_2'           => array('class' => array('form-row-wide'), 'label' => __('Apartment, unit, building, floor, etc.', 'fluid-checkout'), 'placeholder' => __('Apartment, unit, building, floor, etc.', 'fluid-checkout')),
+			'address_1'           => array('class' => array('form-row-wide'), 'description' => __('House number and street name.', 'simple-checkout')),
+			'address_2'           => array('class' => array('form-row-wide'), 'label' => __('Apartment, unit, building, floor, etc.', 'simple-checkout'), 'placeholder' => __('Apartment, unit, building, floor, etc.', 'simple-checkout')),
 		);
 
 		// Only apply class changes on checkout and account pages
@@ -105,7 +105,7 @@ class FluidCheckout_CheckoutFields extends FluidCheckout
 			$new_field_args['state']['class'] = array('form-row');
 		}
 
-		$new_field_args = apply_filters('fc_default_locale_field_args', $new_field_args);
+		$new_field_args = apply_filters('sc_default_locale_field_args', $new_field_args);
 
 		foreach ($fields as $field_key => $original_args) {
 			$new_args = array_key_exists($field_key, $new_field_args) ? $new_field_args[$field_key] : array();
@@ -301,4 +301,4 @@ class FluidCheckout_CheckoutFields extends FluidCheckout
 	}
 }
 
-FluidCheckout_CheckoutFields::instance();
+SimpleCheckout_CheckoutFields::instance();

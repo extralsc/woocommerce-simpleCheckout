@@ -1,26 +1,29 @@
 <?php
+
 /**
  * WooCommerce Checkout Settings
  *
- * @package fluid-checkout
+ * @package simple-checkout
  * @version 1.2.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 
-if ( class_exists( 'WC_Settings_FluidCheckout_WCShippingSettings', false ) ) {
-	return new WC_Settings_FluidCheckout_WCShippingSettings();
+if (class_exists('WC_Settings_SimpleCheckout_WCShippingSettings', false)) {
+	return new WC_Settings_SimpleCheckout_WCShippingSettings();
 }
 
 /**
- * WC_Settings_FluidCheckout_WCShippingSettings.
+ * WC_Settings_SimpleCheckout_WCShippingSettings.
  */
-class WC_Settings_FluidCheckout_WCShippingSettings extends WC_Settings_Page {
+class WC_Settings_SimpleCheckout_WCShippingSettings extends WC_Settings_Page
+{
 
 	/**
 	 * __construct function.
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->hooks();
 	}
 
@@ -29,31 +32,36 @@ class WC_Settings_FluidCheckout_WCShippingSettings extends WC_Settings_Page {
 	/**
 	 * Initialize hooks.
 	 */
-	public function hooks() {
+	public function hooks()
+	{
 		// WooCommerce Shipping Settings
-		add_filter( 'woocommerce_get_settings_shipping', array( $this, 'change_shipping_destination_settings_args' ), 100, 2 );
+		add_filter('woocommerce_get_settings_shipping', array($this, 'change_shipping_destination_settings_args'), 100, 2);
 	}
 
 
 
-	public function change_shipping_destination_settings_args( $settings, $current_section ) {
+	public function change_shipping_destination_settings_args($settings, $current_section)
+	{
 		// Bail if not on shipping options section
-		if ( $current_section != 'options' ) { return $settings; }
+		if ($current_section != 'options') {
+			return $settings;
+		}
 
 		// Iterate shipping settings
-		foreach ( $settings as $key => $setting_args ) {
+		foreach ($settings as $key => $setting_args) {
 			// Skip settings other than shipping destination
-			if ( ! array_key_exists( 'id', $setting_args ) ||  $setting_args[ 'id' ] !== 'woocommerce_ship_to_destination' ) { continue; }
+			if (!array_key_exists('id', $setting_args) ||  $setting_args['id'] !== 'woocommerce_ship_to_destination') {
+				continue;
+			}
 
 			// Disable shipping destination options and change tooltip/description explaining why it was disabled
-			$setting_args[ 'custom_attributes' ]['disabled'] = true;
-			$setting_args[ 'desc' ] = __( 'The shipping destination is always set to "Default to customer shipping address" when Fluid Checkout is activated. Customers can still provide different shipping and billing addresses during checkout, an option for setting the default billing address to be the same as the shipping address is available at WooCommerce > Settings > Fluid Checkout > Address Fields.', 'fluid-checkout' );
-			$settings[ $key ] = $setting_args;
+			$setting_args['custom_attributes']['disabled'] = true;
+			$setting_args['desc'] = __('The shipping destination is always set to "Default to customer shipping address" when simple checkout is activated. Customers can still provide different shipping and billing addresses during checkout, an option for setting the default billing address to be the same as the shipping address is available at WooCommerce > Settings > simple checkout > Address Fields.', 'simple-checkout');
+			$settings[$key] = $setting_args;
 		}
 
 		return $settings;
 	}
-
 }
 
-return new WC_Settings_FluidCheckout_WCShippingSettings();
+return new WC_Settings_SimpleCheckout_WCShippingSettings();

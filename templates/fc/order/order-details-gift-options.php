@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Checkout gift options order details section
  *
@@ -11,29 +12,29 @@
  * the readme will list any important changes.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
- * @package fluid-checkout
+ * @package simple-checkout
  * @version 1.2.0
  */
 
-defined( 'ABSPATH' ) || exit;
+defined('ABSPATH') || exit;
 ?>
 
 <section class="fc-gift-options--order-details">
 
-	<h2 class="woocommerce-column__title"><?php echo esc_html( _x( 'Gift message', 'Gift options section title in the order details', 'fluid-checkout' ) ); ?></h2>
+	<h2 class="woocommerce-column__title"><?php echo esc_html(_x('Gift message', 'Gift options section title in the order details', 'simple-checkout')); ?></h2>
 
 	<figure class="fc-gift-options__message">
 
-		<?php if ( isset( $gift_options ) && array_key_exists( '_fc_gift_message', $gift_options ) && ! empty( $gift_options[ '_fc_gift_message' ] ) ) : ?>
+		<?php if (isset($gift_options) && array_key_exists('_sc_gift_message', $gift_options) && !empty($gift_options['_sc_gift_message'])) : ?>
 			<blockquote class="fc-gift-options__message-text">
-				<?php echo esc_html( $gift_options[ '_fc_gift_message' ] ); ?>
+				<?php echo esc_html($gift_options['_sc_gift_message']); ?>
 			</blockquote>
 		<?php endif; ?>
 
-		<?php if ( isset( $gift_options ) && array_key_exists( '_fc_gift_from', $gift_options ) && ! empty( $gift_options[ '_fc_gift_from' ] ) ) : ?>
+		<?php if (isset($gift_options) && array_key_exists('_sc_gift_from', $gift_options) && !empty($gift_options['_sc_gift_from'])) : ?>
 			<figcaption class="fc-gift-options__message-from">
-				<span class="screen-reader-text"><?php echo esc_attr( _x( 'From:', 'Label on the order details for person sending the gift', 'fluid-checkout' ) ); ?></span>
-				<?php echo esc_html( $gift_options[ '_fc_gift_from' ] ); ?>
+				<span class="screen-reader-text"><?php echo esc_attr(_x('From:', 'Label on the order details for person sending the gift', 'simple-checkout')); ?></span>
+				<?php echo esc_html($gift_options['_sc_gift_from']); ?>
 			</figcaption>
 		<?php endif; ?>
 
