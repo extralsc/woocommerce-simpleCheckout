@@ -91,7 +91,7 @@ class SimpleCheckout_CheckoutLocalPickup extends SimpleCheckout
 	public function output_substep_state_hidden_fields_shipping_fields()
 	{
 		$substep_editable_value = !$this->is_shipping_method_local_pickup_selected() ? 'yes' : 'no';
-		echo '<input class="fc-substep-editable-state" type="hidden" value="' . $substep_editable_value . '" />';
+		echo '<input class="sc-substep-editable-state" type="hidden" value="' . $substep_editable_value . '" />';
 	}
 
 
@@ -186,7 +186,7 @@ class SimpleCheckout_CheckoutLocalPickup extends SimpleCheckout
 		$substep_id = 'shipping_address';
 		$substep_title = $this->maybe_change_shipping_address_substep_title(__('Shipping to', 'simple-checkout'));
 		$html = SimpleCheckout_Steps::instance()->get_substep_title_html($substep_id, $substep_title);
-		$fragments['.fc-step__substep-title--shipping_address'] = $html;
+		$fragments['.sc-step__substep-title--shipping_address'] = $html;
 		return $fragments;
 	}
 
@@ -221,8 +221,8 @@ class SimpleCheckout_CheckoutLocalPickup extends SimpleCheckout
 				'postcode' => WC()->countries->get_base_postcode(),
 			);
 
-			$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--shipping-address">';
-			$html .= '<div class="fc-step__substep-text-line">' . WC()->countries->get_formatted_address($address_data) . '</div>'; // WPCS: XSS ok.
+			$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--shipping-address">';
+			$html .= '<div class="sc-step__substep-text-line">' . WC()->countries->get_formatted_address($address_data) . '</div>'; // WPCS: XSS ok.
 			$html .= '</div>';
 		}
 

@@ -2,7 +2,7 @@
 // EXPRESS CHECKOUT
 // ------------------------------------
 
-.fc-wrapper .fc-express-checkout__inner {
+.sc-wrapper .sc-express-checkout__inner {
 	margin: 0 0 remsize( -.1rem ); // Prevent double borders
 	padding: $checkout-substep-padding;
 	border: solid remsize( .1rem ) $border-color;
@@ -15,7 +15,7 @@
 
 
 
-.fc-wrapper .fc-express-checkout__title {
+.sc-wrapper .sc-express-checkout__title {
 	margin: $checkout-substep-title-margin;
 	padding: $checkout-substep-title-padding;
 	color: $checkout-substep-title-color;
@@ -33,19 +33,19 @@
 	}
 	
 }
-.fc-wrapper .fc-express-checkout__title:before,
-.fc-wrapper .fc-express-checkout__title:after {
+.sc-wrapper .sc-express-checkout__title:before,
+.sc-wrapper .sc-express-checkout__title:after {
 	@include clearfix();
 }
 
 
 
-.fc-wrapper .fc-express-checkout__separator {
+.sc-wrapper .sc-express-checkout__separator {
 	position: relative;
 	margin: $global-spacing-small 0;
 	text-align: center;
 }
-.fc-wrapper .fc-express-checkout__separator:before {
+.sc-wrapper .sc-express-checkout__separator:before {
 	z-index: z( 'default' );
 	content: '';
 	position: absolute;
@@ -56,7 +56,7 @@
 	background-color: $border-color;
 }
 
-.fc-wrapper .fc-express-checkout__separator-text {
+.sc-wrapper .sc-express-checkout__separator-text {
 	z-index: z( 'above' );
 	position: relative;
 	display: inline-block;

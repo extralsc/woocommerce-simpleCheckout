@@ -107,37 +107,37 @@ div.woocommerce form #shipping_address_2_field > label {
   color: #6A6A6A;
 }
 
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group {
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group {
   margin: 0 -20px -20px;
   padding: 20px;
   background-color: #F0F4F4;
 }
 @media (min-width: 1000px) {
-  .fc-content div.woocommerce form .fc-wrapper .fc-field-group {
+  .sc-content div.woocommerce form .sc-wrapper .sc-field-group {
     margin: 0 -20px -20px;
     padding: 20px;
   }
 }
 
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group:before,
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group:after {
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group:before,
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group:after {
   content: "";
   display: table;
   table-layout: fixed;
   width: 100%;
 }
 
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group textarea,
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group select,
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group input[type=email],
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group input[type=number],
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group input[type=date],
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group input[type=search],
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group input[type=text],
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group input[type=tel],
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group input[type=url],
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group input[type=password],
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group #billing_email {
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group textarea,
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group select,
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group input[type=email],
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group input[type=number],
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group input[type=date],
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group input[type=search],
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group input[type=text],
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group input[type=tel],
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group input[type=url],
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group input[type=password],
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group #billing_email {
   background-color: #fff !important;
   border: 1px solid #e1e1e1;
   box-shadow: none !important;
@@ -199,12 +199,12 @@ div.woocommerce form .form-row textarea {
   min-height: 100px;
 }
 
-div.woocommerce .fc-expansible-form-section {
+div.woocommerce .sc-expansible-form-section {
   background-color: transparent;
   box-shadow: none;
 }
 
-div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus {
+div.woocommerce .sc-expansible-form-section .expansible-section__toggle-plus {
   position: relative;
   display: inline-block;
   width: auto;
@@ -215,11 +215,11 @@ div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus {
   font-size: 15px;
 }
 @media (min-width: 750px) {
-  div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus {
+  div.woocommerce .sc-expansible-form-section .expansible-section__toggle-plus {
     font-size: 15px;
   }
 }
-div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus:before {
+div.woocommerce .sc-expansible-form-section .expansible-section__toggle-plus:before {
   display: inline-block;
   font-family: "simple-checkout-icons" !important;
   font-style: normal !important;
@@ -240,24 +240,24 @@ div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus:bef
   top: 50%;
   transform: translateY(-50%);
 }
-div.woocommerce .fc-expansible-form-section .expansible-section__toggle-plus:focus {
+div.woocommerce .sc-expansible-form-section .expansible-section__toggle-plus:focus {
   outline: dotted 1px #6a6a6a;
   outline-offset: 1px;
 }
 
-div.woocommerce .fc-expansible-form-section.form-row .form-row {
+div.woocommerce .sc-expansible-form-section.form-row .form-row {
   margin: 0;
   padding: 0;
   width: 100%;
 }
 
 @media (min-width: 750px) {
-  div.woocommerce .fc-expansible-form-section.form-row.form-row-first + .form-row-last .fc-expansible-form-section__toggle .collapsible-content__inner {
+  div.woocommerce .sc-expansible-form-section.form-row.form-row-first + .form-row-last .sc-expansible-form-section__toggle .collapsible-content__inner {
     padding-top: 1.8em;
   }
 }
 
-body:not(.has-collapsible-block) .fc-expansible-form-section__toggle.is-collapsed .collapsible-content__inner,
-body:not(.has-collapsible-block) .fc-expansible-form-section__content.is-collapsed .collapsible-content__inner {
+body:not(.has-collapsible-block) .sc-expansible-form-section__toggle.is-collapsed .collapsible-content__inner,
+body:not(.has-collapsible-block) .sc-expansible-form-section__content.is-collapsed .collapsible-content__inner {
   display: none;
 }

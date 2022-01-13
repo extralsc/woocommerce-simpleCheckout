@@ -1,18 +1,18 @@
 // ------------------------------------
 // CHECKOUT LOGIN
 // ------------------------------------
-.fc-login-form,
-.fc-login-form * {
+.sc-login-form,
+.sc-login-form * {
 	box-sizing: border-box !important; // Needed to override theme styles breaking the layout
 }
 
-.has-flyout [data-flyout][data-flyout-modal].is-activated .fc-login-form__inner[data-flyout-content] {
+.has-flyout [data-flyout][data-flyout-modal].is-activated .sc-login-form__inner[data-flyout-content] {
 	padding-bottom: $global-spacing-medium;
 	max-width: remsize( 42rem );
 }
 
 
-.fc-wrapper .fc-step__substep[data-substep-id="contact_login"] {
+.sc-wrapper .sc-step__substep[data-substep-id="contact_login"] {
 	padding-bottom: $global-spacing-tiny;
 	border-top: 0;
 	border-bottom: 0;
@@ -20,14 +20,14 @@
 
 
 
-.fc-contact-login__cta-text {
+.sc-contact-login__cta-text {
 	margin-bottom: 0;
 	text-align: center;
 }
 
 
 
-.fc-contact-login__action {
+.sc-contact-login__action {
 	text-decoration: underline;
 	cursor: pointer;
 
@@ -39,12 +39,12 @@
 
 
 
-.fc-contact-login__separator {
+.sc-contact-login__separator {
 	position: relative;
 	margin-top: $global-spacing-small;
 	text-align: center;
 }
-.fc-contact-login__separator:before {
+.sc-contact-login__separator:before {
 	z-index: z( 'default' );
 	content: '';
 	position: absolute;
@@ -55,7 +55,7 @@
 	background-color: $border-color;
 }
 
-.fc-contact-login__separator-text {
+.sc-contact-login__separator-text {
 	z-index: z( 'above' );
 	position: relative;
 	display: inline-block;
@@ -72,23 +72,23 @@
 // ------------------------------------
 // CHECKOUT LOGIN FORM
 // ------------------------------------
-.woocommerce-checkout .fc-login-form form.login {
+.woocommerce-checkout .sc-login-form form.login {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
 
 
-.fc-login-form .fc-login-form__close-wrapper {
+.sc-login-form .sc-login-form__close-wrapper {
 	text-align: right;
 }
 
-.fc-login-form .button--flyout-close {
+.sc-login-form .button--flyout-close {
 	position: absolute;
 	top: $global-spacing-small;
 	right: $global-spacing-small;
 }
-.fc-login-form .button--flyout-close:before {
+.sc-login-form .button--flyout-close:before {
 	@include icon-styles();
 	@include icon( 'i-x' );
 	@include icon-size( $icon-size );
@@ -96,7 +96,7 @@
 
 
 
-.fc-login-form__title {
+.sc-login-form__title {
 	margin-top: $global-spacing;
 	margin-bottom: $global-spacing-small;
 	font-size: $font-size-medium;
@@ -106,7 +106,7 @@
 
 
 
-.fc-login-form .woocommerce-form-login__submit {
+.sc-login-form .woocommerce-form-login__submit {
 	margin-top: $global-spacing-small;
 }
 
@@ -116,7 +116,7 @@
 // ------------------------------------
 // CHECKOUT LOGIN FORM FIELDS
 // ------------------------------------
-.woocommerce-checkout .fc-login-form form.login .form-row {
+.woocommerce-checkout .sc-login-form form.login .form-row {
 	display: block;
 	margin: 0 0 $global-spacing-small;
 	width: 100%;
@@ -124,13 +124,13 @@
 
 
 
-.woocommerce-checkout .fc-login-form form.login .form-row input[type="text"],
-.woocommerce-checkout .fc-login-form form.login .form-row input[type="password"],
-.woocommerce-checkout .fc-login-form form.login .fc-login-button {
+.woocommerce-checkout .sc-login-form form.login .form-row input[type="text"],
+.woocommerce-checkout .sc-login-form form.login .form-row input[type="password"],
+.woocommerce-checkout .sc-login-form form.login .sc-login-button {
 	margin: 0;
 }
 
-.woocommerce-checkout .fc-login-form form.login .woocommerce-button.woocommerce-form-login__submit {
+.woocommerce-checkout .sc-login-form form.login .woocommerce-button.woocommerce-form-login__submit {
 	box-sizing: border-box !important; // Needed to override theme styles breaking the layout
 	margin: 0 0 $global-spacing-small;
 	width: 100%;
@@ -139,7 +139,7 @@
 
 
 
-.woocommerce-checkout .fc-login-form form.login .lost_password {
+.woocommerce-checkout .sc-login-form form.login .lost_password {
 	float: none;
 	text-align: center;
 }

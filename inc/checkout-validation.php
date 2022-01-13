@@ -55,7 +55,7 @@ class SimpleCheckout_Validation extends SimpleCheckout
 			return $classes;
 		}
 
-		return array_merge($classes, array('has-fc-checkout-validation'));
+		return array_merge($classes, array('has-sc-checkout-validation'));
 	}
 
 
@@ -71,11 +71,11 @@ class SimpleCheckout_Validation extends SimpleCheckout
 		}
 
 		// Styles
-		wp_enqueue_style('fc-checkout-validation', self::$directory_url . 'css/checkout-validation' . self::$asset_version . '.css', array('fc-checkout-layout'), NULL);
+		wp_enqueue_style('sc-checkout-validation', self::$directory_url . 'css/checkout-validation' . self::$asset_version . '.css', array('sc-checkout-layout'), NULL);
 
 		// Checkout steps scripts
-		wp_enqueue_script('fc-checkout-validation', self::$directory_url . 'js/checkout-validation' . self::$asset_version . '.js', array('jquery', 'wc-checkout'), NULL, true);
-		wp_add_inline_script('fc-checkout-validation', 'window.addEventListener("load",function(){CheckoutValidation.init(fcSettings.checkoutValidation);})');
+		wp_enqueue_script('sc-checkout-validation', self::$directory_url . 'js/checkout-validation' . self::$asset_version . '.js', array('jquery', 'wc-checkout'), NULL, true);
+		wp_add_inline_script('sc-checkout-validation', 'window.addEventListener("load",function(){CheckoutValidation.init(fcSettings.checkoutValidation);})');
 	}
 
 
@@ -94,7 +94,7 @@ class SimpleCheckout_Validation extends SimpleCheckout
 			'alwaysValidateFieldsSelector' => '',
 			'mailcheckSuggestions' => array(
 				/* translators: %s: html for the email address typo correction suggestion link */
-				'suggestedElementTemplate'    => '<div class="fc-mailcheck-suggestion" data-mailcheck-suggestion>' . sprintf(__('Did you mean %s?', 'simple-checkout'), '<a class="mailcheck-suggestion" href="#apply-suggestion" role="button" aria-label="' . esc_attr(__('Change email address to: {suggestion-value}', 'simple-checkout')) . '" data-mailcheck-apply data-suggestion-value="{suggestion-value}">{suggestion}</a>') . '</div>',
+				'suggestedElementTemplate'    => '<div class="sc-mailcheck-suggestion" data-mailcheck-suggestion>' . sprintf(__('Did you mean %s?', 'simple-checkout'), '<a class="mailcheck-suggestion" href="#apply-suggestion" role="button" aria-label="' . esc_attr(__('Change email address to: {suggestion-value}', 'simple-checkout')) . '" data-mailcheck-apply data-suggestion-value="{suggestion-value}">{suggestion}</a>') . '</div>',
 			),
 			'validationMessages' => array(
 				'required'                    => __('This is a required field.', 'simple-checkout'),

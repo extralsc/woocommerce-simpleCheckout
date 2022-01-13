@@ -73,7 +73,7 @@ class SimpleCheckout_WooCommerceGermanMarket extends SimpleCheckout
 			return $classes;
 		}
 
-		$classes[] = 'has-fc-compat-german-market';
+		$classes[] = 'has-sc-compat-german-market';
 		return $classes;
 	}
 
@@ -89,7 +89,7 @@ class SimpleCheckout_WooCommerceGermanMarket extends SimpleCheckout
 			return $classes;
 		}
 
-		$classes[] = 'has-fc-compat-german-market-button-placement';
+		$classes[] = 'has-sc-compat-german-market-button-placement';
 		return $classes;
 	}
 

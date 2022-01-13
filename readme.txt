@@ -76,12 +76,12 @@ We are working to bring to you the following PRO features:
 * Cart page optimization
 * Edit cart at checkout
 * Thank you / Order confirmation page
-* [Google Address Autocomplete for WooCommerce](https://SimpleCheckout.com/product/fc-google-address-autocomplete/)
+* [Google Address Autocomplete for WooCommerce](https://SimpleCheckout.com/product/sc-google-address-autocomplete/)
 * Customize checkout steps and fields
 * Account matching, let registered customers complete the purchase without logging in and attach the order to their account
 * Account pages optimization
 
-**[Google Address Autocomplete for WooCommerce](https://SimpleCheckout.com/product/fc-google-address-autocomplete/) is now available as a stand-alone plugin**.
+**[Google Address Autocomplete for WooCommerce](https://SimpleCheckout.com/product/sc-google-address-autocomplete/) is now available as a stand-alone plugin**.
 
 
 == Need more features? ==
@@ -276,10 +276,10 @@ We are working on building the PRO version of simple checkout. Visit [our websit
 
 == Changelog ==
 
-= 1.4.3 - 2022-01-12 =
+= 0.9.9 - 2022-01-12 =
 
 * Added: New actions `sc_checkout_header_widgets_inside_before` and `sc_checkout_header_widgets_inside_after` to add content inside the checkout header widget area via PHP code.
-* Improved: Moved checkout header widgets to before the cart icon link in the template file `fc/checkout/checkout-header.php`.
+* Improved: Moved checkout header widgets to before the cart icon link in the template file `sc/checkout/checkout-header.php`.
 * Improved: Compatibility with plugin WooCommerce Stripe Payment Gateway - by WooCommerce.
 * Fixed: Use of deprecated function `is_ajax` on payment.php template file since WooCommerce 6.1.0.
 * Fixed: Fatal error while adding gift message styles to email notifications if only one parameter is provider, while two parameters are expected.

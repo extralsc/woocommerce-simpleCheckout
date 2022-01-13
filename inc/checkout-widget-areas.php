@@ -106,7 +106,7 @@ class SimpleCheckout_CheckoutWidgetAreas extends SimpleCheckout
 	public function output_widget_area_checkout_header()
 	{
 		if (is_active_sidebar('sc_checkout_header') || has_action('sc_checkout_header_widgets_inside_before') || has_action('sc_checkout_header_widgets_inside_after')) :
-			echo '<div class="fc-checkout__header-widgets">';
+			echo '<div class="sc-checkout__header-widgets">';
 			do_action('sc_checkout_header_widgets_inside_before');
 			dynamic_sidebar('sc_checkout_header');
 			do_action('sc_checkout_header_widgets_inside_after');
@@ -120,7 +120,7 @@ class SimpleCheckout_CheckoutWidgetAreas extends SimpleCheckout
 	public function output_widget_area_checkout_header_below()
 	{
 		if (is_active_sidebar('sc_checkout_below_header')) :
-			echo '<div class="fc-checkout__below-header-widgets">';
+			echo '<div class="sc-checkout__below-header-widgets">';
 			dynamic_sidebar('sc_checkout_below_header');
 			echo '</div>';
 		endif;
@@ -141,7 +141,7 @@ class SimpleCheckout_CheckoutWidgetAreas extends SimpleCheckout
 		}
 
 		if (is_active_sidebar('sc_checkout_sidebar_after')) :
-			echo '<div class="fc-checkout-order-review__widgets-outside">';
+			echo '<div class="sc-checkout-order-review__widgets-outside">';
 			dynamic_sidebar('sc_checkout_sidebar_after');
 			echo '</div>';
 		endif;
@@ -162,7 +162,7 @@ class SimpleCheckout_CheckoutWidgetAreas extends SimpleCheckout
 		}
 
 		if (is_active_sidebar('sc_order_summary_after')) :
-			echo '<div class="fc-checkout-order-review__widgets-inside">';
+			echo '<div class="sc-checkout-order-review__widgets-inside">';
 			dynamic_sidebar('sc_order_summary_after');
 			echo '</div>';
 		endif;
@@ -176,7 +176,7 @@ class SimpleCheckout_CheckoutWidgetAreas extends SimpleCheckout
 	public function output_widget_area_checkout_place_order_below()
 	{
 		if (is_active_sidebar('sc_place_order_after')) :
-			echo '<div class="fc-checkout__below-place-order-widgets">';
+			echo '<div class="sc-checkout__below-place-order-widgets">';
 			dynamic_sidebar('sc_place_order_after');
 			echo '</div>';
 		endif;

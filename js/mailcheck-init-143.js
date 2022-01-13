@@ -24,7 +24,7 @@
 		suggestionElementSelector: '[data-mailcheck-suggestion]',
 		suggestionApplySelector: '[data-mailcheck-apply]',
 		suggestionValueAttr: 'data-suggestion-value',
-		suggestedElementTemplate: '<div class="fc-mailcheck-suggestion" data-mailcheck-suggestion>Did you mean <a class="mailcheck-suggestion" href="#apply-suggestion" data-mailcheck-apply data-suggestion-value="{suggestion-value}">{suggestion}</a>?</div>',
+		suggestedElementTemplate: '<div class="sc-mailcheck-suggestion" data-mailcheck-suggestion>Did you mean <a class="mailcheck-suggestion" href="#apply-suggestion" data-mailcheck-apply data-suggestion-value="{suggestion-value}">{suggestion}</a>?</div>',
 		suggestionTemplate: '{address}@<span class="mailcheck-suggestion-domain">{domain}</span>',
 	}
 	var _key = {

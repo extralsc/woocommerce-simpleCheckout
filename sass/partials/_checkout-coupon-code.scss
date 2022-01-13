@@ -1,25 +1,25 @@
 // ------------------------------------
 // CHECKOUT COUPON CODE
 // ------------------------------------
-.fc-wrapper .fc-expansible-form-section__content--coupon_code .collapsible-content__inner {
+.sc-wrapper .sc-expansible-form-section__content--coupon_code .collapsible-content__inner {
 	position: relative;
 }
 
-.fc-wrapper .fc-expansible-form-section__content--coupon_code .form-row {
+.sc-wrapper .sc-expansible-form-section__content--coupon_code .form-row {
 	float: none;
 	margin: 0;
 	padding: 0;
 }
 
-.fc-wrapper .fc-expansible-form-section__content--coupon_code input#coupon_code {
+.sc-wrapper .sc-expansible-form-section__content--coupon_code input#coupon_code {
 	height: remsize( 5.5rem );
 }
-.fc-wrapper .fc-expansible-form-section__content--coupon_code input#coupon_code:focus {
+.sc-wrapper .sc-expansible-form-section__content--coupon_code input#coupon_code:focus {
 	position: relative;
 	z-index: z( 'above' );
 }
 
-.fc-wrapper .fc-expansible-form-section__content--coupon_code .fc-coupon-code__apply {
+.sc-wrapper .sc-expansible-form-section__content--coupon_code .sc-coupon-code__apply {
 	z-index: z( 'above' ) + 1;
 	position: absolute;
 	top: remsize( .5rem );
@@ -40,11 +40,11 @@
 
 
 
-.fc-wrapper .fc-step__substep-text-content--coupon-codes:not( :empty ) {
+.sc-wrapper .sc-step__substep-text-content--coupon-codes:not( :empty ) {
 	margin-bottom: $global-spacing-small;
 }
 
-.fc-wrapper .fc-coupon-codes__coupon {
+.sc-wrapper .sc-coupon-codes__coupon {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -54,12 +54,12 @@
 	border-radius: $coupon-code-coupon-border-radius;
 }
 
-.fc-wrapper .fc-coupon-codes__coupon-amount {
+.sc-wrapper .sc-coupon-codes__coupon-amount {
 	flex-wrap: wrap;
 	flex-shrink: 0;
 }
 
-.fc-wrapper .fc-coupon-codes__coupon-amount .woocommerce-remove-coupon {
+.sc-wrapper .sc-coupon-codes__coupon-amount .woocommerce-remove-coupon {
 	margin-left: $coupon-code-remove-spacing;
 	font-size: $coupon-code-remove-font-size;
 	font-weight: $coupon-code-remove-font-weight;

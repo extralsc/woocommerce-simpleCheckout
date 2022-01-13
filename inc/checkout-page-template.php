@@ -38,7 +38,7 @@ class SimpleCheckout_CheckoutPageTemplate extends SimpleCheckout
 		}
 
 		// Locate new checkout page template
-		$template_name = 'fc/page-checkout.php';
+		$template_name = 'sc/page-checkout.php';
 		$plugin_path  = self::$directory_path . 'templates/';
 		$new_template = $this->locate_template($template, $template_name, $plugin_path);
 

@@ -2,34 +2,34 @@ body:not(.has-checkout-header) {
   padding-top: 120px;
 }
 
-body:not(.has-checkout-header).admin-bar .fc-sidebar[data-sticky-states].is-sticky--top .fc-sidebar__inner {
+body:not(.has-checkout-header).admin-bar .sc-sidebar[data-sticky-states].is-sticky--top .sc-sidebar__inner {
   padding-top: 5px;
 }
 
-header.fc-checkout-header {
+header.sc-checkout-header {
   position: fixed !important;
   top: 0 !important;
 }
 @media (min-width: 1000px) {
-  header.fc-checkout-header {
+  header.sc-checkout-header {
     position: static !important;
   }
 }
 
-.admin-bar header.fc-checkout-header {
+.admin-bar header.sc-checkout-header {
   top: 46px !important;
 }
 @media screen and (min-width: 783px) {
-  .admin-bar header.fc-checkout-header {
+  .admin-bar header.sc-checkout-header {
     top: 32px !important;
   }
 }
 
-body:not(.has-checkout-header).admin-bar .fc-progress-bar[data-sticky-states].is-sticky--top .fc-progress-bar__inner {
+body:not(.has-checkout-header).admin-bar .sc-progress-bar[data-sticky-states].is-sticky--top .sc-progress-bar__inner {
   transform: translateY(0);
 }
 @media screen and (min-width: 783px) {
-  body:not(.has-checkout-header).admin-bar .fc-progress-bar[data-sticky-states].is-sticky--top .fc-progress-bar__inner {
+  body:not(.has-checkout-header).admin-bar .sc-progress-bar[data-sticky-states].is-sticky--top .sc-progress-bar__inner {
     transform: translateY(5px);
   }
 }

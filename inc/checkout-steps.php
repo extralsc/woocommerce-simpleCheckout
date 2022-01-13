@@ -236,7 +236,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			return;
 		}
 ?>
-		<style id="fc-custom-styles">
+		<style id="sc-custom-styles">
 			<?php do_action('sc_output_custom_styles'); ?>
 		</style>
 	<?php
@@ -260,7 +260,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			return;
 		}
 
-		echo 'header.fc-checkout-header{background-color:' . $header_background_color . '}';
+		echo 'header.sc-checkout-header{background-color:' . $header_background_color . '}';
 	}
 
 	/**
@@ -297,11 +297,11 @@ class SimpleCheckout_Steps extends SimpleCheckout
 		}
 
 		// Styles
-		wp_enqueue_style('fc-checkout-layout', self::$directory_url . 'css/checkout-layout' . self::$asset_version . '.css', NULL, NULL);
+		wp_enqueue_style('sc-checkout-layout', self::$directory_url . 'css/checkout-layout' . self::$asset_version . '.css', NULL, NULL);
 
 		// Checkout steps scripts
-		wp_enqueue_script('fc-checkout-steps', self::$directory_url . 'js/checkout-steps' . self::$asset_version . '.js', array('jquery', 'wc-checkout'), NULL, true);
-		wp_add_inline_script('fc-checkout-steps', 'window.addEventListener("load",function(){CheckoutSteps.init();})');
+		wp_enqueue_script('sc-checkout-steps', self::$directory_url . 'js/checkout-steps' . self::$asset_version . '.js', array('jquery', 'wc-checkout'), NULL, true);
+		wp_add_inline_script('sc-checkout-steps', 'window.addEventListener("load",function(){CheckoutSteps.init();})');
 	}
 
 
@@ -316,7 +316,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			return;
 		}
 
-		wp_enqueue_style('fc-order-details', self::$directory_url . 'css/order-details' . self::$asset_version . '.css', NULL, NULL);
+		wp_enqueue_style('sc-order-details', self::$directory_url . 'css/order-details' . self::$asset_version . '.css', NULL, NULL);
 	}
 
 
@@ -407,7 +407,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 		}
 
 		wc_get_template(
-			'fc/checkout/checkout-header.php',
+			'sc/checkout/checkout-header.php',
 			array('checkout' => WC()->checkout())
 		);
 	}
@@ -418,7 +418,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 	public function output_checkout_notices_wrapper_start_tag()
 	{
 	?>
-		<div class="fc-checkout-notices">
+		<div class="sc-checkout-notices">
 		<?php
 	}
 
@@ -443,7 +443,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 		wc_cart_totals_order_total_html();
 		$link_label_html = str_replace('includes_tax', 'includes_tax screen-reader-text', ob_get_clean());
 	?>
-		<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="fc-checkout__cart-link" aria-description="<?php echo esc_attr(__('Click to go to the order summary', 'simple-checkout')); ?>" data-flyout-toggle data-flyout-target="[data-flyout-order-review]"><span class="screen-reader-text"><?php echo esc_html(__('Cart total:', 'simple-checkout')); ?></span> <?php echo $link_label_html; // WPCS: XSS ok. 
+		<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="sc-checkout__cart-link" aria-description="<?php echo esc_attr(__('Click to go to the order summary', 'simple-checkout')); ?>" data-flyout-toggle data-flyout-target="[data-flyout-order-review]"><span class="screen-reader-text"><?php echo esc_html(__('Cart total:', 'simple-checkout')); ?></span> <?php echo $link_label_html; // WPCS: XSS ok. 
 																																																																																											?></a>
 	<?php
 	}
@@ -466,7 +466,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 	public function add_checkout_header_cart_link_fragment($fragments)
 	{
 		$html = $this->get_checkout_header_cart_link();
-		$fragments['.fc-checkout__cart-link'] = $html;
+		$fragments['.sc-checkout__cart-link'] = $html;
 		return $fragments;
 	}
 
@@ -500,7 +500,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			return $class;
 		}
 
-		return $class . ' fc-container';
+		return $class . ' sc-container';
 	}
 
 
@@ -1044,8 +1044,8 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			sprintf(
 				/* translators: %1$s is replaced with html for "current checkout step number", %2$s is replaced with html for "total number of checkout steps". */
 				esc_html(__('Step %1$s of %2$s', 'simple-checkout')),
-				'<span class="fc-progress-bar__current-step" data-step-count-current>' . esc_html($current_step_number) . '</span>',
-				'<span class="fc-progress-bar__total-steps" data-step-count-total>' . esc_html($steps_count) . '</span>'
+				'<span class="sc-progress-bar__current-step" data-step-count-current>' . esc_html($current_step_number) . '</span>',
+				'<span class="sc-progress-bar__total-steps" data-step-count-total>' . esc_html($steps_count) . '</span>'
 			),
 			$_checkout_steps,
 			$current_step
@@ -1053,19 +1053,19 @@ class SimpleCheckout_Steps extends SimpleCheckout
 
 		// Attributes
 		$progress_bar_attributes = array(
-			'class' => 'fc-progress-bar',
+			'class' => 'sc-progress-bar',
 			'data-progress-bar' => true,
 
 		);
 		$progress_bar_inner_attributes = array(
-			'class' => 'fc-progress-bar__inner',
+			'class' => 'sc-progress-bar__inner',
 		);
 
 		// Sticky state attributes
 		if (get_option('sc_enable_checkout_sticky_progress_bar', 'yes') === 'yes') {
 			$progress_bar_attributes = array_merge($progress_bar_attributes, array(
 				'data-sticky-states' => true,
-				'data-sticky-relative-to' => '.fc-checkout-header',
+				'data-sticky-relative-to' => '.sc-checkout-header',
 				'data-sticky-container' => 'div.woocommerce',
 			));
 
@@ -1087,14 +1087,14 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			<div <?php echo $progress_bar_attributes_inner_str; // WPCS: XSS ok. 
 					?>>
 
-				<div class="fc-progress-bar__count" data-step-count-text><?php echo $steps_count_label_html; // WPCS: XSS ok. 
+				<div class="sc-progress-bar__count" data-step-count-text><?php echo $steps_count_label_html; // WPCS: XSS ok. 
 																			?></div>
-				<div class="fc-progress-bar__bars" data-progress-bar data-step-count="<?php echo esc_attr($steps_count); ?>">
+				<div class="sc-progress-bar__bars" data-progress-bar data-step-count="<?php echo esc_attr($steps_count); ?>">
 					<?php
 					foreach ($_checkout_steps as $step_index => $step_args) :
 						$step_bar_class = $step_index < $current_step_index ? 'is-complete' : ($step_index == $current_step_index ? 'is-current' : '');
 					?>
-						<span class="fc-progress-bar__bar <?php echo esc_attr($step_bar_class); ?>" data-step-id="<?php echo esc_attr($step_args['step_id']); ?>" data-step-index="<?php echo esc_attr($step_index); ?>"></span>
+						<span class="sc-progress-bar__bar <?php echo esc_attr($step_bar_class); ?>" data-step-id="<?php echo esc_attr($step_args['step_id']); ?>" data-step-index="<?php echo esc_attr($step_index); ?>"></span>
 					<?php
 					endforeach;
 					?>
@@ -1117,10 +1117,10 @@ class SimpleCheckout_Steps extends SimpleCheckout
 	{
 		$step_id = $step_args['step_id'];
 		$step_title = apply_filters("sc_step_title_{$step_id}", $step_args['step_title']);
-		$step_title_id = 'fc-step__title--' . $step_args['step_id'];
+		$step_title_id = 'sc-step__title--' . $step_args['step_id'];
 
 		$step_attributes = array(
-			'class' => 'fc-checkout-step',
+			'class' => 'sc-checkout-step',
 			'data-step-id' => !empty($step_id) && $step_id != null ? $step_id : '',
 			'data-step-label' => $step_title,
 			'aria-label' => $step_title,
@@ -1131,19 +1131,19 @@ class SimpleCheckout_Steps extends SimpleCheckout
 
 		// Maybe add class for previous step completed
 		if ($this->is_prev_step_complete($step_id)) {
-			$step_attributes['class'] .= ' fc-checkout-step--prev-step-complete';
+			$step_attributes['class'] .= ' sc-checkout-step--prev-step-complete';
 		}
 
 		// Maybe add class for next step completed
 		if ($this->is_next_step_complete($step_id)) {
-			$step_attributes['class'] .= ' fc-checkout-step--next-step-complete';
+			$step_attributes['class'] .= ' sc-checkout-step--next-step-complete';
 		} else {
-			$step_attributes['class'] .= ' fc-checkout-step--next-step-incomplete';
+			$step_attributes['class'] .= ' sc-checkout-step--next-step-incomplete';
 		}
 
 		$step_attributes_str = implode(' ', array_map(array($this, 'map_html_attributes'), array_keys($step_attributes), $step_attributes));
 		echo '<section ' . $step_attributes_str . '>'; // WPCS: XSS ok.
-		echo '<h2 id="' . esc_attr($step_title_id) . '" class="fc-step__title screen-reader-text">' . wp_kses($step_title, array('span' => array('class' => array()), 'i' => array('class' => array()))) . '</h2>';
+		echo '<h2 id="' . esc_attr($step_title_id) . '" class="sc-step__title screen-reader-text">' . wp_kses($step_title, array('span' => array('class' => array()), 'i' => array('class' => array()))) . '</h2>';
 	}
 
 	/**
@@ -1159,12 +1159,12 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			$button_label = apply_filters('sc_next_step_button_label', $this->get_next_step_button_label($step_args['step_id']), $step_args['step_id']);
 
 			$button_attributes = array(
-				'class' => implode(' ', array_merge(array('fc-step__next-step'), apply_filters('sc_next_step_button_classes', array('button')), $step_args['next_step_button_classes'])),
+				'class' => implode(' ', array_merge(array('sc-step__next-step'), apply_filters('sc_next_step_button_classes', array('button')), $step_args['next_step_button_classes'])),
 				'data-step-next' => true,
 			);
 			$button_attributes_str = implode(' ', array_map(array($this, 'map_html_attributes'), array_keys($button_attributes), $button_attributes));
 		?>
-			<div class="fc-step__actions">
+			<div class="sc-step__actions">
 				<button type="button" <?php echo $button_attributes_str; // WPCS: XSS ok. 
 										?>><?php echo esc_html($button_label); ?></button>
 			</div>
@@ -1188,7 +1188,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 		$substep_title = apply_filters("sc_substep_title_{$substep_id}", $substep_title);
 
 		if (!empty($substep_title)) {
-			$html = '<h3 class="fc-step__substep-title fc-step__substep-title--' . esc_attr($substep_id) . '">' . wp_kses($substep_title, array('span' => array('class' => array()), 'i' => array('class' => array()))) . '</h3>';
+			$html = '<h3 class="sc-step__substep-title sc-step__substep-title--' . esc_attr($substep_id) . '">' . wp_kses($substep_title, array('span' => array('class' => array()), 'i' => array('class' => array()))) . '</h3>';
 		}
 
 		return $html;
@@ -1207,7 +1207,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 	public function output_substep_start_tag($step_id, $substep_id, $substep_title, $additional_attributes = array())
 	{
 		$substep_attributes = array_merge($additional_attributes, array(
-			'class' => array_key_exists('class', $additional_attributes) ? 'fc-step__substep ' . $additional_attributes['class'] : 'fc-step__substep',
+			'class' => array_key_exists('class', $additional_attributes) ? 'sc-step__substep ' . $additional_attributes['class'] : 'sc-step__substep',
 			'data-substep-id' => $substep_id,
 		));
 		$substep_attributes_str = implode(' ', array_map(array($this, 'map_html_attributes'), array_keys($substep_attributes), $substep_attributes));
@@ -1232,8 +1232,8 @@ class SimpleCheckout_Steps extends SimpleCheckout
 		?>
 
 			<?php if ($output_edit_buttons && $this->is_checkout_layout_multistep()) : ?>
-				<a tabindex="0" role="button" class="fc-step__substep-edit" data-step-edit aria-label="<?php echo sprintf(__('Change: %s', 'simple-checkout'), $substep_title); ?>"><?php echo esc_html(apply_filters('sc_substep_change_button_label', _x('Change', 'Checkout substep change link label', 'simple-checkout'))); ?></a>
-				<button class="fc-step__substep-save <?php echo esc_attr(apply_filters('sc_substep_save_button_classes', 'button')); ?>" data-step-save><?php echo esc_html(apply_filters('sc_substep_save_button_label', _x('Save changes', 'Checkout substep save link label', 'simple-checkout'))); ?></button>
+				<a tabindex="0" role="button" class="sc-step__substep-edit" data-step-edit aria-label="<?php echo sprintf(__('Change: %s', 'simple-checkout'), $substep_title); ?>"><?php echo esc_html(apply_filters('sc_substep_change_button_label', _x('Change', 'Checkout substep change link label', 'simple-checkout'))); ?></a>
+				<button class="sc-step__substep-save <?php echo esc_attr(apply_filters('sc_substep_save_button_classes', 'button')); ?>" data-step-save><?php echo esc_html(apply_filters('sc_substep_save_button_label', _x('Save changes', 'Checkout substep save link label', 'simple-checkout'))); ?></button>
 			<?php endif; ?>
 
 		</div>
@@ -1251,13 +1251,13 @@ class SimpleCheckout_Steps extends SimpleCheckout
 	public function output_substep_fields_start_tag($step_id, $substep_id, $collapsible = true)
 	{
 		$substep_attributes = array(
-			'id' => 'fc-substep__fields--' . $substep_id,
-			'class' => 'fc-step__substep-fields fc-substep__fields--' . $substep_id,
+			'id' => 'sc-substep__fields--' . $substep_id,
+			'class' => 'sc-step__substep-fields sc-substep__fields--' . $substep_id,
 			'data-substep-id' => $substep_id,
 		);
 
 		$substep_inner_attributes = array(
-			'class' => 'fc-step__substep-fields-inner',
+			'class' => 'sc-step__substep-fields-inner',
 		);
 
 		// Add collapsible-block attributes for multistep layout
@@ -1309,8 +1309,8 @@ class SimpleCheckout_Steps extends SimpleCheckout
 		{
 			$is_step_complete = $this->is_step_complete($step_id);
 			$substep_attributes = array(
-				'id' => 'fc-substep__text--' . $substep_id,
-				'class' => 'fc-step__substep-text',
+				'id' => 'sc-substep__text--' . $substep_id,
+				'class' => 'sc-step__substep-text',
 				'data-substep-id' => $substep_id,
 				'data-collapsible' => true,
 				'data-collapsible-content' => true,
@@ -1358,7 +1358,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			$initial_state = array_key_exists('initial_state', $args) && $args['initial_state'] === 'expanded' ? 'expanded' : 'collapsed';
 
 			// Section attributes
-			$section_attributes = array('class' => 'fc-expansible-form-section');
+			$section_attributes = array('class' => 'sc-expansible-form-section');
 
 			// Merge section attributes
 			if (array_key_exists('section_attributes', $args) && is_array($args['section_attributes'])) {
@@ -1372,8 +1372,8 @@ class SimpleCheckout_Steps extends SimpleCheckout
 
 			// Section toggle attributes
 			$section_toggle_attributes = array(
-				'id' => 'fc-expansible-form-section__toggle--' . $section_id_esc,
-				'class' => 'fc-expansible-form-section__toggle fc-expansible-form-section__toggle--' . $section_id_esc . ' ' . ($initial_state === 'expanded' ? 'is-collapsed' : 'is-expanded'), // Toggle is collapsed when the section is set to expanded
+				'id' => 'sc-expansible-form-section__toggle--' . $section_id_esc,
+				'class' => 'sc-expansible-form-section__toggle sc-expansible-form-section__toggle--' . $section_id_esc . ' ' . ($initial_state === 'expanded' ? 'is-collapsed' : 'is-expanded'), // Toggle is collapsed when the section is set to expanded
 				'data-collapsible' => true,
 				'data-collapsible-content' => true,
 				'data-collapsible-initial-state' => $initial_state === 'expanded' ? 'collapsed' : 'expanded', // Toggle is collapsed when the section is set to expanded
@@ -1386,19 +1386,19 @@ class SimpleCheckout_Steps extends SimpleCheckout
 
 			// Toggle element attributes
 			$toggle_attributes = array(
-				'href' => '#fc-expansible-form-section__content--' . $section_id_esc,
+				'href' => '#sc-expansible-form-section__content--' . $section_id_esc,
 				'class' => 'expansible-section__toggle-plus expansible-section__toggle-plus--' . $section_id_esc,
 				'data-collapsible-handler' => true,
 				'data-collapsible-targets' => implode(',', array(
-					'fc-expansible-form-section__toggle--' . $section_id_esc,
-					'fc-expansible-form-section__content--' . $section_id_esc,
+					'sc-expansible-form-section__toggle--' . $section_id_esc,
+					'sc-expansible-form-section__content--' . $section_id_esc,
 				)),
 			);
 
 			// Section content attributes
 			$section_content_attributes = array(
-				'id' => 'fc-expansible-form-section__content--' . $section_id_esc,
-				'class' => 'fc-expansible-form-section__content fc-expansible-form-section__content--' . $section_id_esc . ' ' . ($initial_state === 'expanded' ? 'is-expanded' : 'is-collapsed'),
+				'id' => 'sc-expansible-form-section__content--' . $section_id_esc,
+				'class' => 'sc-expansible-form-section__content sc-expansible-form-section__content--' . $section_id_esc . ' ' . ($initial_state === 'expanded' ? 'is-expanded' : 'is-collapsed'),
 				'data-collapsible' => true,
 				'data-collapsible-content' => true,
 				'data-collapsible-initial-state' => $initial_state,
@@ -1499,7 +1499,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 				do_action('woocommerce_checkout_before_customer_details');
 
 				wc_get_template(
-					'fc/checkout/form-contact.php',
+					'sc/checkout/form-contact.php',
 					array(
 						'checkout'			=> WC()->checkout(),
 						'display_fields'	=> $this->get_contact_step_display_field_ids(),
@@ -1515,14 +1515,14 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function get_substep_text_contact()
 			{
 				$customer = WC()->customer;
-				$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--contact">';
-				$html .= '<div class="fc-step__substep-text-line">' . esc_html($customer->get_billing_email()) . '</div>';
+				$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--contact">';
+				$html .= '<div class="sc-step__substep-text-line">' . esc_html($customer->get_billing_email()) . '</div>';
 
 				// Maybe add notice for account creation
 				if (get_option('sc_show_account_creation_notice_checkout_contact_step_text', 'true') === 'true') {
 					$parsed_posted_data = $this->get_parsed_posted_data();
 					if (array_key_exists('createaccount', $parsed_posted_data) && $parsed_posted_data['createaccount'] == '1') {
-						$html .= '<div class="fc-step__substep-text-line"><em>' . esc_html(__('An account will be created with the information provided.', 'simple-checkout')) . '</em></div>';
+						$html .= '<div class="sc-step__substep-text-line"><em>' . esc_html(__('An account will be created with the information provided.', 'simple-checkout')) . '</em></div>';
 					}
 				}
 
@@ -1539,7 +1539,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function add_contact_text_fragment($fragments)
 			{
 				$html = $this->get_substep_text_contact();
-				$fragments['.fc-step__substep-text-content--contact'] = $html;
+				$fragments['.sc-step__substep-text-content--contact'] = $html;
 				return $fragments;
 			}
 
@@ -1586,7 +1586,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function output_form_account_creation()
 			{
 				wc_get_template(
-					'fc/checkout/form-account-creation.php',
+					'sc/checkout/form-account-creation.php',
 					array(
 						'checkout'			=> WC()->checkout(),
 					)
@@ -1618,7 +1618,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 				};
 
 				wc_get_template(
-					'fc/checkout/form-contact-login-modal.php',
+					'sc/checkout/form-contact-login-modal.php',
 					array(
 						'checkout'			=> WC()->checkout(),
 					)
@@ -1636,7 +1636,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 				}
 
 				wc_get_template(
-					'fc/checkout/form-contact-login.php',
+					'sc/checkout/form-contact-login.php',
 					array(
 						'checkout'			=> WC()->checkout(),
 					)
@@ -1865,8 +1865,8 @@ class SimpleCheckout_Steps extends SimpleCheckout
 					'postcode' => $customer->get_shipping_postcode(),
 				);
 
-				$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--shipping-address">';
-				$html .= '<div class="fc-step__substep-text-line">' . WC()->countries->get_formatted_address($address_data) . '</div>'; // WPCS: XSS ok.
+				$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--shipping-address">';
+				$html .= '<div class="sc-step__substep-text-line">' . WC()->countries->get_formatted_address($address_data) . '</div>'; // WPCS: XSS ok.
 				$html .= '</div>';
 
 				return apply_filters('sc_substep_shipping_address_text', $html);
@@ -1880,7 +1880,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function add_shipping_address_text_fragment($fragments)
 			{
 				$html = $this->get_substep_text_shipping_address();
-				$fragments['.fc-step__substep-text-content--shipping-address'] = $html;
+				$fragments['.sc-step__substep-text-content--shipping-address'] = $html;
 				return $fragments;
 			}
 
@@ -1903,7 +1903,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			{
 				$packages = WC()->shipping()->get_packages();
 
-				$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--shipping-method">';
+				$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--shipping-method">';
 
 				foreach ($packages as $i => $package) {
 					$available_methods = $package['rates'];
@@ -1914,7 +1914,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 					// TODO: Maybe handle multiple packages
 					// $package_name = apply_filters( 'woocommerce_shipping_package_name', ( ( $i + 1 ) > 1 ) ? sprintf( _x( 'Shipping %d', 'shipping packages', 'woocommerce' ), ( $i + 1 ) ) : _x( 'Shipping', 'shipping packages', 'woocommerce' ), $i, $package );
 
-					$html .= '<div class="fc-step__substep-text-line">' . wp_kses($chosen_method_label, array('span' => array('class' => ''), 'bdi' => array(), 'strong' => array())) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . wp_kses($chosen_method_label, array('span' => array('class' => ''), 'bdi' => array(), 'strong' => array())) . '</div>';
 				}
 
 				$html .= '</div>';
@@ -1930,7 +1930,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function add_shipping_methods_text_fragment($fragments)
 			{
 				$html = $this->get_substep_text_shipping_method();
-				$fragments['.fc-step__substep-text-content--shipping-method'] = $html;
+				$fragments['.sc-step__substep-text-content--shipping-method'] = $html;
 				return $fragments;
 			}
 
@@ -1951,15 +1951,15 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			{
 				$order_notes = $this->get_checkout_field_value_from_session('order_comments');
 
-				$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--order-notes">';
+				$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--order-notes">';
 
 				// The order notes value
 				if (!empty($order_notes)) {
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html($order_notes) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html($order_notes) . '</div>';
 				}
 				// "No order notes" notice.
 				else {
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html(apply_filters('sc_no_order_notes_order_review_notice', _x('None.', 'Notice for no order notes provided', 'simple-checkout'))) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html(apply_filters('sc_no_order_notes_order_review_notice', _x('None.', 'Notice for no order notes provided', 'simple-checkout'))) . '</div>';
 				}
 
 				$html .= '</div>';
@@ -1975,7 +1975,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function add_order_notes_text_fragment($fragments)
 			{
 				$html = $this->get_substep_text_order_notes();
-				$fragments['.fc-step__substep-text-content--order-notes'] = $html;
+				$fragments['.sc-step__substep-text-content--order-notes'] = $html;
 				return $fragments;
 			}
 
@@ -2059,7 +2059,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 
 				do_action('sc_shipping_methods_before_packages');
 
-				echo '<div class="fc-shipping-method__packages">';
+				echo '<div class="sc-shipping-method__packages">';
 
 				$first_item = true;
 				foreach ($packages as $i => $package) {
@@ -2073,7 +2073,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 						$product_names = apply_filters('woocommerce_shipping_package_details_array', $product_names, $package);
 					}
 
-					wc_get_template('fc/cart/shipping-methods-available.php', array(
+					wc_get_template('sc/cart/shipping-methods-available.php', array(
 						'package'					=> $package,
 						'available_methods'			=> $package['rates'],
 						'show_package_details'		=> sizeof($packages) > 1,
@@ -2103,7 +2103,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function add_shipping_methods_fields_fragment($fragments)
 			{
 				$html = $this->get_shipping_methods_available();
-				$fragments['.fc-shipping-method__packages'] = $html;
+				$fragments['.sc-shipping-method__packages'] = $html;
 				return $fragments;
 			}
 
@@ -2167,7 +2167,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function output_additional_fields()
 			{
 				wc_get_template(
-					'fc/checkout/form-additional-fields.php',
+					'sc/checkout/form-additional-fields.php',
 					array(
 						'checkout' => WC()->checkout(),
 					)
@@ -2315,10 +2315,10 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			{
 				$customer = WC()->customer;
 
-				$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--billing-address">';
+				$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--billing-address">';
 
 				if ($this->is_billing_same_as_shipping_checked()) {
-					$html .= '<div class="fc-step__substep-text-line"><em>' . __('Same as shipping address', 'simple-checkout') . '</em></div>';
+					$html .= '<div class="sc-step__substep-text-line"><em>' . __('Same as shipping address', 'simple-checkout') . '</em></div>';
 				} else {
 					$address_data = array(
 						'address_1' => $customer->get_billing_address_1(),
@@ -2329,10 +2329,10 @@ class SimpleCheckout_Steps extends SimpleCheckout
 						'postcode' => $customer->get_billing_postcode(),
 					);
 
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html($customer->get_billing_first_name()) . ' ' . esc_html($customer->get_billing_last_name()) . '</div>';
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html($customer->get_billing_company()) . '</div>';
-					$html .= '<div class="fc-step__substep-text-line">' . WC()->countries->get_formatted_address($address_data) . '</div>'; // WPCS: XSS ok.
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html($customer->get_billing_phone()) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html($customer->get_billing_first_name()) . ' ' . esc_html($customer->get_billing_last_name()) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html($customer->get_billing_company()) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . WC()->countries->get_formatted_address($address_data) . '</div>'; // WPCS: XSS ok.
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html($customer->get_billing_phone()) . '</div>';
 				}
 
 				$html .= '</div>';
@@ -2348,7 +2348,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function add_billing_address_text_fragment($fragments)
 			{
 				$html = $this->get_substep_text_billing_address();
-				$fragments['.fc-step__substep-text-content--billing-address'] = $html;
+				$fragments['.sc-step__substep-text-content--billing-address'] = $html;
 				return $fragments;
 			}
 
@@ -2704,7 +2704,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function output_substep_payment_fields()
 			{
 				wc_get_template(
-					'fc/checkout/form-payment.php',
+					'sc/checkout/form-payment.php',
 					array(
 						'checkout'          => WC()->checkout(),
 					)
@@ -2752,10 +2752,10 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function output_checkout_sidebar_wrapper()
 			{
 				$sidebar_attributes = array(
-					'class' => 'fc-sidebar',
+					'class' => 'sc-sidebar',
 				);
 				$sidebar_attributes_inner = array(
-					'class' => 'fc-sidebar__inner',
+					'class' => 'sc-sidebar__inner',
 				);
 
 				// Sticky state attributes
@@ -2809,13 +2809,13 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function get_order_review_html_attributes($is_sidebar_widget = false)
 			{
 				$attributes = array(
-					'class' => 'fc-checkout-order-review',
+					'class' => 'sc-checkout-order-review',
 				);
 
 				// Sidebar widget
 				if ($is_sidebar_widget) {
 					$attributes = array_merge($attributes, array(
-						'id' => 'fc-checkout-order-review',
+						'id' => 'sc-checkout-order-review',
 						'data-flyout' => true,
 						'data-flyout-order-review' => true,
 						'data-flyout-open-animation-class' => 'fade-in-down',
@@ -2841,7 +2841,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function get_order_review_html_attributes_inner($is_sidebar_widget = false)
 			{
 				$attributes = array(
-					'class' => 'fc-checkout-order-review__inner',
+					'class' => 'sc-checkout-order-review__inner',
 				);
 
 				// Sidebar widget
@@ -2860,7 +2860,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function output_order_review()
 			{
 				wc_get_template(
-					'fc/checkout/review-order-section.php',
+					'sc/checkout/review-order-section.php',
 					array(
 						'checkout'           => WC()->checkout(),
 						'order_review_title' => $this->get_order_review_title(),
@@ -2877,7 +2877,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			public function output_order_review_for_sidebar()
 			{
 				wc_get_template(
-					'fc/checkout/review-order-section.php',
+					'sc/checkout/review-order-section.php',
 					array(
 						'checkout'           => WC()->checkout(),
 						'order_review_title' => $this->get_order_review_title(),
@@ -2897,7 +2897,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			{
 				ob_start();
 				wc_get_template(
-					'fc/checkout/place-order.php',
+					'sc/checkout/place-order.php',
 					array(
 						'checkout'           => WC()->checkout(),
 						'order_button_text'  => apply_filters('woocommerce_order_button_text', __('Place order', 'woocommerce')),
@@ -2906,7 +2906,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 				$place_order_html = ob_get_clean();
 
 				// Add terms checkbox custom class
-				$place_order_html = str_replace('input-checkbox" name="terms"', 'input-checkbox fc-terms-checkbox" name="terms"', $place_order_html);
+				$place_order_html = str_replace('input-checkbox" name="terms"', 'input-checkbox sc-terms-checkbox" name="terms"', $place_order_html);
 
 				// Make sure there are no duplicate fields for outputting place order on the sidebar
 				if ($is_sidebar) {
@@ -2969,8 +2969,8 @@ class SimpleCheckout_Steps extends SimpleCheckout
 			 */
 			public function add_place_order_button_wrapper($button_html)
 			{
-				$button_html = str_replace('class="button alt', 'class="' . esc_attr(apply_filters('sc_place_order_button_classes', 'button alt')) . ' fc-place-order-button', $button_html);
-				return '<div class="fc-place-order">' . $button_html . '</div>';
+				$button_html = str_replace('class="button alt', 'class="' . esc_attr(apply_filters('sc_place_order_button_classes', 'button alt')) . ' sc-place-order-button', $button_html);
+				return '<div class="sc-place-order">' . $button_html . '</div>';
 			}
 
 
@@ -3000,7 +3000,7 @@ class SimpleCheckout_Steps extends SimpleCheckout
 					}
 
 					wc_get_template(
-						'fc/checkout/review-order-shipping.php',
+						'sc/checkout/review-order-shipping.php',
 						array(
 							'package'                  => $package,
 							'available_methods'        => $package['rates'],

@@ -1,4 +1,4 @@
-.fc-gift-options__message {
+.sc-gift-options__message {
   margin: 0 0 30px;
   padding: 30px 20px;
   border: dashed 1px #e1e1e1;
@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.fc-gift-options__message .fc-gift-options__message-text {
+.sc-gift-options__message .sc-gift-options__message-text {
   max-width: 750px;
   display: block;
   margin: 0 auto;
@@ -15,6 +15,6 @@
   font-style: italic;
 }
 
-.fc-gift-options__message .fc-gift-options__message-from {
+.sc-gift-options__message .sc-gift-options__message-from {
   margin-top: 5px;
 }

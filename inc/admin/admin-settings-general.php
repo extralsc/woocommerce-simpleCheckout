@@ -68,8 +68,8 @@ class WC_Settings_SimpleCheckout_General_Settings extends WC_Settings_Page
 						'options'           => SimpleCheckout_Steps::instance()->get_allowed_checkout_layouts(),
 						'default'           => 'multi-step',
 						'autoload'          => false,
-						'wrapper_class'     => 'fc-checkout-layout',
-						'class'             => 'fc-checkout-layout__option',
+						'wrapper_class'     => 'sc-checkout-layout',
+						'class'             => 'sc-checkout-layout__option',
 					),
 
 					array(
@@ -78,7 +78,7 @@ class WC_Settings_SimpleCheckout_General_Settings extends WC_Settings_Page
 						'id'                => 'sc_checkout_logo_image',
 						'type'              => 'sc_image_uploader',
 						'autoload'          => false,
-						'wrapper_class'     => 'fc-checkout-logo-image',
+						'wrapper_class'     => 'sc-checkout-logo-image',
 					),
 
 					array(

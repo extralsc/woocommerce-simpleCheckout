@@ -243,7 +243,7 @@ class SimpleCheckout_CheckoutShippingPhoneField extends SimpleCheckout
 
 		// Insert the phone field in the text
 		if ($shipping_phone != null && !empty($shipping_phone)) {
-			$shipping_phone_text = '<div class="fc-step__substep-text-line">' . $shipping_phone . '</div>';
+			$shipping_phone_text = '<div class="sc-step__substep-text-line">' . $shipping_phone . '</div>';
 			$last_div_position = strrpos($html, '</div>');
 			$html = substr_replace($html, $shipping_phone_text, $last_div_position, 0);
 		}

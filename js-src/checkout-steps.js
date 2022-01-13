@@ -22,26 +22,26 @@
 	var _hasInitialized = false;
 	var _publicMethods = {};
 	var _settings = {
-		bodyClass: 'has-fc-checkout-steps',
-		bodyClassActiveStepPattern: 'fc-checkout-step--active-{ID}',
+		bodyClass: 'has-sc-checkout-steps',
+		bodyClassActiveStepPattern: 'sc-checkout-step--active-{ID}',
 
-		wrapperSelector: '.fc-wrapper',
+		wrapperSelector: '.sc-wrapper',
 
-		progressBarSelector: '.fc-progress-bar',
-		progressBarCurrentSelector: '.fc-progress-bar__current-step',
-		progressBarItemSelector: '.fc-progress-bar__bar',
+		progressBarSelector: '.sc-progress-bar',
+		progressBarCurrentSelector: '.sc-progress-bar__current-step',
+		progressBarItemSelector: '.sc-progress-bar__bar',
 
-		stepsWrapperSelector: '.fc-checkout-steps',
-		stepSelector: '.fc-checkout-step',
+		stepsWrapperSelector: '.sc-checkout-steps',
+		stepSelector: '.sc-checkout-step',
 		currentStepSelector: '[data-step-current]',
-		nextStepSelector: '[data-step-current] ~ .fc-checkout-step',
+		nextStepSelector: '[data-step-current] ~ .sc-checkout-step',
 		nextStepButtonSelector: '[data-step-next]',
 		focusableElementsSelector: 'a[role="button"], a[href], button:not([disabled]), input:not([disabled]):not([type="hidden"]), textarea:not([disabled]), select:not([disabled]), details, summary, iframe, object, embed, [contenteditable] [tabindex]:not([tabindex="-1"])',
 
-		substepSelector: '.fc-step__substep',
-		substepTextContentSelector: '.fc-step__substep-text-content',
-		substepFieldsSelector: '.fc-step__substep-fields',
-		substepTextSelector: '.fc-step__substep-text',
+		substepSelector: '.sc-step__substep',
+		substepTextContentSelector: '.sc-step__substep-text-content',
+		substepFieldsSelector: '.sc-step__substep-fields',
+		substepTextSelector: '.sc-step__substep-text',
 		substepEditButtonSelector: '[data-step-edit]',
 		substepSaveButtonSelector: '[data-step-save]',
 
@@ -57,16 +57,16 @@
 		isLoadingClass: 'is-loading',
 		isCurrentClass: 'is-current',
 		isCompleteClass: 'is-complete',
-		stepNextIncompleteClass: 'fc-checkout-step--next-step-incomplete',
+		stepNextIncompleteClass: 'sc-checkout-step--next-step-incomplete',
 
-		substepEditableStateFieldSelector: '.fc-substep-editable-state[type="hidden"]',
+		substepEditableStateFieldSelector: '.sc-substep-editable-state[type="hidden"]',
 		substepEditableStateAttribute: 'data-substep-editable',
-		substepVisibleStateFieldSelector: '.fc-substep-visible-state[type="hidden"]',
+		substepVisibleStateFieldSelector: '.sc-substep-visible-state[type="hidden"]',
 		substepVisibleStateAttribute: 'data-substep-visible',
 
 		invalidFieldRowSelector: '.woocommerce-invalid .input-text, .woocommerce-invalid select',
 
-		scrollOffsetSelector: '.fc-checkout-header',
+		scrollOffsetSelector: '.sc-checkout-header',
 		scrollBehavior: 'smooth',
 		scrollOffset: 0,
 	}

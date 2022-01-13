@@ -6,7 +6,7 @@ body.theme-orchid-store #payment div.payment_box {
 	color: inherit;
 }
 
-body.theme-orchid-store .fc-wrapper #payment .payment_methods > .wc_payment_method > input[type=radio] + label:before,
-body.theme-orchid-store .fc-wrapper #payment ul.payment_methods > .wc_payment_method > input[type=radio]:first-child:checked + label:after { 
+body.theme-orchid-store .sc-wrapper #payment .payment_methods > .wc_payment_method > input[type=radio] + label:before,
+body.theme-orchid-store .sc-wrapper #payment ul.payment_methods > .wc_payment_method > input[type=radio]:first-child:checked + label:after { 
 	top: remsize( .55rem );
 }

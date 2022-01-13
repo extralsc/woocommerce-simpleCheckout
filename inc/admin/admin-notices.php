@@ -60,7 +60,7 @@ class SimpleCheckout_AdminNotices extends SimpleCheckout
 			}
 
 ?>
-			<div class="notice fc-admin-notice <?php echo $notice['error'] === true ? 'notice-error' : ''; ?>" <?php echo $notice['error'] === true ? '' : 'style="border-left-color: #0047e1;"'; ?>>
+			<div class="notice sc-admin-notice <?php echo $notice['error'] === true ? 'notice-error' : ''; ?>" <?php echo $notice['error'] === true ? '' : 'style="border-left-color: #0047e1;"'; ?>>
 				<?php if (!empty($notice['title'])) : ?>
 					<p><strong><?php echo wp_kses_post($notice['title']); ?></strong></p>
 				<?php endif; ?>

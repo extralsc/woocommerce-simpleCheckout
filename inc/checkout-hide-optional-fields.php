@@ -81,7 +81,7 @@ class SimpleCheckout_CheckoutHideOptionalFields extends SimpleCheckout
 
 		// Bail if field has already been hidden
 		// Needed for compatibility with plugins that call `woocommerce_form_field` multiple times for the same field
-		if (false !== strpos($field, 'id="fc-expansible-form-section__toggle--' . $key)) {
+		if (false !== strpos($field, 'id="sc-expansible-form-section__toggle--' . $key)) {
 			return $field;
 		}
 

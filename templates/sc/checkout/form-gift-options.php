@@ -3,7 +3,7 @@
 /**
  * Checkout gift options form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/fc/checkout/form-gift-options.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/sc/checkout/form-gift-options.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -29,7 +29,7 @@ $gift_options_fields = array_filter($gift_options_fields, function ($key) {
 }, ARRAY_FILTER_USE_KEY);
 ?>
 
-<div id="fc-gift-options">
+<div id="sc-gift-options">
 
 	<?php
 	do_action('sc_checkout_gift_options_before_fields');

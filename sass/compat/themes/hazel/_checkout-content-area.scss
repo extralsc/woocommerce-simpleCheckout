@@ -8,6 +8,6 @@ body:not( .has-checkout-header ) {
 
 
 // Sticky sidebar, page with admin bar
-body:not( .has-checkout-header ).admin-bar .fc-sidebar[data-sticky-states].is-sticky--top .fc-sidebar__inner {
+body:not( .has-checkout-header ).admin-bar .sc-sidebar[data-sticky-states].is-sticky--top .sc-sidebar__inner {
 	padding-top: $global-spacing-tiny;
 }

@@ -2,7 +2,7 @@
 // CHECKOUT PLACE ORDER
 // ------------------------------------
 
-.fc-wrapper .fc-inside div.place-order {
+.sc-wrapper .sc-inside div.place-order {
 	padding: $place-order-padding;
 
 	@media (#{$bp-larger-than-desktop}) {
@@ -10,7 +10,7 @@
 	}
 }
 
-.fc-sidebar div.place-order {
+.sc-sidebar div.place-order {
 	display: none;
 
 	@media (#{$bp-larger-than-desktop}) {
@@ -52,7 +52,7 @@
 
 
 
-.fc-place-order {
+.sc-place-order {
 	padding: $global-spacing 0;
 	text-align: center;
 }
@@ -60,7 +60,7 @@
 
 
 // Place order button
-.fc-wrapper .fc-place-order .fc-place-order-button {
+.sc-wrapper .sc-place-order .sc-place-order-button {
 	margin: 0;
 	width: 100%;
 	min-width: remsize( 28rem );
@@ -74,7 +74,7 @@
 }
 
 // Place order button on the sidebar
-.fc-sidebar .fc-place-order .fc-place-order-button {
+.sc-sidebar .sc-place-order .sc-place-order-button {
 	margin: $global-spacing-extra-small auto 0;
 }
 

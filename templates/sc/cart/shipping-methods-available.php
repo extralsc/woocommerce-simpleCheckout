@@ -3,7 +3,7 @@
 /**
  * Cart shipping methods available
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/fc/cart/shipping-methods-available.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/sc/cart/shipping-methods-available.php.
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package simple-checkout
@@ -67,7 +67,7 @@ defined('ABSPATH') || exit;
 
 	<?php else : ?>
 
-		<div class="fc-shipping-method__no-shipping-methods">
+		<div class="sc-shipping-method__no-shipping-methods">
 			<?php echo wp_kses_post(apply_filters('woocommerce_no_shipping_available_html', __('There are no shipping options available. Please ensure that your address has been entered correctly, or contact us if you need any help.', 'woocommerce'))); ?>
 		</div>
 

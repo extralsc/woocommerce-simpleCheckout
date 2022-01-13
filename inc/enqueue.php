@@ -95,9 +95,9 @@ class SimpleCheckout_Enqueue extends SimpleCheckout
 	 */
 	public function enqueue_scripts()
 	{
-		wp_enqueue_script('fc-bundles', self::$directory_url . 'js/bundles' . self::$asset_version . '.js', array('require-bundle'), NULL, true);
+		wp_enqueue_script('sc-bundles', self::$directory_url . 'js/bundles' . self::$asset_version . '.js', array('require-bundle'), NULL, true);
 		wp_localize_script(
-			'fc-bundles',
+			'sc-bundles',
 			'fcSettings',
 			apply_filters('sc_js_settings', array(
 				'ver'               => self::$version,
@@ -138,7 +138,7 @@ class SimpleCheckout_Enqueue extends SimpleCheckout
 	 */
 	function enqueue_custom_fonts()
 	{
-		wp_enqueue_style('fc-fonts', self::$directory_url . 'css/fonts' . self::$asset_version . '.css', array(), null);
+		wp_enqueue_style('sc-fonts', self::$directory_url . 'css/fonts' . self::$asset_version . '.css', array(), null);
 	}
 
 
@@ -161,7 +161,7 @@ class SimpleCheckout_Enqueue extends SimpleCheckout
 	 */
 	function enqueue_styles_edit_address()
 	{
-		wp_enqueue_style('fc-account-page-address', self::$directory_url . 'css/account-page-address' . self::$asset_version . '.css', array(), null);
+		wp_enqueue_style('sc-account-page-address', self::$directory_url . 'css/account-page-address' . self::$asset_version . '.css', array(), null);
 	}
 
 
@@ -191,7 +191,7 @@ class SimpleCheckout_Enqueue extends SimpleCheckout
 
 			// Maybe load theme's compatibility file
 			if (file_exists(self::$directory_path . $theme_compat_file_path)) {
-				wp_enqueue_style('fc-theme-compat-' . $theme_slug, self::$directory_url . $theme_compat_file_path, array(), null);
+				wp_enqueue_style('sc-theme-compat-' . $theme_slug, self::$directory_url . $theme_compat_file_path, array(), null);
 			}
 		}
 	}
@@ -230,7 +230,7 @@ class SimpleCheckout_Enqueue extends SimpleCheckout
 
 			// Maybe load plugin's compatibility file
 			if (file_exists(self::$directory_path . $plugin_compat_file_path)) {
-				wp_enqueue_style('fc-plugin-compat-' . $plugin_slug, self::$directory_url . $plugin_compat_file_path, array(), null);
+				wp_enqueue_style('sc-plugin-compat-' . $plugin_slug, self::$directory_url . $plugin_compat_file_path, array(), null);
 			}
 		}
 	}

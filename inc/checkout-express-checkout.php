@@ -39,14 +39,14 @@ class SimpleCheckout_ExpressCheckout extends SimpleCheckout
 
 		$express_checkout_section_title = apply_filters('sc_checkout_express_checkout_section_title', __('Express checkout', 'simple-checkout'));
 ?>
-		<section class="fc-express-checkout" aria-labelledby="fc-express-checkout__title">
-			<div class="fc-express-checkout__inner">
-				<h2 id="fc-express-checkout__title" class="fc-express-checkout__title"><?php echo esc_html($express_checkout_section_title); ?></h2>
+		<section class="sc-express-checkout" aria-labelledby="sc-express-checkout__title">
+			<div class="sc-express-checkout__inner">
+				<h2 id="sc-express-checkout__title" class="sc-express-checkout__title"><?php echo esc_html($express_checkout_section_title); ?></h2>
 				<?php do_action('sc_checkout_express_checkout'); ?>
 			</div>
 
-			<div class="fc-express-checkout__separator">
-				<span class="fc-express-checkout__separator-text"><?php echo esc_html(apply_filters('sc_checkout_login_separator_text', _x('Or', 'Separator label for the express checkout section', 'simple-checkout'))); ?></span>
+			<div class="sc-express-checkout__separator">
+				<span class="sc-express-checkout__separator-text"><?php echo esc_html(apply_filters('sc_checkout_login_separator_text', _x('Or', 'Separator label for the express checkout section', 'simple-checkout'))); ?></span>
 			</div>
 		</section>
 <?php

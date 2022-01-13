@@ -112,7 +112,7 @@ div.woocommerce form #shipping_address_2_field > label {
 // ------------------------------------
 // WOOCOMMERCE FORM FIELD GROUP
 // ------------------------------------
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group {
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group {
 	margin: $checkout-field-group-margin;
 	padding: $checkout-field-group-padding;
 	background-color: $lighter-grey;
@@ -123,13 +123,13 @@ div.woocommerce form #shipping_address_2_field > label {
 	}
 }
 
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group:before,
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group:after {
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group:before,
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group:after {
 	@include clearfix();
 }
 
 // Make fields background white
-.fc-content div.woocommerce form .fc-wrapper .fc-field-group {
+.sc-content div.woocommerce form .sc-wrapper .sc-field-group {
 	textarea,
 	select,
 	input[type="email"],

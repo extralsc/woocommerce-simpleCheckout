@@ -3,7 +3,7 @@ div.woocommerce .form-row .woocommerce-error:not(.invalid-country-not-allowed) {
 }
 
 div.woocommerce .form-row .woocommerce-error,
-div.woocommerce .form-row .fc-mailcheck-suggestion {
+div.woocommerce .form-row .sc-mailcheck-suggestion {
   position: relative;
   margin: 0;
   padding: 5px 10px 5px 28px;
@@ -12,11 +12,11 @@ div.woocommerce .form-row .fc-mailcheck-suggestion {
   font-size: 13px;
 }
 
-div.woocommerce .form-row .fc-mailcheck-suggestion {
+div.woocommerce .form-row .sc-mailcheck-suggestion {
   padding: 5px 10px;
 }
 
-div.woocommerce .form-row .fc-mailcheck-suggestion .mailcheck-suggestion:focus {
+div.woocommerce .form-row .sc-mailcheck-suggestion .mailcheck-suggestion:focus {
   outline: dotted 1px #6a6a6a;
   outline-offset: 1px;
 }

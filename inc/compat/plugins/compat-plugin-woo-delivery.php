@@ -173,45 +173,45 @@ class SimpleCheckout_WooDelivery extends SimpleCheckout
 		$has_pickup_time = $pickup_time !== null && !empty($pickup_time);
 		$has_values = $has_delivery_date || $has_delivery_time || $has_pickup_date || $has_pickup_time;
 
-		$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--delivery-date">';
+		$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--delivery-date">';
 
 		if ($has_values) {
 
 			// Delivery
 			if (($delivery_option_settings['enable_option_time_pickup'] !== true || 'delivery' == $order_type) && ($has_delivery_date || $has_delivery_time)) {
 				// Delivery label
-				$html .= '<div class="fc-step__substep-text-line"><strong>' . esc_html($delivery_field_label) . '</strong></div>';
+				$html .= '<div class="sc-step__substep-text-line"><strong>' . esc_html($delivery_field_label) . '</strong></div>';
 
 				// Delivery Date
 				if ($has_delivery_date) {
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html($delivery_date) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html($delivery_date) . '</div>';
 				}
 
 				// Delivery Time
 				if ($has_delivery_time) {
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html($delivery_time) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html($delivery_time) . '</div>';
 				}
 			}
 
 			// Pickup
 			if (($delivery_option_settings['enable_option_time_pickup'] !== true || 'pickup' == $order_type) && ($has_pickup_date || $has_pickup_time)) {
 				// Pickup label
-				$html .= '<div class="fc-step__substep-text-line"><strong>' . esc_html($pickup_field_label) . '</strong></div>';
+				$html .= '<div class="sc-step__substep-text-line"><strong>' . esc_html($pickup_field_label) . '</strong></div>';
 
 				// Pickup Date
 				if ($has_pickup_date) {
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html($pickup_date) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html($pickup_date) . '</div>';
 				}
 
 				// Pickup Time
 				if ($has_pickup_time) {
-					$html .= '<div class="fc-step__substep-text-line">' . esc_html($pickup_time) . '</div>';
+					$html .= '<div class="sc-step__substep-text-line">' . esc_html($pickup_time) . '</div>';
 				}
 			}
 		}
 		// "No delivery or pickup date" notice.
 		else {
-			$html .= '<div class="fc-step__substep-text-line">' . esc_html(apply_filters('sc_woodelivery_no_delivery_options_order_review_notice', _x('None.', 'Notice for no delivery or pickup options provided', 'simple-checkout'))) . '</div>';
+			$html .= '<div class="sc-step__substep-text-line">' . esc_html(apply_filters('sc_woodelivery_no_delivery_options_order_review_notice', _x('None.', 'Notice for no delivery or pickup options provided', 'simple-checkout'))) . '</div>';
 		}
 
 		$html .= '</div>';
@@ -227,7 +227,7 @@ class SimpleCheckout_WooDelivery extends SimpleCheckout
 	public function add_delivery_options_text_fragment($fragments)
 	{
 		$html = $this->get_substep_text_delivery_options();
-		$fragments['.fc-step__substep-text-content--delivery-date'] = $html;
+		$fragments['.sc-step__substep-text-content--delivery-date'] = $html;
 		return $fragments;
 	}
 

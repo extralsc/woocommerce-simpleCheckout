@@ -2,7 +2,7 @@
 // CHECKOUT PLACE ORDER
 // ------------------------------------
 
-body.has-fc-compat-german-market-button-placement .fc-wrapper .fc-inside div.place-order {
+body.has-sc-compat-german-market-button-placement .sc-wrapper .sc-inside div.place-order {
 	@media (#{$bp-larger-than-desktop}) {
 		display: none;
 	}
@@ -10,13 +10,13 @@ body.has-fc-compat-german-market-button-placement .fc-wrapper .fc-inside div.pla
 
 
 
-body.has-fc-compat-german-market-button-placement .fc-place-order,
-body.has-fc-compat-german-market-button-placement form.woocommerce-checkout .fc-wrapper #order_review .fc-place-order {
+body.has-sc-compat-german-market-button-placement .sc-place-order,
+body.has-sc-compat-german-market-button-placement form.woocommerce-checkout .sc-wrapper #order_review .sc-place-order {
 	padding-top: 0;
 	padding-bottom: $global-spacing-small;
 }
 
-body.has-fc-compat-german-market-button-placement .fc-sidebar .fc-place-order .fc-place-order-button {
+body.has-sc-compat-german-market-button-placement .sc-sidebar .sc-place-order .sc-place-order-button {
 	display: none;
 	
 	@media (#{$bp-larger-than-desktop}) {
@@ -25,8 +25,8 @@ body.has-fc-compat-german-market-button-placement .fc-sidebar .fc-place-order .f
 	}
 }
 
-body.has-fc-compat-german-market-button-placement .fc-sidebar .woocommerce-checkout-review-order .woocommerce-terms-and-conditions + p.form-row,
-body.has-fc-compat-german-market-button-placement .fc-sidebar .woocommerce-checkout-review-order .german-market-checkbox-p {
+body.has-sc-compat-german-market-button-placement .sc-sidebar .woocommerce-checkout-review-order .woocommerce-terms-and-conditions + p.form-row,
+body.has-sc-compat-german-market-button-placement .sc-sidebar .woocommerce-checkout-review-order .german-market-checkbox-p {
 	display: none;
 	
 	@media (#{$bp-larger-than-desktop}) {
@@ -36,13 +36,13 @@ body.has-fc-compat-german-market-button-placement .fc-sidebar .woocommerce-check
 
 
 
-body.has-fc-compat-german-market-button-placement .fc-wrapper .fc-checkout-order-review.has-additional-content .fc-checkout-order-review__inner {
+body.has-sc-compat-german-market-button-placement .sc-wrapper .sc-checkout-order-review.has-additional-content .sc-checkout-order-review__inner {
 	padding-bottom: 0;
 }
 
 
 
-body.has-fc-compat-german-market-button-placement form.woocommerce-checkout .fc-wrapper #order_review .fc-checkout__below-place-order-widgets {
+body.has-sc-compat-german-market-button-placement form.woocommerce-checkout .sc-wrapper #order_review .sc-checkout__below-place-order-widgets {
 	display: none;
 
 	@media (#{$bp-larger-than-desktop}) {

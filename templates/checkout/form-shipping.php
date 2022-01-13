@@ -14,7 +14,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
  * @version 3.6.0
- * @fc-version 1.3.1
+ * @sc-version 1.3.1
  * @global WC_Checkout $checkout
  */
 

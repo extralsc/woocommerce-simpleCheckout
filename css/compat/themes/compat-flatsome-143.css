@@ -2,11 +2,11 @@ body {
   background-color: #faf9f8;
 }
 
-.theme-flatsome.admin-bar .fc-checkout-header {
+.theme-flatsome.admin-bar .sc-checkout-header {
   top: 0;
 }
 
-.theme-flatsome.admin-bar .fc-progress-bar[data-sticky-states].is-sticky--top .fc-progress-bar__inner {
+.theme-flatsome.admin-bar .sc-progress-bar[data-sticky-states].is-sticky--top .sc-progress-bar__inner {
   transform: translateY(0);
 }
 
@@ -16,6 +16,6 @@ div.woocommerce form #shipping_address_2_field .fl-wrap > label.fl-label {
   z-index: 2;
 }
 
-.theme-flatsome.admin-bar .fc-wrapper .fc-checkout-order-review[data-flyout].is-activated.is-open {
+.theme-flatsome.admin-bar .sc-wrapper .sc-checkout-order-review[data-flyout].is-activated.is-open {
   padding: 60px 0 0;
 }

@@ -54,7 +54,7 @@ class WC_Settings_SimpleCheckout_Checkout extends WC_Settings_Page
 		// SCRIPT: MEDIA UPLOADER
 		if (in_array($hook, array('woocommerce_page_wc-settings'))) {
 			wp_enqueue_media();
-			wp_enqueue_script('fc-admin-image-uploader', SimpleCheckout::$directory_url . '/js/admin/admin-image-uploader' . SimpleCheckout::$asset_version . '.js', array('jquery', 'media-upload', 'media-views'), null, true);
+			wp_enqueue_script('sc-admin-image-uploader', SimpleCheckout::$directory_url . '/js/admin/admin-image-uploader' . SimpleCheckout::$asset_version . '.js', array('jquery', 'media-upload', 'media-views'), null, true);
 		}
 	}
 
@@ -189,8 +189,8 @@ class WC_Settings_SimpleCheckout_Checkout extends WC_Settings_Page
 					<style>
 						<?php
 						foreach ($value['options'] as $key => $val) {
-							$option_image_url = apply_filters('sc_checkout_layout_option_image_url', SimpleCheckout::$directory_url . 'images/admin/fc-layout-' . esc_attr($key) . '.png', $key, $val);
-						?>.forminp-sc_layout_selector .fc-checkout-layout__option[value="<?php echo esc_attr($key); ?>"]:after {
+							$option_image_url = apply_filters('sc_checkout_layout_option_image_url', SimpleCheckout::$directory_url . 'images/admin/sc-layout-' . esc_attr($key) . '.png', $key, $val);
+						?>.forminp-sc_layout_selector .sc-checkout-layout__option[value="<?php echo esc_attr($key); ?>"]:after {
 							background-image: url(<?php echo esc_url($option_image_url) ?> );
 						}
 

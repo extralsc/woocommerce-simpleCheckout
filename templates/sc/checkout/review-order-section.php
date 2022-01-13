@@ -3,7 +3,7 @@
 /**
  * Order review section
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/fc/checkout/review-order-section.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/sc/checkout/review-order-section.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -36,10 +36,10 @@ $attributes_inner_str = implode(' ', array_map(array(SimpleCheckout::instance(),
 
 		<?php do_action('woocommerce_checkout_before_order_review_heading'); ?>
 
-		<h3 class="fc-checkout-order-review-title fc-step__substep-title"><?php echo esc_html($order_review_title); ?></h3>
+		<h3 class="sc-checkout-order-review-title sc-step__substep-title"><?php echo esc_html($order_review_title); ?></h3>
 
 		<?php if ($is_sidebar_widget && apply_filters('sc_order_summary_display_desktop_edit_cart_link', true)) : ?>
-			<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="fc-checkout-order-review__edit-cart"><?php echo esc_html(__('Edit Cart', 'simple-checkout')); ?></a>
+			<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="sc-checkout-order-review__edit-cart"><?php echo esc_html(__('Edit Cart', 'simple-checkout')); ?></a>
 		<?php endif; ?>
 
 		<?php do_action('woocommerce_checkout_before_order_review'); ?>
@@ -53,9 +53,9 @@ $attributes_inner_str = implode(' ', array_map(array(SimpleCheckout::instance(),
 		<?php if ($is_sidebar_widget) : ?>
 			<?php do_action('sc_checkout_order_review_sidebar_before_actions', $is_sidebar_widget); ?>
 
-			<div class="fc-checkout-order-review__actions-mobile">
-				<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="fc-checkout-order-review__edit-cart"><?php echo esc_html(__('Edit Cart', 'simple-checkout')); ?></a>
-				<button type="button" class="fc-checkout-order-review__close-order-summary <?php echo esc_attr(apply_filters('sc_order_summary_continue_button_classes', 'button')); ?>" data-flyout-close aria-label="<?php echo esc_html(__('Close and continue with checkout', 'simple-checkout')); ?>"><?php echo esc_html(__('Continue', 'simple-checkout')); ?></button>
+			<div class="sc-checkout-order-review__actions-mobile">
+				<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="sc-checkout-order-review__edit-cart"><?php echo esc_html(__('Edit Cart', 'simple-checkout')); ?></a>
+				<button type="button" class="sc-checkout-order-review__close-order-summary <?php echo esc_attr(apply_filters('sc_order_summary_continue_button_classes', 'button')); ?>" data-flyout-close aria-label="<?php echo esc_html(__('Close and continue with checkout', 'simple-checkout')); ?>"><?php echo esc_html(__('Continue', 'simple-checkout')); ?></button>
 			</div>
 		<?php endif; ?>
 

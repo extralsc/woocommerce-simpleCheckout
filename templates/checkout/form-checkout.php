@@ -14,7 +14,7 @@
  * @see https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
  * @version 3.5.0
- * @fc-version 1.2.0
+ * @sc-version 1.2.0
  */
 
 if (!defined('ABSPATH')) {
@@ -25,7 +25,7 @@ do_action('woocommerce_before_checkout_form', $checkout);
 
 // If checkout registration is disabled and not logged in, the user cannot checkout.
 if (!$checkout->is_registration_enabled() && $checkout->is_registration_required() && !is_user_logged_in()) {
-	echo '<div class="fc-must-login-notice">';
+	echo '<div class="sc-must-login-notice">';
 	echo esc_html(apply_filters('woocommerce_checkout_must_be_logged_in_message', __('You must be logged in to checkout.', 'woocommerce')));
 	echo '</div>';
 	return;
@@ -35,15 +35,15 @@ if (!$checkout->is_registration_enabled() && $checkout->is_registration_required
 
 <form name="checkout" method="post" class="checkout woocommerce-checkout" action="<?php echo esc_url(wc_get_checkout_url()); ?>" enctype="multipart/form-data">
 
-	<div id="fc-wrapper" class="fc-wrapper <?php echo esc_attr(apply_filters('sc_wrapper_classes', '')); ?>">
+	<div id="sc-wrapper" class="sc-wrapper <?php echo esc_attr(apply_filters('sc_wrapper_classes', '')); ?>">
 
 		<?php do_action('sc_checkout_before', $checkout); ?>
 
-		<div class="fc-inside">
+		<div class="sc-inside">
 
 			<?php do_action('sc_checkout_before_steps', $checkout); ?>
 
-			<div class="fc-checkout-steps">
+			<div class="sc-checkout-steps">
 				<?php do_action('sc_checkout_steps', $checkout); ?>
 			</div>
 

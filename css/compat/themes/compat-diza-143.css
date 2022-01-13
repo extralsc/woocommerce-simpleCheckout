@@ -10,11 +10,11 @@ body.theme-diza .woocommerce-checkout-payment .payment_methods li label {
   padding: 10px 20px 10px 44px !important;
 }
 
-body.theme-diza .fc-wrapper #payment .payment_methods > .wc_payment_method > input[type=radio] + label:before {
+body.theme-diza .sc-wrapper #payment .payment_methods > .wc_payment_method > input[type=radio] + label:before {
   top: 13px;
 }
 
-body.theme-diza .fc-wrapper #payment ul.payment_methods > .wc_payment_method > input[type=radio]:first-child + label:after {
+body.theme-diza .sc-wrapper #payment ul.payment_methods > .wc_payment_method > input[type=radio]:first-child + label:after {
   top: 13px;
 }
 

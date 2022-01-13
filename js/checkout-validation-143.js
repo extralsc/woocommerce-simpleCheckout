@@ -24,7 +24,7 @@
 	var _publicMethods = { };
 	var _validationTypes = {};
 	var _settings = {
-		bodyClass: 'fc-checkout-validation--active',
+		bodyClass: 'sc-checkout-validation--active',
 		formSelector: 'form.checkout',
 		formRowSelector: '.form-row',
 		validateFieldsSelector: '.input-text, select',

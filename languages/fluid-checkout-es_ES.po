@@ -47,7 +47,7 @@ msgstr ""
 msgid "Add %s"
 msgstr "Agregar %s"
 
-#: templates/fc/checkout/form-gift-options.php:52
+#: templates/sc/checkout/form-gift-options.php:52
 msgid "Add a gift message"
 msgstr "Agregar un mensaje de regalo"
 
@@ -75,7 +75,7 @@ msgstr ""
 "Permita que los clientes agreguen un mensaje de regalo y otras opciones "
 "relacionadas con el regalo al pedido."
 
-#: templates/fc/checkout/form-contact-login.php:24
+#: templates/sc/checkout/form-contact-login.php:24
 msgid "Already have an account?"
 msgstr "¿Ya tienes una cuenta?"
 
@@ -250,16 +250,16 @@ msgstr "Elija en qué paso mostrar el teléfono de envío"
 msgid "Click to go to the order summary"
 msgstr "Haga clic para ir al resumen del pedido"
 
-#: templates/fc/checkout/review-order-section.php:55
+#: templates/sc/checkout/review-order-section.php:55
 msgid "Close and continue with checkout"
 msgstr "Cerrar y continuar con el proceso de pago"
 
-#: templates/fc/checkout/form-contact-login-modal.php:25
+#: templates/sc/checkout/form-contact-login-modal.php:25
 msgctxt "Close button aria-label"
 msgid "Close"
 msgstr "Cerrar"
 
-#: templates/fc/checkout/review-order-section.php:55
+#: templates/sc/checkout/review-order-section.php:55
 msgid "Continue"
 msgstr "Continuar"
 
@@ -275,7 +275,7 @@ msgstr ""
 msgid "Coupon code"
 msgstr "Código de cupón"
 
-#: templates/fc/checkout/form-account-creation.php:29
+#: templates/sc/checkout/form-account-creation.php:29
 msgid "Create an account"
 msgstr "Crear una cuenta"
 
@@ -410,8 +410,8 @@ msgid "Do not hide \"Address line 2\" fields behind a link button"
 msgstr ""
 "No oculte los campos \"Línea de dirección 2\" detrás de un botón de enlace"
 
-#: templates/fc/checkout/review-order-section.php:39
-#: templates/fc/checkout/review-order-section.php:54
+#: templates/sc/checkout/review-order-section.php:39
+#: templates/sc/checkout/review-order-section.php:54
 msgid "Edit Cart"
 msgstr "Editar carrito"
 
@@ -460,12 +460,12 @@ msgid "Gift message"
 msgstr "Mensaje de regalo"
 
 #: inc/checkout-gift-options.php:464
-#: templates/fc/order/order-details-gift-options-email-plain-text.php:28
+#: templates/sc/order/order-details-gift-options-email-plain-text.php:28
 msgid "Gift message from:"
 msgstr "Mensaje de regalo de:"
 
 #: inc/checkout-gift-options.php:456
-#: templates/fc/order/order-details-gift-options-email-plain-text.php:23
+#: templates/sc/order/order-details-gift-options-email-plain-text.php:23
 msgid "Gift message:"
 msgstr "Mensaje de regalo:"
 
@@ -473,17 +473,17 @@ msgstr "Mensaje de regalo:"
 msgid "Gift options"
 msgstr "Opciones de regalo"
 
-#: templates/fc/order/order-details-gift-options.php:23
+#: templates/sc/order/order-details-gift-options.php:23
 msgctxt "Gift options section title in the order details"
 msgid "Gift message"
 msgstr "Mensaje de regalo"
 
-#: templates/fc/order/order-details-gift-options-email-plain-text.php:20
+#: templates/sc/order/order-details-gift-options-email-plain-text.php:20
 msgctxt "Gift options section title in the order details"
 msgid "Gift message:"
 msgstr "Mensaje de regalo:"
 
-#: templates/fc/checkout/checkout-header.php:27
+#: templates/sc/checkout/checkout-header.php:27
 msgid "Go to the home page"
 msgstr "Ir a la página de inicio"
 
@@ -567,7 +567,7 @@ msgstr ""
 "shipping-and-hide-the-fields-entirely\" target=\"_blank\">leer la "
 "investigación</a>."
 
-#: templates/fc/order/order-details-gift-options.php:35
+#: templates/sc/order/order-details-gift-options.php:35
 msgctxt "Label on the order details for person sending the gift"
 msgid "From:"
 msgstr "De:"
@@ -599,17 +599,17 @@ msgstr ""
 "La carga de activos nominificados afecta el rendimiento del sitio web. "
 "Utilice esta opción únicamente durante la solución de problemas."
 
-#: templates/fc/checkout/form-contact-login.php:24
+#: templates/sc/checkout/form-contact-login.php:24
 msgctxt "Log in link label at checkout contact step"
 msgid "Log in"
 msgstr "Inicia sesión"
 
-#: templates/fc/checkout/form-contact-login.php:35
+#: templates/sc/checkout/form-contact-login.php:35
 msgctxt "Log in separator label at for when guest checkout is disabled"
 msgid "Or continue as a guest"
 msgstr "O continuar como invitado"
 
-#: templates/fc/checkout/form-contact-login.php:37
+#: templates/sc/checkout/form-contact-login.php:37
 msgctxt "Log in separator label at for when guest checkout is disabled"
 msgid "Or continue checkout below"
 msgstr "O continuar con el proceso de pago a continuación"
@@ -658,7 +658,7 @@ msgstr ""
 "complemento está activado."
 
 #. %s shipping destination.
-#: templates/fc/checkout/review-order-shipping.php:31
+#: templates/sc/checkout/review-order-shipping.php:31
 msgctxt "No shipping method chosen label for the order summary"
 msgid "--"
 msgstr "--"
@@ -883,7 +883,7 @@ msgstr "Envío a"
 msgid "Show coupon codes as a substep of the payment step"
 msgstr "Mostrar códigos de cupón como un subpaso del paso de pago"
 
-#: templates/fc/checkout/form-contact-login-modal.php:28
+#: templates/sc/checkout/form-contact-login-modal.php:28
 msgid "Sign in to your account"
 msgstr "Iniciar sesión en su cuenta"
 
@@ -891,7 +891,7 @@ msgstr "Iniciar sesión en su cuenta"
 msgid "Single step"
 msgstr "Un paso"
 
-#: templates/fc/header-checkout.php:36
+#: templates/sc/header-checkout.php:36
 msgid "Skip to content"
 msgstr "Saltar al contenido"
 

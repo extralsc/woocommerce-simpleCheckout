@@ -14,7 +14,7 @@
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package WooCommerce\Templates
  * @version 6.1.0
- * @fc-version 1.4.3
+ * @sc-version 1.4.3
  */
 
 defined('ABSPATH') || exit;
@@ -30,7 +30,7 @@ if (!wp_doing_ajax()) {
 	<?php do_action('sc_checkout_before_payment', $checkout); ?>
 
 	<?php if (WC()->cart->needs_payment()) : ?>
-		<div class="fc-payment-methods__wrapper">
+		<div class="sc-payment-methods__wrapper">
 			<ul class="wc_payment_methods payment_methods methods">
 				<?php
 				if (!empty($available_gateways)) {
@@ -49,7 +49,7 @@ if (!wp_doing_ajax()) {
 		<div class="woocommerce-info"><?php echo apply_filters('sc_payment_not_needed_message', sprintf(esc_html(__('Your order has a total amount due of %s. No&nbsp;further payment is needed.', 'simple-checkout')), wc_price(0))); ?></div>
 	<?php endif; ?>
 
-	<?php // CHANGE: Removed place order section, moved to templates/fc/checkout/place-order.php 
+	<?php // CHANGE: Removed place order section, moved to templates/sc/checkout/place-order.php 
 	?>
 
 	<?php // CHANGE: Added hook for after the payment section 

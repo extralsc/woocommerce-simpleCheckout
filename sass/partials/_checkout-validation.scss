@@ -9,7 +9,7 @@ div.woocommerce .form-row .woocommerce-error:not( .invalid-country-not-allowed )
 
 
 div.woocommerce .form-row .woocommerce-error,
-div.woocommerce .form-row .fc-mailcheck-suggestion {
+div.woocommerce .form-row .sc-mailcheck-suggestion {
 	position: relative;
 	margin: 0;
 	padding: $checkout-message-error-padding;
@@ -18,11 +18,11 @@ div.woocommerce .form-row .fc-mailcheck-suggestion {
 	font-size: $font-size-extra-small;
 }
 
-div.woocommerce .form-row .fc-mailcheck-suggestion {
+div.woocommerce .form-row .sc-mailcheck-suggestion {
 	padding: $checkout-message-suggestion-padding;
 }
 
-div.woocommerce .form-row .fc-mailcheck-suggestion .mailcheck-suggestion {
+div.woocommerce .form-row .sc-mailcheck-suggestion .mailcheck-suggestion {
 	&:focus {
 		outline: $focus-outline-link;
 		outline-offset: $focus-outline-offset-link;

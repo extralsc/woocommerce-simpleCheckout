@@ -1,7 +1,7 @@
 // ------------------------------------
 // ORDER DETAILS - GIFT MESSAGE
 // ------------------------------------
-.fc-gift-options__message {
+.sc-gift-options__message {
     margin: $gift-message-margin;
 	padding: $gift-message-padding;
 	border: $gift-message-border;
@@ -11,7 +11,7 @@
 
 
 
-.fc-gift-options__message .fc-gift-options__message-text {
+.sc-gift-options__message .sc-gift-options__message-text {
     max-width: remsize( 75rem );
     display: block;
     margin: 0 auto;
@@ -22,6 +22,6 @@
 
 
 
-.fc-gift-options__message .fc-gift-options__message-from {
+.sc-gift-options__message .sc-gift-options__message-from {
     margin-top: $global-spacing-tiny;
 }

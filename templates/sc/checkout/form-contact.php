@@ -3,7 +3,7 @@
 /**
  * Checkout contact form
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/fc/checkout/form-contact.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/sc/checkout/form-contact.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -23,9 +23,9 @@ defined('ABSPATH') || exit;
 
 <?php do_action('sc_checkout_before_contact_fields'); ?>
 
-<div class="fc-contact-fields fc-clearfix">
+<div class="sc-contact-fields sc-clearfix">
 
-	<div class="fc-contact-fields__wrapper">
+	<div class="sc-contact-fields__wrapper">
 		<?php do_action('sc_checkout_contact_before_fields'); ?>
 
 		<?php // CHANGE: Display only fields in the contact step display list 

@@ -61,7 +61,7 @@ class SimpleCheckout_CodeRockz_WooCommerceDelivery extends SimpleCheckout
 
 		// Maybe load plugin's compatibility file
 		if (file_exists(self::$directory_path . $plugin_compat_file_path)) {
-			wp_enqueue_style('fc-plugin-compat-' . $plugin_slug, self::$directory_url . $plugin_compat_file_path, array(), null);
+			wp_enqueue_style('sc-plugin-compat-' . $plugin_slug, self::$directory_url . $plugin_compat_file_path, array(), null);
 		}
 	}
 }

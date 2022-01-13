@@ -3,7 +3,7 @@
 /**
  * The checkout template file.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/fc/checkout/page-checkout.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/sc/checkout/page-checkout.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -20,16 +20,16 @@ defined('ABSPATH') || exit;
 
 // Replace site header with our implementation
 if (SimpleCheckout_Steps::instance()->get_hide_site_header_footer_at_checkout()) {
-	wc_get_template('fc/header-checkout.php');
+	wc_get_template('sc/header-checkout.php');
 }
 // Display the site's default header
 else {
 	get_header('checkout');
 }
 ?>
-<div class="fc-content <?php echo esc_attr(apply_filters('sc_content_section_class', '')); ?>">
+<div class="sc-content <?php echo esc_attr(apply_filters('sc_content_section_class', '')); ?>">
 
-	<h1 class="fc-checkout__title <?php echo false === apply_filters('sc_display_checkout_page_title', false) ? 'screen-reader-text' : ''; ?>"><?php the_title(); ?></h1>
+	<h1 class="sc-checkout__title <?php echo false === apply_filters('sc_display_checkout_page_title', false) ? 'screen-reader-text' : ''; ?>"><?php the_title(); ?></h1>
 
 	<?php
 	// Load the checkout page content
@@ -44,7 +44,7 @@ else {
 <?php
 // Replace site header with our implementation
 if (SimpleCheckout_Steps::instance()->get_hide_site_header_footer_at_checkout()) {
-	wc_get_template('fc/footer-checkout.php');
+	wc_get_template('sc/footer-checkout.php');
 }
 // Display the site's default header
 else {

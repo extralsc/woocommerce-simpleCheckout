@@ -18,8 +18,8 @@ jQuery( function( $ ) {
 	$.blockUI.defaults.overlayCSS.cursor = 'default';
 
 	// CHANGE: Add custom css selectors for place order button and terms checkbox
-	var _place_order_selector = '#place_order, .fc-place-order-button';
-	var _terms_selector = '.fc-terms-checkbox';
+	var _place_order_selector = '#place_order, .sc-place-order-button';
+	var _terms_selector = '.sc-terms-checkbox';
 
 	// CHANGE: Add flag to up prevent users from leaving the page when there is unsaved data
 	var _updateBeforeUnload = false;
@@ -483,7 +483,7 @@ jQuery( function( $ ) {
 			}
 
 			// CHANGE: Also block the shipping methods section when updating
-			$( '.woocommerce-checkout-payment, .woocommerce-checkout-review-order-table .fc-shipping-method__packages' ).block({
+			$( '.woocommerce-checkout-payment, .woocommerce-checkout-review-order-table .sc-shipping-method__packages' ).block({
 				message: null,
 				overlayCSS: {
 					background: '#fff',
@@ -828,8 +828,8 @@ jQuery( function( $ ) {
 			e.preventDefault();
 
 			// CHANGE: Change container element to be the coupon code item if simple checkout coupons feature is enabled
-			var isSimpleCheckoutCouponsEnabled = $( this ).parents( '.fc-coupon-codes__coupon' ).length > 0;
-			var container = isSimpleCheckoutCouponsEnabled ? $( this ).parents( '.fc-coupon-codes__coupon' ) : $( this ).parents( '.woocommerce-checkout-review-order' ),
+			var isSimpleCheckoutCouponsEnabled = $( this ).parents( '.sc-coupon-codes__coupon' ).length > 0;
+			var container = isSimpleCheckoutCouponsEnabled ? $( this ).parents( '.sc-coupon-codes__coupon' ) : $( this ).parents( '.woocommerce-checkout-review-order' ),
 				coupon    = $( this ).data( 'coupon' );
 
 			container.addClass( 'processing' ).block({
@@ -863,8 +863,8 @@ jQuery( function( $ ) {
 
 					if ( code ) {
 						// CHANGE: Get the checkout substep elements
-						var $substep_title = $( '.fc-step__substep[data-substep-id="coupon_codes"] .fc-step__substep-title' );
-						var $substep = $( '.fc-step__substep[data-substep-id="coupon_codes"]' );
+						var $substep_title = $( '.sc-step__substep[data-substep-id="coupon_codes"] .sc-step__substep-title' );
+						var $substep = $( '.sc-step__substep[data-substep-id="coupon_codes"]' );
 
 						// CHANGE: Maybe display coupon code messages in the coupon code step instead of the top of the page
 						if ( isSimpleCheckoutCouponsEnabled && $substep_title.length ) {
@@ -910,7 +910,7 @@ jQuery( function( $ ) {
 			};
 
 			// Display loading/processing indication
-			var container = $( this ).parents( '.fc-expansible-form-section__content--coupon_code' );
+			var container = $( this ).parents( '.sc-expansible-form-section__content--coupon_code' );
 			container.addClass( 'processing' ).block({
 				message: null,
 				overlayCSS: {
@@ -937,8 +937,8 @@ jQuery( function( $ ) {
 
 					if ( code ) {
 						// Get the checkout substep elements
-						var $substep_title = $( '.fc-step__substep[data-substep-id="coupon_codes"] .fc-step__substep-title' );
-						var $substep = $( '.fc-step__substep[data-substep-id="coupon_codes"]' );
+						var $substep_title = $( '.sc-step__substep[data-substep-id="coupon_codes"] .sc-step__substep-title' );
+						var $substep = $( '.sc-step__substep[data-substep-id="coupon_codes"]' );
 
 						// Display response (`code`) as a message
 						if ( $substep_title.length > 0 ) {
@@ -960,8 +960,8 @@ jQuery( function( $ ) {
 						// Close the coupon code field section
 						if ( window.CollapsibleBlock ) {
 
-							var expansibleCouponToggle = document.querySelector( 'form.woocommerce-checkout .fc-expansible-form-section__toggle--coupon_code' );
-							var expansibleCouponContent = document.querySelector( 'form.woocommerce-checkout .fc-expansible-form-section__content--coupon_code' );
+							var expansibleCouponToggle = document.querySelector( 'form.woocommerce-checkout .sc-expansible-form-section__toggle--coupon_code' );
+							var expansibleCouponContent = document.querySelector( 'form.woocommerce-checkout .sc-expansible-form-section__content--coupon_code' );
 							var expansibleCouponToggleButton = document.querySelector( 'form.woocommerce-checkout .expansible-section__toggle-plus--coupon_code' );
 
 							if ( expansibleCouponToggle && expansibleCouponContent ) {

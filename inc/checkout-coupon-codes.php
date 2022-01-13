@@ -65,7 +65,7 @@ class SimpleCheckout_CouponCodes extends SimpleCheckout
 			return $classes;
 		}
 
-		return array_merge($classes, array('has-fc-coupon-code-fields'));
+		return array_merge($classes, array('has-sc-coupon-code-fields'));
 	}
 
 
@@ -126,7 +126,7 @@ class SimpleCheckout_CouponCodes extends SimpleCheckout
 		$this->checkout_steps()->output_expansible_form_section_start_tag($key, $coupon_code_toggle_label, $coupon_code_expansible_args);
 		woocommerce_form_field($key, $coupon_code_field_args);
 ?>
-		<button type="button" class="fc-coupon-code__apply <?php echo esc_attr(apply_filters('sc_coupon_code_apply_button_classes', 'button')); ?>" data-apply-coupon-button><?php echo esc_html($coupon_code_button_label); ?></button>
+		<button type="button" class="sc-coupon-code__apply <?php echo esc_attr(apply_filters('sc_coupon_code_apply_button_classes', 'button')); ?>" data-apply-coupon-button><?php echo esc_html($coupon_code_button_label); ?></button>
 		<?php
 		$this->checkout_steps()->output_expansible_form_section_end_tag();
 	}
@@ -151,7 +151,7 @@ class SimpleCheckout_CouponCodes extends SimpleCheckout
 	 */
 	public function get_substep_text_coupon_codes()
 	{
-		$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--coupon-codes">';
+		$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--coupon-codes">';
 		ob_start();
 
 		do_action('sc_substep_coupon_codes_text_before');
@@ -164,9 +164,9 @@ class SimpleCheckout_CouponCodes extends SimpleCheckout
 		?>
 			<?php // The function `sanitize_title` is used below to convert the string into a CSS-class-like string 
 			?>
-			<div class="fc-coupon-codes__coupon coupon-<?php echo esc_attr(sanitize_title($code)); ?>">
-				<strong class="fc-coupon-codes__coupon-code"><?php wc_cart_totals_coupon_label($coupon); ?></strong>
-				<span class="fc-coupon-codes__coupon-amount"><?php echo $coupon_html_esc; // WPCS: XSS ok. 
+			<div class="sc-coupon-codes__coupon coupon-<?php echo esc_attr(sanitize_title($code)); ?>">
+				<strong class="sc-coupon-codes__coupon-code"><?php wc_cart_totals_coupon_label($coupon); ?></strong>
+				<span class="sc-coupon-codes__coupon-amount"><?php echo $coupon_html_esc; // WPCS: XSS ok. 
 																?></span>
 			</div>
 <?php
@@ -188,7 +188,7 @@ class SimpleCheckout_CouponCodes extends SimpleCheckout
 	public function add_coupon_codes_text_fragment($fragments)
 	{
 		$html = $this->get_substep_text_coupon_codes();
-		$fragments['.fc-step__substep-text-content--coupon-codes'] = $html;
+		$fragments['.sc-step__substep-text-content--coupon-codes'] = $html;
 		return $fragments;
 	}
 

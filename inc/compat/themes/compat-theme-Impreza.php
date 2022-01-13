@@ -97,7 +97,7 @@ class SimpleCheckout_ThemeCompat_Impreza extends SimpleCheckout
 		if (!empty($header_spacing) && intval($header_spacing) > 0 || '0' == $header_spacing) {
 			$header_spacing = intval($header_spacing);
 		?>
-			<style id="fc-compat-theme-impreza-header">
+			<style id="sc-compat-theme-impreza-header">
 				<?php echo 'body:not(.has-checkout-header).theme-Impreza div.woocommerce{padding-top: ' . $header_spacing . 'px;}'; ?>
 			</style>
 <?php

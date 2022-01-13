@@ -3,7 +3,7 @@
 /**
  * Checkout gift options order details section
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/fc/order/order-details-gift-options.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/sc/order/order-details-gift-options.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -19,20 +19,20 @@
 defined('ABSPATH') || exit;
 ?>
 
-<section class="fc-gift-options--order-details">
+<section class="sc-gift-options--order-details">
 
 	<h2 class="woocommerce-column__title"><?php echo esc_html(_x('Gift message', 'Gift options section title in the order details', 'simple-checkout')); ?></h2>
 
-	<figure class="fc-gift-options__message">
+	<figure class="sc-gift-options__message">
 
 		<?php if (isset($gift_options) && array_key_exists('_sc_gift_message', $gift_options) && !empty($gift_options['_sc_gift_message'])) : ?>
-			<blockquote class="fc-gift-options__message-text">
+			<blockquote class="sc-gift-options__message-text">
 				<?php echo esc_html($gift_options['_sc_gift_message']); ?>
 			</blockquote>
 		<?php endif; ?>
 
 		<?php if (isset($gift_options) && array_key_exists('_sc_gift_from', $gift_options) && !empty($gift_options['_sc_gift_from'])) : ?>
-			<figcaption class="fc-gift-options__message-from">
+			<figcaption class="sc-gift-options__message-from">
 				<span class="screen-reader-text"><?php echo esc_attr(_x('From:', 'Label on the order details for person sending the gift', 'simple-checkout')); ?></span>
 				<?php echo esc_html($gift_options['_sc_gift_from']); ?>
 			</figcaption>

@@ -79,7 +79,7 @@ class SimpleCheckout_GiftOptions extends SimpleCheckout
 			return $classes;
 		}
 
-		return array_merge($classes, array('has-fc-gift-options'));
+		return array_merge($classes, array('has-sc-gift-options'));
 	}
 
 
@@ -119,16 +119,16 @@ class SimpleCheckout_GiftOptions extends SimpleCheckout
 		// Get gift options values
 		$gift_options = $this->get_gift_options_session();
 
-		$html = '<div class="fc-step__substep-text-content fc-step__substep-text-content--gift-options">';
+		$html = '<div class="sc-step__substep-text-content sc-step__substep-text-content--gift-options">';
 
 		// Display gift options values
 		if (isset($gift_options['_sc_gift_message']) && !empty($gift_options['_sc_gift_message'])) {
-			$html .= '<div class="fc-step__substep-text-line fc-step__substep-text-line--gift-message">' . esc_html($gift_options['_sc_gift_message']) . '</div>';
-			$html .= '<div class="fc-step__substep-text-line fc-step__substep-text-line--gift-from">' . esc_html($gift_options['_sc_gift_from']) . '</div>';
+			$html .= '<div class="sc-step__substep-text-line sc-step__substep-text-line--gift-message">' . esc_html($gift_options['_sc_gift_message']) . '</div>';
+			$html .= '<div class="sc-step__substep-text-line sc-step__substep-text-line--gift-from">' . esc_html($gift_options['_sc_gift_from']) . '</div>';
 		}
 		// Display "no gift options" notice.
 		else {
-			$html .= '<div class="fc-step__substep-text-line">' . apply_filters('sc_no_gift_options_order_review_notice', _x('None.', 'Notice for no gift options provided', 'simple-checkout')) . '</div>';
+			$html .= '<div class="sc-step__substep-text-line">' . apply_filters('sc_no_gift_options_order_review_notice', _x('None.', 'Notice for no gift options provided', 'simple-checkout')) . '</div>';
 		}
 
 		$html .= '</div>';
@@ -144,7 +144,7 @@ class SimpleCheckout_GiftOptions extends SimpleCheckout
 	public function add_gift_options_text_fragment($fragments)
 	{
 		$html = $this->get_substep_text_gift_options();
-		$fragments['.fc-step__substep-text-content--gift-options'] = $html;
+		$fragments['.sc-step__substep-text-content--gift-options'] = $html;
 		return $fragments;
 	}
 
@@ -233,7 +233,7 @@ class SimpleCheckout_GiftOptions extends SimpleCheckout
 	{
 		// Output gift options form template
 		wc_get_template(
-			'fc/checkout/form-gift-options.php',
+			'sc/checkout/form-gift-options.php',
 			array(
 				'checkout'                 => WC()->checkout(),
 				'gift_options'             => $this->get_gift_options_session(),
@@ -525,7 +525,7 @@ class SimpleCheckout_GiftOptions extends SimpleCheckout
 
 		// Output gift options section template
 		wc_get_template(
-			'fc/order/order-details-gift-options.php',
+			'sc/order/order-details-gift-options.php',
 			array(
 				'order'                    => $order,
 				'gift_options'             => $gift_options,
@@ -560,7 +560,7 @@ class SimpleCheckout_GiftOptions extends SimpleCheckout
 		if ($plain_text) {
 			// Output gift options section template
 			wc_get_template(
-				'fc/order/order-details-gift-options-email-plain-text.php',
+				'sc/order/order-details-gift-options-email-plain-text.php',
 				array(
 					'order'                    => $order,
 					'gift_options'             => $gift_options,
@@ -569,7 +569,7 @@ class SimpleCheckout_GiftOptions extends SimpleCheckout
 		} else {
 			// Output gift options section template
 			wc_get_template(
-				'fc/order/order-details-gift-options.php',
+				'sc/order/order-details-gift-options.php',
 				array(
 					'order'                    => $order,
 					'gift_options'             => $gift_options,

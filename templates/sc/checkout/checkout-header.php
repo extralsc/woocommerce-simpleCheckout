@@ -3,7 +3,7 @@
 /**
  * Checkout header template file.
  *
- * This template can be overridden by copying it to yourtheme/woocommerce/fc/checkout/checkout-header.php.
+ * This template can be overridden by copying it to yourtheme/woocommerce/sc/checkout/checkout-header.php.
  *
  * HOWEVER, on occasion WooCommerce will need to update template files and you
  * (the theme developer) will need to copy the new files to your theme to
@@ -13,16 +13,16 @@
  *
  * @see     https://docs.woocommerce.com/document/template-structure/
  * @package simple-checkout
- * @version 1.4.3
+ * @version 1.0.0
  */
 
 defined('ABSPATH') || exit;
 ?>
 
-<header class="fc-checkout-header">
-	<div class="fc-checkout-header__inner">
+<header class="sc-checkout-header">
+	<div class="sc-checkout-header__inner">
 
-		<div class="fc-checkout__branding">
+		<div class="sc-checkout__branding">
 			<?php
 			$site_title = get_bloginfo('name');
 			$homepage_link_description = esc_attr(__('Go to the home page', 'simple-checkout'));
@@ -44,7 +44,7 @@ defined('ABSPATH') || exit;
 				echo sprintf(
 					'<a href="%1$s" class="custom-logo-link" rel="home">%2$s</a>',
 					esc_url(home_url('/')),
-					'<span class="fc-checkout__site-name">' . esc_html(get_bloginfo('name')) . '</span>'
+					'<span class="sc-checkout__site-name">' . esc_html(get_bloginfo('name')) . '</span>'
 				);
 			}
 
@@ -67,7 +67,7 @@ defined('ABSPATH') || exit;
 		<?php do_action('sc_checkout_header_widgets'); ?>
 
 		<?php if (has_action('sc_checkout_header_cart_link')) : ?>
-			<div class="fc-checkout__cart-link-wrapper">
+			<div class="sc-checkout__cart-link-wrapper">
 				<?php do_action('sc_checkout_header_cart_link'); ?>
 			</div>
 		<?php endif; ?>

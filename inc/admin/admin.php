@@ -45,7 +45,7 @@ class SimpleCheckout_Admin extends SimpleCheckout
 		if ($hook_suffix !== 'woocommerce_page_wc-settings') {
 			return;
 		}
-		wp_enqueue_style('fc-admin-options', self::$directory_url . 'css/admin-options' . self::$asset_version . '.css', NULL, NULL);
+		wp_enqueue_style('sc-admin-options', self::$directory_url . 'css/admin-options' . self::$asset_version . '.css', NULL, NULL);
 	}
 
 

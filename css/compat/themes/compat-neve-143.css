@@ -1,7 +1,7 @@
-.fc-wrapper .fc-expansible-form-section__content--coupon_code .fc-coupon-code__apply {
+.sc-wrapper .sc-expansible-form-section__content--coupon_code .sc-coupon-code__apply {
   line-height: 1;
 }
 
-.woocommerce-page.woocommerce-checkout .fc-wrapper #payment ul.payment_methods {
+.woocommerce-page.woocommerce-checkout .sc-wrapper #payment ul.payment_methods {
   border: solid 1px #e1e1e1 !important;
 }
