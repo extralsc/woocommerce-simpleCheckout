@@ -1,0 +1,940 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: simple checkout for WooCommerce\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-01-12 17:54+0000\n"
+"PO-Revision-Date: 2022-01-13 18:23+0000\n"
+"Last-Translator: \n"
+"Language-Team: Svenska\n"
+"Language: sv_SE\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.5.5; wp-5.8.3"
+
+#: inc/admin/admin-settings-advanced.php:105
+msgid ""
+"(Experimental) Display an additional \"Place order\" and terms checkbox "
+"below the order summary in the sidebar."
+msgstr ""
+"(Experimentell) Visa ytterligare en kryssruta för \"Lägg beställning\" och "
+"villkor under beställningssammanfattningen i sidofältet."
+
+#: inc/admin/admin-settings-advanced.php:121
+msgid "(Experimental) Use theme's page header and footer for the checkout page"
+msgstr "(Experimentell) Använd temats sidhuvud och sidfot för kassasidan"
+
+#: inc/checkout-validation.php:195
+msgid "(Required)"
+msgstr "(Obligatoriskt)"
+
+#: simple-checkout.php:369
+#, php-format
+msgid ""
+"<strong>%1$s</strong> requires <strong>%2$s</strong> to be installed and "
+"activated. <a href=\"%3$s\">Go to Plugin Search</a>"
+msgstr ""
+"<strong>%1$s</strong> kräver att <strong>%2$s</strong>är installerad och "
+"aktiverad. <a href=\"%3$s\">Gå till tilläggshanteraren</a>"
+
+#. %s: Form field label
+#: inc/checkout-coupon-codes.php:113 inc/checkout-hide-optional-fields.php:102
+#, php-format
+msgid "Add %s"
+msgstr "Lägg till %s"
+
+#: templates/sc/checkout/form-gift-options.php:52
+msgid "Add a gift message"
+msgstr "Lägg till ett presentmeddelande"
+
+#: inc/admin/admin-settings-general.php:155
+msgid "Add a phone field to the shipping address form"
+msgstr "Lägg till ett telefonfält i leveransadressformuläret"
+
+#: inc/admin/admin-settings-general.php:256
+msgid "Add widget areas to the checkout page"
+msgstr "Lägg till widgetområden på kassasidan"
+
+#: inc/checkout-steps.php:1630
+msgid "Additional notes"
+msgstr "Ytterligare information"
+
+#: inc/admin/admin-settings-advanced.php:51
+msgid "Advanced"
+msgstr "Avancerad"
+
+#: inc/admin/admin-settings-general.php:226
+msgid ""
+"Allow customers to add a gift message and other gift related options to the "
+"order."
+msgstr ""
+"Tillåt kunder att lägga till ett presentmeddelande och andra "
+"presentrelaterade alternativ till beställningen."
+
+#: templates/sc/checkout/form-contact-login.php:24
+msgid "Already have an account?"
+msgstr "Har du redan ett konto?"
+
+#: inc/compat/plugins/compat-plugin-woocommerce-gateway-amazon-payments-advanced.php:101
+msgctxt "Amazon Pay Express elements"
+msgid "Button and message"
+msgstr "Knapp och meddelande"
+
+#: inc/compat/plugins/compat-plugin-woocommerce-gateway-amazon-payments-advanced.php:100
+msgctxt "Amazon Pay Express elements"
+msgid "Only button"
+msgstr ""
+
+#: inc/checkout-steps.php:1414
+msgid "An account will be created with the information provided."
+msgstr "Ett konto kommer att skapas med den information som tillhandahålls."
+
+#: inc/checkout-fields.php:93
+msgid "Apartment, unit, building, floor, etc."
+msgstr "Lägenhet, enhet, byggnad, våning etc."
+
+#: inc/admin/admin-settings-advanced.php:96
+msgid "Applies only to multi-step layouts."
+msgstr "Gäller endast flerstegslayouter."
+
+#: inc/admin/admin-settings-general.php:144
+msgid "Billing Address"
+msgstr "Faktureringsadress"
+
+#: inc/admin/admin-settings-general.php:145
+msgid "Billing address same as the shipping address checked by default"
+msgstr "Faktureringsadress är samma som leveransadressen markerad som standard"
+
+#: inc/checkout-steps.php:2064
+msgid "Billing to"
+msgstr "Faktureringsuppgifter"
+
+#: inc/checkout-gift-options.php:181
+#, php-format
+msgid "Brief message with up to %d characters, printed on the packing slip."
+msgstr "Kort meddelande med upp till %d tecken, tryckt på följesedeln."
+
+#: inc/checkout-gift-options.php:181
+msgid "Brief message, printed on the packing slip."
+msgstr "Kort meddelande, tryckt på följesedeln."
+
+#: inc/checkout-coupon-codes.php:91
+msgctxt "Button label for applying coupon codes"
+msgid "Apply"
+msgstr "Använd"
+
+#: inc/compat/plugins/compat-plugin-captcha-pro.php:68
+msgctxt "Captcha position"
+msgid "Before place order button"
+msgstr "Innan beställningsknapp"
+
+#: inc/compat/plugins/compat-plugin-captcha-pro.php:67
+msgctxt "Captcha position"
+msgid "Before place order section"
+msgstr "Innan beställningssektionen"
+
+#: inc/compat/plugins/compat-plugin-captcha-pro.php:63
+msgid "Captcha Pro by BestWebSoft"
+msgstr "Captcha Pro av BestWebSoft"
+
+#: inc/checkout-steps.php:404
+msgid "Cart total:"
+msgstr "Varukorg totalt:"
+
+#: inc/checkout-validation.php:87
+msgid "Change email address to: {suggestion-value}"
+msgstr "Ändra e-postadress till: {suggestion-value}"
+
+#: inc/checkout-steps.php:1144
+#, php-format
+msgid "Change: %s"
+msgstr "Ändra: %s"
+
+#: inc/checkout-widget-areas.php:85
+msgid "Checkout Below Place Order"
+msgstr "Kassa under Beställ"
+
+#: inc/checkout-widget-areas.php:41
+msgid "Checkout Header - Desktop"
+msgstr ""
+
+#: inc/checkout-widget-areas.php:51
+msgid "Checkout Header - Mobile"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:60
+msgid "Checkout Layout"
+msgstr "Kassalayout"
+
+#: inc/admin/admin-settings-simple-checkout.php:65
+msgid "Checkout Options"
+msgstr "Kassaalternativ"
+
+#: inc/checkout-widget-areas.php:75
+msgid "Checkout Order Summary"
+msgstr "Beställningssammanfattning för kassan"
+
+#: inc/checkout-widget-areas.php:63
+msgid "Checkout Sidebar"
+msgstr "Kassa sidofältet"
+
+#: inc/checkout-steps.php:886
+msgctxt "Checkout step title"
+msgid "Billing"
+msgstr "Fakturering"
+
+#: inc/checkout-steps.php:865
+msgctxt "Checkout step title"
+msgid "Contact"
+msgstr "Kontakt"
+
+#: inc/checkout-steps.php:895
+msgctxt "Checkout step title"
+msgid "Payment"
+msgstr ""
+
+#: inc/checkout-steps.php:875
+msgctxt "Checkout step title"
+msgid "Shipping"
+msgstr ""
+
+#: inc/checkout-steps.php:1144
+msgctxt "Checkout substep change link label"
+msgid "Change"
+msgstr "Ändra"
+
+#: inc/checkout-steps.php:1145
+msgctxt "Checkout substep save link label"
+msgid "Save changes"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:255
+msgid "Checkout Widget Areas"
+msgstr "Kassa widgetområden"
+
+#: inc/admin/admin-settings-general.php:81
+msgid ""
+"Choose a background color for the checkout page header. Only applies when "
+"using the plugin's checkout header."
+msgstr ""
+"Välj en bakgrundsfärg för kassasidans sidhuvud. Gäller endast vid användning "
+"av pluginens kassahuvud."
+
+#: inc/admin/admin-settings-general.php:91
+msgid ""
+"Choose a background color for the checkout page. Color is applied to the <em>"
+"body</em> element."
+msgstr ""
+"Välj en bakgrundsfärg för kassasidan. Färg appliceras på <em>body</em> "
+"elementet."
+
+#: inc/admin/admin-settings-general.php:72
+msgid ""
+"Choose an image to be displayed on the checkout page header. Only applies "
+"when using the plugin's checkout header."
+msgstr ""
+"Välj en bild som ska visas i kassans sidhuvud. Gäller endast vid användning "
+"av pluginens kassahuvud."
+
+#: inc/admin/admin-settings-general.php:168
+msgid "Choose in which step to display the shipping phone"
+msgstr "Välj i vilket steg du vill visa leveranstelefonen"
+
+#: inc/checkout-steps.php:404
+msgid "Click to go to the order summary"
+msgstr "Klicka för att gå till orderöversikten"
+
+#: templates/sc/checkout/review-order-section.php:55
+msgid "Close and continue with checkout"
+msgstr "Stäng och fortsätt till kassan"
+
+#: templates/sc/checkout/form-contact-login-modal.php:25
+msgctxt "Close button aria-label"
+msgid "Close"
+msgstr "Stäng"
+
+#: templates/sc/checkout/review-order-section.php:55
+msgid "Continue"
+msgstr "Fortsätt"
+
+#: inc/admin/admin-settings-advanced.php:116
+msgid ""
+"Controls whether to use the simple checkout page header and footer or keep "
+"the currently active theme's."
+msgstr ""
+"Styr om du vill använda den enkla sidhuvudet och sidfoten för kassasidan "
+"eller behålla de för närvarande aktiva teman."
+
+#: inc/checkout-coupon-codes.php:71 inc/checkout-coupon-codes.php:89
+msgid "Coupon code"
+msgstr "Rabattkod"
+
+#: templates/sc/checkout/form-account-creation.php:29
+msgid "Create an account"
+msgstr "Skapa ett konto"
+
+#: inc/admin/admin-settings-advanced.php:140
+msgid "Debug options"
+msgstr "Felsökningsalternativ"
+
+#: inc/compat/plugins/compat-plugin-captcha-pro.php:64
+msgid ""
+"Define the position to display the captcha section. Some positions might not "
+"work depending on the captcha type chosen."
+msgstr ""
+"Definiera positionen för att visa captcha-sektionen. Vissa positioner kanske "
+"inte fungerar beroende på vald captcha-typ."
+
+#: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:101
+msgid ""
+"Define the position to display the legal checkboxes. <br/>The legal "
+"checkboxes will be displayed in the payment section if the place order "
+"button is set to display in the payment section.<br/><span style=\"color:"
+"#f00;\"><strong>Disclaimer:</strong> by changing these settings, I confirm "
+"that I understand the legal implications of changing the position of the "
+"legal checkboxes on my checkout page.</span>"
+msgstr ""
+"Definiera positionen för att visa de juridiska kryssrutorna. <br/>De "
+"juridiska kryssrutorna kommer att visas i betalningssektionen om "
+"beställningsknappen är inställd på att visas i betalningssektionen.<br/>"
+"<span style=\"color:#f00;\"><strong>Ansvarsfriskrivning:< /strong> genom att "
+"ändra dessa inställningar bekräftar jag att jag förstår de juridiska "
+"konsekvenserna av att ändra placeringen av de juridiska kryssrutorna på min "
+"kassasida.</span>"
+
+#: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:89
+msgid ""
+"Define the position to display the place order button. <br/><span "
+"style=\"color:#f00;\"><strong>Disclaimer:</strong> by changing these "
+"settings, I confirm that I understand the legal implications of changing the "
+"position of the legal checkboxes on my checkout page.</span>"
+msgstr ""
+"Definiera positionen för att visa beställningsknappen. <br/><span "
+"style=\"color:#f00;\"><strong>Ansvarsfriskrivning:</strong> genom att ändra "
+"dessa inställningar bekräftar jag att jag förstår de juridiska "
+"konsekvenserna av att ändra placeringen av de juridiska kryssrutorna på min "
+"kassasida .</span>"
+
+#: inc/admin/admin-settings-general.php:202
+msgid "Define the visibility of the additional order notes field."
+msgstr "Definiera synligheten för fältet för ytterligare orderanteckningar."
+
+#: inc/compat/plugins/compat-plugin-woocommerce-gateway-amazon-payments-advanced.php:97
+msgid ""
+"Define which components of the Amazon Pay express checkout button to display."
+msgstr ""
+"Definiera vilka komponenter i Amazon Pay Express-utcheckningsknappen som ska "
+"visas."
+
+#: inc/compat/plugins/compat-plugin-woo-delivery.php:112
+msgid "Delivery Date"
+msgstr ""
+
+#: inc/compat/plugins/compat-plugin-woo-delivery.php:104
+msgid "Delivery Options"
+msgstr ""
+
+#: inc/compat/plugins/compat-plugin-woo-delivery.php:108
+msgid "Delivery or Pickup"
+msgstr ""
+
+#. %s: html for the email address typo correction suggestion link
+#: inc/checkout-validation.php:87
+#, php-format
+msgid "Did you mean %s?"
+msgstr ""
+
+#: inc/admin/admin-notices.php:55
+msgid "Dismiss Notice"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:225
+msgid "Display gift message and other gift options at the checkout page"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:123
+msgid "Display the \"Add\" link buttons in lowercase"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:191
+msgid "Display the coupon codes section title"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:244
+msgid ""
+"Display the gift message as part of the order details table instead of a "
+"separate section"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:235
+msgid "Display the gift message fields always expanded"
+msgstr ""
+
+#: inc/checkout-widget-areas.php:53
+msgid ""
+"Display widgets below the checkout header for mobile devices. Only displayed "
+"if using the plugin's checkout header."
+msgstr ""
+
+#: inc/checkout-widget-areas.php:87
+msgid "Display widgets below the place order button at the checkout page."
+msgstr ""
+
+#: inc/checkout-widget-areas.php:77
+msgid "Display widgets inside the order summary at the checkout page."
+msgstr ""
+
+#: inc/checkout-widget-areas.php:43
+msgid ""
+"Display widgets on the checkout header for large screens. Only displayed if "
+"using the plugin's checkout header."
+msgstr ""
+
+#: inc/checkout-widget-areas.php:65
+msgid "Display widgets on the checkout sidebar after the order summary."
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:216
+msgid ""
+"Displays the express checkout section at checkout when supported payment "
+"gateways have this feature enabled."
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:133
+msgid "Do not hide \"Address line 2\" fields behind a link button"
+msgstr ""
+
+#: templates/sc/checkout/review-order-section.php:39
+#: templates/sc/checkout/review-order-section.php:54
+msgid "Edit Cart"
+msgstr ""
+
+#: inc/checkout-gift-options.php:352
+msgctxt "Edit gift options link on admin order details screen"
+msgid "Edit"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:215
+msgid "Enable the express checkout section at checkout"
+msgstr ""
+
+#: inc/checkout-coupon-codes.php:90
+msgid "Enter your code here"
+msgstr "Ange din kod här"
+
+#: inc/checkout-express-checkout.php:34
+#: inc/admin/admin-settings-general.php:214
+msgid "Express checkout"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:105
+msgid "Features"
+msgstr ""
+
+#: inc/checkout-gift-options.php:166
+msgctxt "Field label for person sending the gift"
+msgid "From"
+msgstr ""
+
+#. Author of the plugin
+#: inc/admin/admin-settings-simple-checkout.php:25
+msgid "simple checkout"
+msgstr ""
+
+#. Name of the plugin
+msgid "simple checkout for WooCommerce"
+msgstr ""
+
+#: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:88
+msgid "Germanized for WooCommerce"
+msgstr ""
+
+#: inc/checkout-gift-options.php:179
+msgid "Gift message"
+msgstr ""
+
+#: inc/checkout-gift-options.php:464
+#: templates/sc/order/order-details-gift-options-email-plain-text.php:28
+msgid "Gift message from:"
+msgstr ""
+
+#: inc/checkout-gift-options.php:456
+#: templates/sc/order/order-details-gift-options-email-plain-text.php:23
+msgid "Gift message:"
+msgstr ""
+
+#: inc/checkout-gift-options.php:87 inc/admin/admin-settings-general.php:224
+msgid "Gift options"
+msgstr ""
+
+#: templates/sc/order/order-details-gift-options.php:23
+msgctxt "Gift options section title in the order details"
+msgid "Gift message"
+msgstr ""
+
+#: templates/sc/order/order-details-gift-options-email-plain-text.php:20
+msgctxt "Gift options section title in the order details"
+msgid "Gift message:"
+msgstr ""
+
+#: templates/sc/checkout/checkout-header.php:27
+msgid "Go to the home page"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:114
+msgid "Header and Footer"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:80
+msgid "Header background color"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:113
+msgid "Hide optional fields behind a link button"
+msgstr ""
+
+#: inc/checkout-fields.php:92
+msgid "House number and street name."
+msgstr "Gatunamn och husnummer."
+
+#: inc/admin/admin-settings-general.php:82
+#: inc/admin/admin-settings-general.php:92
+msgid "HTML color value. ie: #f3f3f3"
+msgstr ""
+
+#. URI of the plugin
+#. Author URI of the plugin
+msgid "https://SimpleCheckout.com/"
+msgstr ""
+
+#: inc/admin/admin-notice-review-request.php:45
+msgid "I Need Help!"
+msgstr ""
+
+#: inc/admin/admin-settings-simple-checkout.php:238
+msgctxt "Image uploader."
+msgid "No image selected."
+msgstr ""
+
+#: inc/packing-slips.php:41
+msgid ""
+"Information message printed on the packing slips. May be replaced with the "
+"gift message for order with a gift message added."
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:180
+msgid "Integrated Coupon Codes"
+msgstr ""
+
+#: inc/admin/admin-settings-integrations.php:51
+msgid "Integrations"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:114
+msgid ""
+"It is recommended to keep this options checked to reduce the number of open "
+"input fields, <a href=\"https://baymard.com/blog/checkout-flow-average-form-"
+"fields#1-address-line-2--company-name-can-safely-be-collapsed-behind-a-"
+"link\" target=\"_blank\">read the research</a>."
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:146
+msgid ""
+"It is recommended to leave this option checked. The billing address at "
+"checkout will start with the option \"Billing same as shipping\" checked by "
+"default. This will reduce significantly the number of open input fields at "
+"the checkout, <a href=\"https://baymard.com/blog/checkout-flow-average-form-"
+"fields#3-default-billing--shipping-and-hide-the-fields-entirely\" "
+"target=\"_blank\">read the research</a>."
+msgstr ""
+
+#: templates/sc/order/order-details-gift-options.php:35
+msgctxt "Label on the order details for person sending the gift"
+msgid "From:"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:78
+#: inc/admin/admin-settings-general.php:53
+msgid "Layout"
+msgstr ""
+
+#: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:105
+msgctxt "Legal checkboxes position"
+msgid "Before place order button"
+msgstr "Innan beställningsknapp"
+
+#: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:104
+msgctxt "Legal checkboxes position"
+msgid "Order summary (before products)"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:141
+msgid "Load unminified assets"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:142
+msgid ""
+"Loading unminified assets affects the website performance. Only use this "
+"option while troubleshooting."
+msgstr ""
+
+#: templates/sc/checkout/form-contact-login.php:24
+msgctxt "Log in link label at checkout contact step"
+msgid "Log in"
+msgstr "Logga in"
+
+#: templates/sc/checkout/form-contact-login.php:35
+msgctxt "Log in separator label at for when guest checkout is disabled"
+msgid "Or continue as a guest"
+msgstr "eller fortsätt som gäst"
+
+#: templates/sc/checkout/form-contact-login.php:37
+msgctxt "Log in separator label at for when guest checkout is disabled"
+msgid "Or continue checkout below"
+msgstr "eller slutför din beställning nedan"
+
+#: inc/admin/admin-settings-general.php:71
+msgid "Logo image"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:95
+msgid "Make the checkout progress bar stay visible while scrolling"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:124
+msgid ""
+"Make the labels of optional field \"Add\" link button as <code>"
+"lowercase</code>. (ie. \"Add phone number\" instead of \"Add Phone number\")"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:86
+msgid "Make the order summary stay visible while scrolling"
+msgstr ""
+
+#: inc/checkout-steps.php:319
+msgid "Multi-step"
+msgstr ""
+
+#: inc/checkout-steps.php:1368
+msgid "My contact"
+msgstr "Dina uppgifter"
+
+#: inc/checkout-gift-options.php:168
+msgid "Name of who is sending the gift, printed on the packing slip."
+msgstr ""
+
+#: inc/admin/admin-settings-integrations.php:95
+msgid ""
+"No integrations available at the moment on this section. The options related "
+"to each plugin will only appear here if that plugin is activated."
+msgstr ""
+
+#. %s shipping destination.
+#: templates/sc/checkout/review-order-shipping.php:31
+msgctxt "No shipping method chosen label for the order summary"
+msgid "--"
+msgstr ""
+
+#: inc/checkout-steps.php:1771
+msgid "Not selected yet."
+msgstr ""
+
+#: inc/compat/plugins/compat-plugin-woo-delivery.php:208
+msgctxt "Notice for no delivery or pickup options provided"
+msgid "None."
+msgstr ""
+
+#: inc/checkout-gift-options.php:122
+msgctxt "Notice for no gift options provided"
+msgid "None."
+msgstr ""
+
+#: inc/checkout-steps.php:1818
+msgctxt "Notice for no order notes provided"
+msgid "None."
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:182
+msgid ""
+"Only applicable if use of coupon codes are enabled in the WooCommerce "
+"settings."
+msgstr ""
+
+#: inc/compat/themes/compat-theme-Impreza.php:119
+msgid ""
+"Only applicable when using the Impreza theme header at the checkout page."
+msgstr ""
+
+#: inc/checkout-shipping-phone-field.php:81
+msgid "Only used for shipping-related questions."
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:112
+msgid "Optional fields"
+msgstr ""
+
+#: inc/checkout-fields.php:45
+msgid "Order and tracking number will be sent to this email address."
+msgstr ""
+"Beställnings- och spårningsnummer kommer att skickas till denna e-postadress."
+
+#: inc/admin/admin-settings-general.php:201
+msgid "Order notes"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:205
+msgctxt "Order notes field visibility"
+msgid "Hidden"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:206
+msgctxt "Order notes field visibility"
+msgid "Optional"
+msgstr ""
+
+#: inc/checkout-fields.php:45
+msgid "Order number and receipt will be sent to this email address."
+msgstr ""
+
+#: inc/checkout-steps.php:2621 inc/admin/admin-settings-advanced.php:85
+#: inc/admin/admin-settings-advanced.php:104
+msgid "Order summary"
+msgstr ""
+
+#: inc/packing-slips.php:40
+msgid "Packing Slips"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:90
+msgid "Page background color"
+msgstr ""
+
+#: inc/checkout-steps.php:2517
+msgid "Payment method"
+msgstr "Betalningsmetod"
+
+#: inc/compat/plugins/compat-plugin-woo-delivery.php:116
+msgid "Pickup Date"
+msgstr ""
+
+#: inc/checkout-local-pickup.php:182
+msgid "Pickup point"
+msgstr "Ombud"
+
+#: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:92
+msgctxt "Place order position"
+msgid "Order summary (after totals)"
+msgstr ""
+
+#: inc/compat/plugins/compat-plugin-woocommerce-germanized.php:93
+msgctxt "Place order position"
+msgid "Payment step"
+msgstr ""
+
+#. Next checkout step title
+#: inc/checkout-steps.php:760
+#, php-format
+msgid "Proceed to %s"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:94
+msgid "Progress bar"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"Provides a distraction free checkout experience for any WooCommerce store. "
+"Ask for shipping information before billing in a truly linear multi-step or "
+"one-step checkout, add options for gift message, and display a coupon code "
+"field at the checkout page that does not distract your customers."
+msgstr ""
+
+#: inc/admin/admin-notice-review-request.php:44
+msgid "Rate Us Now"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:106
+msgid ""
+"Recommended if most of the orders have only a few different products in the "
+"cart, and product variations do not take too much space on the order summary."
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:134
+msgid ""
+"Recommended only whe most customers actually need the \"Address line 2\" "
+"field, or when getting the right shipping address is crucial (ie. if "
+"delivering food and other perishable products)."
+msgstr ""
+
+#: inc/checkout-coupon-codes.php:150
+msgid "Remove"
+msgstr ""
+
+#: inc/checkout-steps.php:2161 inc/checkout-steps.php:2246
+msgid "Same as shipping address"
+msgstr "Samma som leveransuppgifter"
+
+#: inc/admin/admin-settings-simple-checkout.php:250
+#: inc/admin/admin-settings-simple-checkout.php:251
+#: inc/admin/admin-settings-simple-checkout.php:254
+msgid "Select an image"
+msgstr ""
+
+#: inc/checkout-express-checkout.php:43
+msgctxt "Separator label for the express checkout section"
+msgid "Or"
+msgstr ""
+
+#: inc/admin/admin.php:70
+msgid "Settings"
+msgstr ""
+
+#: inc/admin/admin-settings-integrations.php:83
+msgctxt "Settings section title"
+msgid "Integrations"
+msgstr ""
+
+#: inc/checkout-steps.php:1606
+msgid "Shipping method"
+msgstr "Leveransalternativ"
+
+#: inc/checkout-shipping-phone-field.php:80
+#: inc/admin/admin-settings-general.php:154
+msgid "Shipping phone"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:172
+msgctxt "Shipping phone field position"
+msgid "Contact"
+msgstr "Kontakt"
+
+#: inc/admin/admin-settings-general.php:171
+msgctxt "Shipping phone field position"
+msgid "Shipping address"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:158
+msgctxt "Shipping phone field visibility"
+msgid "Hidden"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:159
+msgctxt "Shipping phone field visibility"
+msgid "Optional"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:160
+msgctxt "Shipping phone field visibility"
+msgid "Required"
+msgstr ""
+
+#: inc/checkout-local-pickup.php:170 inc/checkout-steps.php:1582
+msgid "Shipping to"
+msgstr "Leveransuppgifter"
+
+#: inc/admin/admin-settings-general.php:181
+msgid "Show coupon codes as a substep of the payment step"
+msgstr ""
+
+#: templates/sc/checkout/form-contact-login-modal.php:28
+msgid "Sign in to your account"
+msgstr ""
+
+#: inc/checkout-steps.php:320
+msgid "Single step"
+msgstr ""
+
+#: templates/sc/header-checkout.php:36
+msgid "Skip to content"
+msgstr ""
+
+#: inc/compat/themes/compat-theme-Impreza.php:118
+msgid "Spacing for site header at the checkout page (in pixels)"
+msgstr ""
+
+#. %1$s is replaced with html for "current checkout step number", %2$s is replaced with html for "total number of checkout steps".
+#: inc/checkout-steps.php:964
+#, php-format
+msgid "Step %1$s of %2$s"
+msgstr ""
+
+#: inc/admin/admin-notice-review-request.php:41
+msgid "Thanks for choosing simple checkout, you rock!"
+msgstr ""
+
+#: inc/admin/admin-settings-wc-shipping.php:50
+msgid ""
+"The shipping destination is always set to \"Default to customer shipping "
+"address\" when simple checkout is activated. Customers can still provide "
+"different shipping and billing addresses during checkout, an option for "
+"setting the default billing address to be the same as the shipping address "
+"is available at WooCommerce > Settings > simple checkout > Address Fields."
+msgstr ""
+
+#: inc/compat/themes/compat-theme-Impreza.php:117
+msgid "Theme Impreza"
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:257
+msgid "These widget areas are used to add trust symbols on the checkout page."
+msgstr ""
+
+#: inc/checkout-validation.php:92
+msgid "This does not match the related field value."
+msgstr ""
+
+#: inc/checkout-validation.php:90
+msgid "This is a required field."
+msgstr "Detta är ett obligatoriskt fält."
+
+#: inc/checkout-validation.php:91
+msgid "This is not a valid email address."
+msgstr ""
+
+#: inc/admin/admin-settings-general.php:245
+msgid ""
+"This option affects the order confirmation page (thank you page), order "
+"details at account pages, emails and packing slips."
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:133
+msgid "Troubleshooting"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:120
+msgid "Use simple checkout header and footer"
+msgstr ""
+
+#: inc/admin/admin-settings-advanced.php:115
+msgid ""
+"We recommend using the simple checkout header and footer to avoid "
+"distractions at the checkout page. <a href=\"https://baymard.com/blog/cart-"
+"abandonment\" target=\"_blank\">Read the research about cart abandonment</a>."
+msgstr ""
+
+#: inc/compat/plugins/compat-plugin-woocommerce-gateway-amazon-payments-advanced.php:96
+msgid "WooCommerce Amazon Pay"
+msgstr ""
+
+#: inc/checkout-gift-options.php:180
+msgid "Write a gift message..."
+msgstr ""
+
+#: inc/admin/admin-notice-review-request.php:42
+msgid ""
+"You have been using simple checkout for a while. How do you like it so far? "
+"<br>Please give us a quick rating, it works as a boost for us to keep "
+"working on the plugin :)"
+msgstr ""
+
+#: inc/checkout-gift-options.php:167
+msgid "Your name"
+msgstr ""
+
+#: templates/checkout/payment.php:46
+#, php-format
+msgid ""
+"Your order has a total amount due of %s. No&nbsp;further payment is needed."
+msgstr ""
