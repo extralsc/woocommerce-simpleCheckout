@@ -3,7 +3,7 @@
 Plugin Name: Simple Checkout
 Plugin URI: https://ceeglo.se/
 Description: Making checkout as simple as it should be.
-Text Domain: ceeglo
+Text Domain: simple-checkout
 Domain Path: /languages
 Version: 1.0.0
 Author: Ceeglo
