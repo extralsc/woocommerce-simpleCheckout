@@ -16,7 +16,7 @@
 	@media (#{$bp-larger-than-desktop}) {
 		position: static;
 		min-height: $checkout-header-height--large-screen;
-		border-bottom: 0;
+		border-bottom: solid remsize( .1rem ) $border-color;
 		box-shadow: none;
 	}
 }
