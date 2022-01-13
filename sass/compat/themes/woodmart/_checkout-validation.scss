@@ -1,0 +1,33 @@
+// ------------------------------------
+// CHECKOUT FIELD VALIDATION
+// ------------------------------------
+
+// VALID FIELDS
+body.theme-woodmart div.woocommerce form .form-row.woocommerce-validated:not( [class*='woocommerce-invalid'] ) {
+
+	// Select2 Fields
+	.select2-selection:after {
+		right: remsize( 2.6rem );
+	}
+
+}
+
+body.theme-woodmart div.woocommerce .form-row.form-row .woocommerce-error:before {
+	padding-top: remsize( .6rem );
+}
+
+body.theme-woodmart div.woocommerce .form-row.form-row .woocommerce-error {
+	background-color: none;
+	-webkit-transform: none;
+	-webkit-animation: none;
+	transform: none;
+	animation: none;
+	z-index: 0;
+	cursor: auto;
+	min-height: 0;
+}
+
+body.theme-woodmart div.woocommerce .form-row.form-row .woocommerce-error::after {
+	display: none;
+}
+
