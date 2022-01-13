@@ -1298,7 +1298,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
 
 .woocommerce .fc-shipping-method__no-shipping-methods {
   border: solid 1px #e1e1e1;
-  border-radius: 5px;
+  border-radius: 0;
   border-color: #CC1818;
   color: #CC1818;
   padding: 10px 10px;
@@ -1309,7 +1309,7 @@ div.woocommerce form .fc-step__substep[data-substep-id=shipping_address] .select
   margin: 0;
   padding: 0;
   border: solid 1px #e1e1e1;
-  border-radius: 5px;
+  border-radius: 0;
   overflow: hidden;
 }
 
@@ -2491,4 +2491,8 @@ body .c-cart__form--shipping-fields {
 }
 body .c-cart__form--additional-fields {
   margin: 0;
+}
+body .includes_tax {
+  text-transform: uppercase;
+  color: #6a6a6a;
 }

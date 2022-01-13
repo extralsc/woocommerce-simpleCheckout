@@ -469,9 +469,9 @@ $shipping-method-font-weight:               normal !default;
 $shipping-method-price-font-weight:         bold !default;
 $shipping-method-price-width:               $global-spacing-large !default;
 
-$shipping-method-border-color:              $option-box-border-color !default;
-$shipping-method-border:                    $option-box-border !default;
-$shipping-method-border-radius:             $option-box-border-radius !default;
+$shipping-method-border-color:              $grey !default; //$option-box-border-color
+$shipping-method-border:                    $option-box-border !default; //
+$shipping-method-border-radius:             0 !default; // $option-box-border-radius
 
 $shipping-method-radio-size:                $option-box-radio-size !default;
 $shipping-method-radio-border:              $option-box-radio-border !default;
