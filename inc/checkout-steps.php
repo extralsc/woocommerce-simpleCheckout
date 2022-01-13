@@ -117,6 +117,7 @@ class FluidCheckout_Steps extends FluidCheckout
 		add_action('fc_checkout_payment', 'woocommerce_checkout_payment', 20);
 
 		if (get_option('fc_enable_checkout_place_order_sidebar', 'no') !== 'no') {
+
 			if ($is_sidebar_widget) { // asd
 				add_action('fc_output_step_payment', array($this, 'output_substep_payment'), 80);
 				add_action('fc_output_step_payment', array($this, 'output_order_review'), 90);
@@ -450,11 +451,13 @@ class FluidCheckout_Steps extends FluidCheckout
 	public function output_checkout_header_cart_link()
 	{
 		ob_start();
-		wc_cart_totals_order_total_html();
-		$link_label_html = str_replace('includes_tax', 'includes_tax screen-reader-text', ob_get_clean());
+		// wc_cart_totals_order_total_html();
+		// $link_label_html = str_replace('includes_tax', 'includes_tax screen-reader-text', ob_get_clean());
+		$link_label_html = "Tillbaka till varukorgen ➔";
+
 	?>
-		<a href="<?php echo esc_url(wc_get_cart_url()); ?>" class="fc-checkout__cart-link" aria-description="<?php echo esc_attr(__('Click to go to the order summary', 'fluid-checkout')); ?>" data-flyout-toggle data-flyout-target="[data-flyout-order-review]"><span class="screen-reader-text"><?php echo esc_html(__('Cart total:', 'fluid-checkout')); ?></span> <?php echo $link_label_html; // WPCS: XSS ok. 
-																																																																																										?></a>
+		<a style="font-size: 12px;" href="<?php echo esc_url(wc_get_cart_url()); ?>" class="fc-checkout__carts-link" aria-description="<?php echo esc_attr(__('Click to go to the order summary', 'fluid-checkout')); ?>" data-flyout-toggle data-flyout-target="[data-flyout-order-review]"><span class="screen-reader-text"><?php echo esc_html(__('Cart total:', 'fluid-checkout')); ?></span> <?php echo $link_label_html; // WPCS: XSS ok. 
+																																																																																																	?></a>
 	<?php
 	}
 
@@ -2833,10 +2836,12 @@ class FluidCheckout_Steps extends FluidCheckout
 					));
 				}
 
+
 				// Maybe add class for additional content inside the order summary section
 				if (get_option('fc_enable_checkout_place_order_sidebar', 'no') === 'yes' || is_active_sidebar('fc_order_summary_after')) {
 					$attributes['class'] = $attributes['class'] . ' has-additional-content white-bg';
 				}
+
 				add_action('fc_output_step_payment', array($this, 'output_checkout_place_order'), 100, 2);
 
 
